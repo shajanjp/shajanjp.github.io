@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+    color: #0F0;
+    font: 15px/24px "Bitstream Vera Sans Mono", "Anonymous Pro", "Consolas", monospace;
+    letter-spacing: -0.01em;
+}
+p{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: #00F;
+}
+h1,h2,h3,h4,h5,h6,
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,
+a.mine{
+    color:#FFF;
+}
+
+header{
+    border-bottom:1px solid #222;
+    padding-bottom:10px;
+}
+header h1,header h2{
+display:inline;   
+}
+/* Brand Colors */
+.color-google-plus { color: #dc4e41; }
+.color-facebook { color: #3b5998; }
+.color-github { color: #4183c4; }
+.color-linkedin { color: #0077b5; }
+.color-youtube { color: #cd201f; }
+.color-twitter { color: #55acee; }
+.color-instagram { color: #3f729b; }
+.color-pinterest { color: #bd081c; }
+.color-stumbleupon { color: #eb4924; }
+.color-ifttt { color: #33ccff; }
+.color-about-me { color: #00405d; }
+.color-deviantart { color: #05cc47; }
+.color-dribbble { color: #444444; }
+.color-kickstarter { color: #2bde73; }
+.color-soundcloud { color: #ff8800; }
+.color-slideshare { color: #0077b5; }
+.color-reddit { color: #ff4500; }
+.color-dribbble { color: #444444; }
+.color-foursquare { color: #f94877; }
+
+footer{
+    margin:10px 0px;
+    text-align:center;
+}
+
+input[type="text"],input[type="email"],textarea{
+    display:block;
+    background-color:#000;
+    border:0px;
+    border-bottom:1px solid #0F0;
+    padding: 10px;
+    width: 100%;
+    color: #0F0;
+    font-size:inherit;
+}
+input[type="submit"]{
+    background-color: #000;
+    border: 1px solid #0F0;
+    padding: 10px;
+    color: #0F0;
+}
+
+@media (max-width: 550px) {
+    body {
+        font-size: 15px;
+        min-height: 530px;
+    }
+    ul.content {
+        top: 20%;
+        min-width: 290px;
+    }
+}

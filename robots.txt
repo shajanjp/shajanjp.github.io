@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /lab/
+
+Sitemap: http://shajanjacob.com/sitemap.xml
