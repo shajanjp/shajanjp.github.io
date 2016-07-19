@@ -49,9 +49,9 @@
   <link rel="stylesheet" href="css/grid12.min.css">
 </head>
 <body id="typing">
-  <div class="container">
+  <div class="container"> <!-- main container -->
     <div class="row">
-      <nav class="col-sm-3">
+      <nav class="col-sm-3"> <!-- navigation -->
         <ul>
           <li><a href="/" class="mine">Home</a></li>
           <li><a href="/projects.html" class="mine">Projects</a></li>
@@ -61,35 +61,37 @@
           <li><a href="/blog" class="mine">Blog</a></li>
         </ul>
       </nav>
-      <div class="col-sm-9">
+      <div class="col-sm-9"> <!-- content block -->
         <div class="row">
-          <header class="col-sm-12">
-            <h1><a href="/">Shajan Jacob</a></h1>
-          </header>
+          <div class="col-sm-12">
+            <header>
+              <h1><a href="/">Shajan Jacob</a></h1>
+            </header>
+            <div class="row">
+              <div class="col-sm-4">
+                <section id="contact-form">
+                 <form action="https://formspree.io/shajanjp@gmail.com" method="POST">
+                  <input type="email" name="_replyto" placeholder="Email">
+                  <input type="text" name="name" placeholder="Full Name">
+                  <textarea name="feedback" rows="4" placeholder="Feedback here"></textarea>
+                  <input type="hidden" name="_next" value="http://guyswhocode.com">
+                  <br>
+                  <input type="submit" value="Submit">
+                </form>
+              </section>
+            </div>
+            <div class="col-sm-8">
+              <p>Feel free to contact me.</p>
+            </div>
+          </div>
         </div>
-        <div class="row">
-         <div class="col-sm-4">
-           <section id="contact-form">
-             <form action="https://formspree.io/shajanjp@gmail.com" method="POST">
-              <input type="email" name="_replyto" placeholder="Email">
-              <input type="text" name="name" placeholder="Full Name">
-              <textarea name="feedback" rows="4" placeholder="Feedback here"></textarea>
-              <input type="hidden" name="_next" value="http://guyswhocode.com">
-              <br>
-              <input type="submit" value="Submit">
-            </form>
-          </section>
-        </div>
-        <div class="col-sm-8">
-         <p>Feel free to contact me.</p>
-       </div>
-     </div>
-   </div>
- </div>
- <footer>
-  < / > with love by Shajan 
-</footer>
-</div>
+      </div>
+    </div> <!-- content block -->
+  </div>
+  <footer>
+    < / > with love by Shajan 
+  </footer>
+</div> <!-- main containe -->
 
 <script src="js/script.js"></script>
 <script>
@@ -100,7 +102,6 @@
 
   ga('create', 'UA-76440547-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 </body>
 </html>
