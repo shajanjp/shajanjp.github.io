@@ -74,6 +74,18 @@ input[type="submit"]{
     color: #0F0;
 }
 
+#photography .col-sm-3{
+    margin-top: 15px;
+}
+#photography .photo{
+    width: 100%;
+    border: 1px solid #0F0;
+    padding: 5px;
+}
+#photography .photo img{
+    width: 100%;
+}
+
 /* Responsive code */
 @media (max-width: 550px) {
     body {
