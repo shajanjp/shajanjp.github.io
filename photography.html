@@ -5,19 +5,8 @@ layout: page_static
 ---
 <section id="photography">
   <div class="row">
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-1.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-2.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-3.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-4.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-5.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-6.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-7.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-8.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-9.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-10.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-11.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-12.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-13.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
-    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/shajan-jacob-photography-14.jpg" alt=""><p class="tagline">Lorem ipsum dolor sit.</p></div></div>
+  {% for photograph in site.data.photographs %}
+    <div class="col-sm-3"><div class="photo"><img src="/posts/photography/{{ photograph.file }}" alt="{{ photograph.title }}"><p class="tagline">{{ photograph.title }}</p></div></div>
+  {% endfor %}
   </div>
 </section>
