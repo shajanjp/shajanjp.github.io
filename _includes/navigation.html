@@ -1,11 +1,11 @@
  <nav class="col-sm-2"> <!-- navigation -->
  	<ul class="sidebar">
- 		<li><a href="/" title="About Me">About Me</a></li>
- 		<li><a href="/projects.html" title="Projects">Projects</a></li>
- 		<li><a href="/contact.html" title="Contact">Contact</a></li>
- 		<li><a href="/hire-me.html" title="Hire Me">Hire Me</a></li>
- 		<li><a href="/resume.html" title="Resume">Resume</a></li>
- 		<li><a href="/blog" title="Blog">Blog</a></li>
- 		<li><a href="/photography" title="Photography">Photography</a></li>
+ 		<li><a href="/" class="{% if page.url == "/" %}active{% endif %}" title="About Me">About Me</a></li>
+ 		<li><a href="/projects.html" class="{% if page.url == "/projects.html" %}active{% endif %}" title="Projects">Projects</a></li>
+ 		<li><a href="/contact.html" class="{% if page.url == "/contact.html" %}active{% endif %}" title="Contact">Contact</a></li>
+ 		<li><a href="/hire-me.html" class="{% if page.url == "/hire-me.html" %}active{% endif %}" title="Hire Me">Hire Me</a></li>
+ 		<li><a href="/resume.html" class="{% if page.url == "/resume.html" %}active{% endif %}" title="Resume">Resume</a></li>
+ 		<li><a href="/blog" class="{% if page.url == "/blog" %}active{% endif %}" title="Blog">Blog</a></li>
+ 		<li><a href="/photography.html" class="{% if page.url == "/photography.html" %}active{% endif %}" title="Photography">Photography</a></li>
  	</ul>
  </nav>
