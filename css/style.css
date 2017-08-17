@@ -84,7 +84,15 @@ input[type="submit"]{
 }
 #photography .photo img{
     width: 100%;
+    filter: saturate(0.0); 
 }
+#photography .photo:hover img{
+    filter: saturate(1.0);
+    -webkit-transition: 0.5s filter ease-in-out;
+    -o-transition: 0.5s filter ease-in-out;
+    transition: 0.5s filter ease-in-out;
+}
+
 
 /* Responsive code */
 @media (max-width: 550px) {
