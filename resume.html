@@ -21,16 +21,22 @@ layout: page
     <li>Worked for Alts Solution as a full-stack developer</li>
   </ul>
   <h3>PROJECTS</h3>
-  <ul>
-    {% for project in site.data.projects %}    
-    <li>
-      <p class="heading">{{ project.title }}</p>
-      <!-- <p></p> -->
-      <p><a href="{{ project.url }}">{{ project.url }}</a></p>
-      <p>{{ project.description }}</p>
-    </li>
-    {% endfor %}
-  </ul>
+  <section id="projects">
+    <ul>
+      {% for project in site.data.projects %}    
+      <li class="project">
+        <p class="heading">{{ project.title }}</p>
+        <p><a href="{{ project.url }}">{{ project.url }}</a></p>
+        <p>{{ project.description }}</p>
+        <p class="tags">
+          {% for tag in project.tags %}    
+          <span>{{ tag }}</span>
+          {% endfor %}   
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
   <h3>SKILLS</h3>
   <ul>
