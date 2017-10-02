@@ -99,8 +99,8 @@ input[type="submit"]{
 
 #projects .project .tags span{
     font-size: 0.8em;
-    color: #eee;
-    border: 1px solid #eee;
+    color: #555;
+    border: 1px solid #555;
     padding: 2px 4px;
 }
 
