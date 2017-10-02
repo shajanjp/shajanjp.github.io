@@ -22,59 +22,14 @@ layout: page
   </ul>
   <h3>PROJECTS</h3>
   <ul>
+    {% for project in site.data.projects %}    
     <li>
-      <p class="heading">Lets All Chef - Food-networking app</p>
-      <p><a href="https://guyswhocode.com/projects/letsallchef">https://guyswhocode.com/projects/letsallchef</a></p>
-      <p>It's a food service platform that suggests, orders and guides you to make recipes. Smart companion for home cooks and professional chefs. Accomplish more in the kitchen with what you have.</p>
+      <p class="heading">{{ project.title }}</p>
+      <!-- <p></p> -->
+      <p><a href="{{ project.url }}">{{ project.url }}</a></p>
+      <p>{{ project.description }}</p>
     </li>
-
-    <li>
-      <p class="heading">mindPrick</p>
-      <p><a href="http://guyswhocode.com/products/mindprick">http://guyswhocode.com/products/mindprick</a></p>
-      <p>The all-in-one web/mobile ERP for students and teachers to take the campus experience to a whole new level.</p>
-    </li>
-
-    <li>
-      <p class="heading">GuysWhoCode</p>
-      <p><a href="http://guyswhocode.com/">http://guyswhocode.com/</a></p>
-      <p>GWC is a nonprofit organization working to bridge the gap between students and computer technologies. We also aims at developing on ideas that are useful and beneficial to everyone.</p>
-    </li>
-
-    <li>
-      <p class="heading">Black Fire - Javascript web app boilerplate JavaScript</p>
-      <p><a href="https://github.com/shajanjp/blackfire">https://github.com/shajanjp/blackfire</a></p>
-      <p>NodeJS web app framework using Express, Node.js and MongoDB</p>
-    </li>
-
-    <li>
-      <p class="heading">Nalettes - Nature inspired color palettes</p>
-      <p><a href="https://guyswhoc ode.com/nalettes">https://guyswhoc ode.com/nalettes</a></p>
-      <p>Repository of color palettes picked up carefully, inspired from nature.</p>
-    </li>
-
-    <li>
-      <p class="heading">Sparkle - Developer resources</p>
-      <p><a href="https://guyswhocode.com/sparkle">https://guyswhocode.com/sparkle</a></p>
-      <p>Useful and genuine resources for developers added and maintained by developers.Built with jekyll and hosted on GH-Pages</p>
-    </li>
-
-    <li>
-      <p class="heading">Sanz - Jekyll template</p>
-      <p><a href="https://github.com/shajanjp/sanz">https://github.com/shajanjp/sanz</a></p>
-      <p>A minimal responsive jekyll blog template.</p>
-    </li>
-
-    <li>
-      <p class="heading">Thulasi - Jekyll template</p>
-      <p><a href="https://github.com/shajanjp/thulasi">https://github.com/shajanjp/thulasi</a></p>
-      <p>A flat responsive jekyll blog template.</p>
-    </li>
-
-    <li>
-      <p class="heading">Game - Chain Reaction</p>
-      <p><a href="http://shajanjacob.com/chain-reaction/">http://shajanjacob.com/chain-reaction/</a></p>
-      <p>Popular android game Chain Reaction written HTML, CSS &amp JS</p>
-    </li>
+    {% endfor %}
   </ul>
 
   <h3>SKILLS</h3>
