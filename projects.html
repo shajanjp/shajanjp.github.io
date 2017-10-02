@@ -6,11 +6,15 @@ layout: page
 <section id="projects">
   <ul>
     {% for project in site.data.projects %}    
-    <li>
+    <li class="project">
       <p class="heading">{{ project.title }}</p>
-      <!-- <p></p> -->
       <p><a href="{{ project.url }}">{{ project.url }}</a></p>
       <p>{{ project.description }}</p>
+      <p class="tags">
+        {% for tag in project.tags %}    
+        <span>{{ tag }}</span>
+        {% endfor %}   
+      </p>
     </li>
     {% endfor %}
   </ul>
