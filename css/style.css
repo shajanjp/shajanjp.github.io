@@ -93,6 +93,16 @@ input[type="submit"]{
     transition: 0.5s filter ease-in-out;
 }
 
+#projects .project{
+    margin-top: 15px;
+}
+
+#projects .project .tags span{
+    font-size: 0.8em;
+    color: #eee;
+    border: 1px solid #eee;
+    padding: 2px 4px;
+}
 
 /* Responsive code */
 @media (max-width: 550px) {
