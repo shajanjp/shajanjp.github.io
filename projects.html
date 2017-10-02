@@ -8,7 +8,7 @@ layout: page
     {% for project in site.data.projects %}    
     <li class="project">
       <p class="heading">{{ project.title }}</p>
-      <p><a href="{{ project.url }}">{{ project.url }}</a></p>
+      <p><a href="{{ project.url }}" target="_blank">{{ project.url }}</a></p>
       <p>{{ project.description }}</p>
       <p class="tags">
         {% for tag in project.tags %}    
