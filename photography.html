@@ -6,7 +6,7 @@ layout: page
 <section id="photography">
 	<div class="row">
 		{% for photograph in site.data.photographs %}
-		<div class="col-sm-3"><div class="photo"><img src="/posts/photography/{{ photograph.file }}" alt="{{ photograph.title }}"><p class="tagline">{{ photograph.title }}</p></div></div>
+		<div class="col-sm-3"><div class="photo"><img src="/posts/photography/thumbs/{{ photograph.file }}" alt="{{ photograph.title }}"><p class="tagline">{{ photograph.title }}</p></div></div>
 		{% endfor %}
 	</div>
 </section>
