@@ -1,4 +1,5 @@
 ---
+layout : default
 ---
 
 <!DOCTYPE html>
@@ -16,40 +17,163 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/header.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/card.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/menu.min.css">
-
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body id="flat">
+
+	<section id="intro" style="background-image: url('https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/d560e7d7d695293217875d2db6fbb35b31fc1991_2880x1620.jpg?w=1200');">
+		<h1>{{ site.title }}</h1>
+		<p>{{ site.description }}</p>
+	</section>
+
 	<div class="ui container">
-		<h1 class="ui header">{ Full Name }</h1>
-		<p class="description">Engineer from nowhere. Working in somewhere as something.</p>
 		<div class="ui stackable grid">
 			<div class="three wide column">
-				<div class="ui fluid vertical menu">
-					<a class="green item">
-						About
-					</a>
-					<a class="item">
-						Projects
-					</a>
-					<a class="item">
-						Contact
-					</a>
-					<a href="" class="item">
-						Hire
-					</a>
-					<a href="" class="item">
-						Resume
-					</a>
-					<a href="" class="item">
-						Blog
-					</a>
-					<a href="" class="item">
-						Photography
-					</a>
+				<div class="ui fluid vertical menu flat">
+					<a class="active item">Home</a>
+					<a class="item">About</a>
+					<a class="item">Projects</a>
+					<a class="item">Contact</a>
+					<a class="item">Hire</a>
+					<a class="item">Resume</a>
+					<a class="item">Blog</a>
+					<a class="item">Photography</a>
 				</div>
 			</div>
 			<div class="thirteen wide column">
 				
+				<section id="recent-blogs">
+					<h2 class="ui header">Recent Blogs</h2>
+					<div class="ui four stackable cards">
+					
+						<div class="ui card flat">
+							<div class="image">
+								<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+							</div>
+							<div class="content">
+								<a class="header">Blog Post 1</a>
+								<div class="meta">
+									<span class="date">Joined in 2013</span>
+								</div>
+								<div class="description">
+									Kristy is an art director living in New York.
+								</div>
+							</div>
+						</div>
+
+						<div class="ui card flat">
+							<div class="image">
+								<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+							</div>
+							<div class="content">
+								<a class="header">Blog Post 2</a>
+								<div class="meta">
+									<span class="date">Joined in 2013</span>
+								</div>
+								<div class="description">
+									Kristy is an art director living in New York.
+								</div>
+							</div>
+						</div>
+
+						<div class="ui card flat">
+							<div class="image">
+								<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+							</div>
+							<div class="content">
+								<a class="header">Blog Post 3</a>
+								<div class="meta">
+									<span class="date">Joined in 2013</span>
+								</div>
+								<div class="description">
+									Kristy is an art director living in New York.
+								</div>
+							</div>
+						</div>
+
+						<div class="ui card flat">
+							<div class="image">
+								<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+							</div>
+							<div class="content">
+								<a class="header">Blog Post 4</a>
+								<div class="meta">
+									<span class="date">Joined in 2013</span>
+								</div>
+								<div class="description">
+									Kristy is an art director living in New York.
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</section><!-- Recent Blogs -->
+
+
+				<h2 class="ui header">Recent Projects</h2>
+				<div class="ui stackable two cards">
+
+					<div class="ui card flat">
+						<div class="image">
+							<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+						</div>
+						<div class="content">
+							<a class="header">Project 1</a>
+							<div class="meta">
+								<span class="date">Joined in 2013</span>
+							</div>
+							<div class="description">
+								Kristy is an art director living in New York.
+							</div>
+						</div>
+					</div>
+
+					<div class="ui card flat">
+						<div class="image">
+							<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+						</div>
+						<div class="content">
+							<a class="header">Project 2</a>
+							<div class="meta">
+								<span class="date">Joined in 2013</span>
+							</div>
+							<div class="description">
+								Kristy is an art director living in New York.
+							</div>
+						</div>
+					</div>
+
+					<div class="ui card flat">
+						<div class="image">
+							<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+						</div>
+						<div class="content">
+							<a class="header">Project 3</a>
+							<div class="meta">
+								<span class="date">Joined in 2013</span>
+							</div>
+							<div class="description">
+								Kristy is an art director living in New York.
+							</div>
+						</div>
+					</div>
+
+					<div class="ui card flat">
+						<div class="image">
+							<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+						</div>
+						<div class="content">
+							<a class="header">Project 4</a>
+							<div class="meta">
+								<span class="date">Joined in 2013</span>
+							</div>
+							<div class="description">
+								Kristy is an art director living in New York.
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
