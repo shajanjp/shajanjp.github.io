@@ -1,0 +1,69 @@
+body{
+	background-color: #efefef;
+}
+
+section#intro{
+	margin-bottom: 50px;
+	background-size: cover;
+	background-position: center center;
+	padding: 250px 100px;
+	background-repeat: no-repeat, no-repeat;
+	background-color: #999;
+	background-blend-mode: multiply;
+}
+section#intro:hover{
+	background-color: #ccc;
+	background-blend-mode: multiply;
+	-webkit-transition: .3s background ease-in;
+	-o-transition: .3s background ease-in;
+	transition: .3s background ease-in;
+}
+section#intro h1{
+	font-size: 3em;
+	text-align: center;
+	color: white;
+}
+section#intro p{
+	margin: 0px auto;
+	max-width: 800px;
+	font-size: 1.5em;
+	text-align: center;
+	color: white;
+}
+
+#flat .menu,
+#flat .card,
+#flat .card img{
+	border-radius: 0px;
+	border: 0px;
+}
+#flat .menu,
+#flat .card{
+	-webkit-box-shadow: 0 4px 8px -8px #444;
+	box-shadow: 0 4px 8px -8px #444;
+	transition: 0.3s box-shadow ease-in-out;
+
+}
+#flat .menu:hover,
+#flat .card:hover{
+	-webkit-box-shadow: 0 10px 8px -8px #AAA;
+	box-shadow: 0 10px 8px -8px #AAA;
+}
+#flat .menu .item{
+	border-left: 2px solid #fff; 
+}
+#flat .menu .item::before {
+	background: none;
+}
+#flat .menu .item:first-child,
+#flat .menu .item:last-child{
+	border-radius: 0px;
+}
+#flat .menu .item:hover,
+#flat .menu .item.active{
+	background-color: #fff;
+	border-color:#62d2a2;
+	-webkit-transition: border-color 0.2s ease-in-out;
+	-o-transition: border-color 0.2s ease-in-out;
+	transition: border-color 0.2s ease-in-out;
+}
