@@ -2,6 +2,13 @@ body{
 	background-color: #efefef;
 }
 
+.space.bottom{
+	margin-bottom:25px;
+}
+.space.top{
+	margin-top: 25px;
+}
+
 section#intro{
 	margin-bottom: 50px;
 	background-size: cover;
@@ -30,7 +37,11 @@ section#intro p{
 	text-align: center;
 	color: white;
 }
-
+#flat .form .field input,
+#flat .form .field textarea,
+#flat .form .button{
+	border-radius: 0px;
+}
 #flat .menu,
 #flat .card,
 #flat .card img{
@@ -66,4 +77,24 @@ section#intro p{
 	-webkit-transition: border-color 0.2s ease-in-out;
 	-o-transition: border-color 0.2s ease-in-out;
 	transition: border-color 0.2s ease-in-out;
+}
+
+section#contact-form{
+	background-color: #88d498;
+	padding: 50px 0px;
+}
+
+section#contact-form input,
+section#contact-form textarea{
+	background-color: #fff;
+	border: 0px;
+}
+section#contact-form button{
+	background-color: #fff;
+	color:#555;
+}
+
+section#social-profiles{
+	background-color: #fff;
+	padding: 50px 0px;
 }
