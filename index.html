@@ -43,12 +43,13 @@ layout : default
 					<a class="item">Photography</a>
 				</div>
 			</div>
+
 			<div class="thirteen wide column">
 				
 				<section id="recent-blogs">
 					<h2 class="ui header">Recent Blogs</h2>
 					<div class="ui four stackable cards">
-					
+
 						<div class="ui card flat">
 							<div class="image">
 								<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
@@ -112,74 +113,128 @@ layout : default
 					</div>
 				</section><!-- Recent Blogs -->
 
+			</div> <!-- Main Area -->
+			
 
-				<h2 class="ui header">Recent Projects</h2>
-				<div class="ui stackable two cards">
-
-					<div class="ui card flat">
-						<div class="image">
-							<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
-						</div>
-						<div class="content">
-							<a class="header">Project 1</a>
-							<div class="meta">
-								<span class="date">Joined in 2013</span>
-							</div>
-							<div class="description">
-								Kristy is an art director living in New York.
-							</div>
-						</div>
-					</div>
-
-					<div class="ui card flat">
-						<div class="image">
-							<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
-						</div>
-						<div class="content">
-							<a class="header">Project 2</a>
-							<div class="meta">
-								<span class="date">Joined in 2013</span>
-							</div>
-							<div class="description">
-								Kristy is an art director living in New York.
-							</div>
-						</div>
-					</div>
-
-					<div class="ui card flat">
-						<div class="image">
-							<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
-						</div>
-						<div class="content">
-							<a class="header">Project 3</a>
-							<div class="meta">
-								<span class="date">Joined in 2013</span>
-							</div>
-							<div class="description">
-								Kristy is an art director living in New York.
-							</div>
-						</div>
-					</div>
-
-					<div class="ui card flat">
-						<div class="image">
-							<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
-						</div>
-						<div class="content">
-							<a class="header">Project 4</a>
-							<div class="meta">
-								<span class="date">Joined in 2013</span>
-							</div>
-							<div class="description">
-								Kristy is an art director living in New York.
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
 		</div>
 	</div>
+
+	<div class="ui container">
+		<section id="recent-projects" class="space top bottom">
+			<h2 class="ui header">Recent Projects</h2>
+			<div class="ui stackable four cards">
+
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+					</div>
+					<div class="content">
+						<a class="header">Project 1</a>
+						<div class="meta">
+							<span class="date">Joined in 2013</span>
+						</div>
+						<div class="description">
+							Kristy is an art director living in New York.
+						</div>
+					</div>
+				</div>
+
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+					</div>
+					<div class="content">
+						<a class="header">Project 1</a>
+						<div class="meta">
+							<span class="date">Joined in 2013</span>
+						</div>
+						<div class="description">
+							Kristy is an art director living in New York.
+						</div>
+					</div>
+				</div>
+
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+					</div>
+					<div class="content">
+						<a class="header">Project 2</a>
+						<div class="meta">
+							<span class="date">Joined in 2013</span>
+						</div>
+						<div class="description">
+							Kristy is an art director living in New York.
+						</div>
+					</div>
+				</div>
+
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+					</div>
+					<div class="content">
+						<a class="header">Project 4</a>
+						<div class="meta">
+							<span class="date">Joined in 2013</span>
+						</div>
+						<div class="description">
+							Kristy is an art director living in New York.
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</div>
+
+
+	<section id="contact-form" class="space top">
+		<div class="ui text container">
+			<div class="ui form">
+				<div class="two fields">
+					<div class="field">
+						<label for="">Full Name</label>
+						<input type="text" placeholder="John Doe">
+					</div>
+					<div class="field">
+						<label for="">Email</label>
+						<input type="text" placeholder="johnd@gmail.com">
+					</div>
+				</div>
+				<div class="field">
+					<label for="">Message</label>
+					<textarea name="" id="" rows="6" placeholder="Your message goes here..."></textarea>
+				</div>
+				<button class="ui green button" type="submit">Submit</button>
+			</div>	
+		</div>
+	</section>
+
+	<section id="social-profiles" class="">
+		<div class="ui container">
+			<div class="ui equal width grid">
+				<a href="" class="column">
+					<img class="ui medium circular image" src="http://icons.iconarchive.com/icons/danleech/simple/1024/pinterest-icon.png">
+				</a>
+				<a href="" class="column">
+					<img class="ui medium circular image" src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+				</a>
+				<a href="" class="column">
+					<img class="ui medium circular image" src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+				</a>
+				<a href="" class="column">
+					<img class="ui medium circular image" src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+				</a>
+				<a href="" class="column">
+					<img class="ui medium circular image" src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+				</a>
+				<a href="" class="column">
+					<img class="ui medium circular image" src="https://api.adorable.io/avatars/256/{{ site.social.email }}">
+				</a>	
+			</div>
+		</div>
+	</section>
 
 </body>
 </html>
