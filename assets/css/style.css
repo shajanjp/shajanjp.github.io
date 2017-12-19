@@ -62,11 +62,15 @@ section#intro{
 	margin-bottom: 50px;
 	background-size: cover;
 	background-position: center center;
-	padding: 250px 100px;
 	background-repeat: no-repeat, no-repeat;
 	background-color: #999;
 	background-blend-mode: multiply;
 }
+
+section#intro .content{
+	padding:200px 0px;
+}
+
 section#intro:hover{
 	background-color: #ccc;
 	background-blend-mode: multiply;
@@ -76,6 +80,7 @@ section#intro:hover{
 }
 section#intro h1{
 	font-size: 3em;
+	font-weight: 100;
 	text-align: center;
 	color: white;
 }
@@ -83,6 +88,7 @@ section#intro p{
 	margin: 0px auto;
 	max-width: 800px;
 	font-size: 1.5em;
+	font-weight: 100;
 	text-align: center;
 	color: white;
 }
@@ -90,6 +96,7 @@ section#intro p{
 #flat h2{
 	color: #444;
 	font-weight: 100;
+	font-size: 2.5em;
 }
 
 #flat .form .field input,
@@ -153,7 +160,7 @@ section#contact-form label{
 }
 
 section#social-profiles{
-	background-color: #fff;
+	/*background-color: #fff;*/
 	padding: 75px 0px;
 }
 section#social-profiles h2{
