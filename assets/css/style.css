@@ -129,21 +129,32 @@ section#intro p{
 }
 
 section#contact-form{
-	background-color: #88d498;
+	background-color: #3399dd;
 	padding: 50px 0px;
 }
-
 section#contact-form input,
 section#contact-form textarea{
 	background-color: #fff;
 	border: 0px;
+	color: #3399dd;
 }
 section#contact-form button{
 	background-color: #fff;
-	color:#555;
+	color:#3399dd;
+}
+section#contact-form label{
+	color:#fff;
 }
 
 section#social-profiles{
 	background-color: #fff;
-	padding: 50px 0px;
+	padding: 75px 0px;
+}
+section#social-profiles h2{
+	color: #777;
+	margin-bottom: 30px;
+}
+
+section h4.white.header{
+	color:#fff;
 }
