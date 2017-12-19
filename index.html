@@ -89,10 +89,10 @@ layout : default
 					<div class="content">
 						<a class="header" href="{{ project.url }}">{{ project.title }}</a>
 						<div class="meta">
-							<span class="date">{{ project.date | date_to_string}}</span>
+							<span class="date">{{ project.summary }}</span>
 						</div>
 						<div class="description">
-							{{ project.content | truncate: 64 }}
+							{{ project.description | truncate: 64 }}
 						</div>
 					</div>
 				</div>
