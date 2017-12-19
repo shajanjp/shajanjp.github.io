@@ -86,6 +86,11 @@ section#intro p{
 	text-align: center;
 	color: white;
 }
+
+#flat h2{
+	color: #444;
+}
+
 #flat .form .field input,
 #flat .form .field textarea,
 #flat .form .button{
