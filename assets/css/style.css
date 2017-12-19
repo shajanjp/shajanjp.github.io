@@ -98,7 +98,9 @@ section#intro p{
 	font-weight: 100;
 	font-size: 2.5em;
 }
-
+#flat .card .header{
+	font-weight: normal;
+}
 #flat .form .field input,
 #flat .form .field textarea,
 #flat .form .button{
