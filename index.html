@@ -50,18 +50,18 @@ layout : default
 					<h2 class="ui header">Recent Blogs</h2>
 					<div class="ui four stackable cards">
 
-						{% for project in site.categories.project %}
+						{% for blog in site.categories.blog %}
 						<div class="ui card flat">
 							<div class="image">
 								<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
 							</div>
 							<div class="content">
-								<a class="header">{{ project.title }}</a>
+								<a class="header" href="{{ blog.url }}">{{ blog.title }}</a>
 								<div class="meta">
-									<span class="date">{{ project.date | date_to_long_string}}</span>
+									<span class="date">{{ blog.date | date_to_string}}</span>
 								</div>
 								<div class="description">
-									{{ project.content | truncate: 64 }}
+									{{ blog.content | truncate: 64 }}
 								</div>
 							</div>
 						</div>
