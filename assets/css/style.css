@@ -89,6 +89,7 @@ section#intro p{
 
 #flat h2{
 	color: #444;
+	font-weight: 100;
 }
 
 #flat .form .field input,
@@ -162,4 +163,6 @@ section#social-profiles h2{
 
 section h4.white.header{
 	color:#fff;
+	font-size: 2em;
+	font-weight: 100;
 }
