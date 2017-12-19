@@ -25,8 +25,12 @@ layout : default
 <body id="flat">
 
 	<section id="intro" style="background-image: url('{{ site.banner }}');">
-		<h1>{{ site.title }}</h1>
-		<p>{{ site.description }}</p>
+		<div class="content">
+			<h1>{{ site.title }}</h1>
+			<p>{{ site.description }}</p>
+		</div>
+		<img src="assets/img/res/polygon-bg.svg" style="width: 100%; -webkit-transform: scaleY(-1);
+		transform: scaleY(-1); margin-bottom: -7px">
 	</section>
 
 	<div class="ui container">
@@ -102,8 +106,9 @@ layout : default
 		</section>
 	</div>
 
-
-	<section id="contact-form" class="space top">
+	<img src="assets/img/res/polygon.svg" style="width: 100%; -webkit-transform: scaleX(-1) scaleY(-1);
+	transform: scaleX(-1) scaleY(-1); margin-bottom: -7px">
+	<section id="contact-form">
 		<div class="ui text container">
 			<h4 class="ui white header">Say hello.</h4>
 			<div class="ui form">
@@ -125,6 +130,8 @@ layout : default
 			</div>	
 		</div>
 	</section>
+
+	<img src="assets/img/res/polygon.svg" style="width: 100%;">
 
 	<section id="social-profiles" class="">
 		<div class="ui container">
