@@ -29,59 +29,52 @@ layout : default
 			<h1>{{ site.title }}</h1>
 			<p>{{ site.description }}</p>
 		</div>
-		<img src="assets/img/res/polygon-bg.svg" style="width: 100%; -webkit-transform: scaleY(-1);
-		transform: scaleY(-1); margin-bottom: -7px">
+		<img src="assets/img/res/polygon-1.svg" class="divider-slope mb flipped-y">
 	</section>
 
-	<div class="ui container">
-		<div class="ui stackable grid">
-			<div class="three wide column">
-				<div class="ui fluid vertical menu flat">
-					<a class="active item">Home</a>
-					<a class="item">About</a>
-					<a class="item">Projects</a>
-					<a class="item">Contact</a>
-					<a class="item">Hire</a>
-					<a class="item">Resume</a>
-					<a class="item">Blog</a>
-					<a class="item">Photography</a>
-				</div>
-			</div>
 
-			<div class="thirteen wide column">
-				
-				<section id="recent-blogs">
-					<h2 class="ui header">Recent Blogs</h2>
-					<div class="ui four stackable cards">
-
-						{% for blog in site.categories.blog %}
-						<div class="ui card flat">
-							<div class="image">
-								<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
-							</div>
-							<div class="content">
-								<a class="header" href="{{ blog.url }}">{{ blog.title }}</a>
-								<div class="meta">
-									<span class="date">{{ blog.date | date_to_string}}</span>
-								</div>
-								<div class="description">
-									{{ blog.content | truncate: 64 }}
-								</div>
-							</div>
-						</div>
-						{% endfor %}
-
+	<section id="main-jumbo">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<div class="three wide column">
+					<div class="ui fluid vertical menu flat">
+						<a class="active item">Home</a>
+						<a class="item">About</a>
+						<a class="item">Projects</a>
+						<a class="item">Contact</a>
+						<a class="item">Hire</a>
+						<a class="item">Resume</a>
+						<a class="item">Blog</a>
+						<a class="item">Photography</a>
 					</div>
-				</section><!-- Recent Blogs -->
+				</div>
 
-			</div> <!-- Main Area -->
-			
+				<div class="thirteen wide column">
 
+					<section id="about-me">
+						<h2 class="ui header">Hello...</h2>
+						<p>I'm Linus, a Finnish-American software engineer who is the creator, and for a long time, principal developer of the Linux kernel, which became the kernel for operating systems such as the Linux operating system, Android, and Chrome OS. He also created the distributed revision control system Git and the diving logging and planning software Subsurface. He was honored, along with Shinya Yamanaka, with the 2012 Millennium Technology Prize by the Technology Academy Finland "in recognition of his creation of a new open source operating system for computers leading to the widely used Linux kernel". He is also the recipient of the 2014 IEEE Computer Society Computer Pioneer Award.</p>
+					</section><!-- Recent Blogs -->
+
+				</div> <!-- Main Area -->
+
+			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class="ui container">
-		<section id="recent-projects" class="space top bottom">
+	<img src="assets/img/res/polygon-2.svg" class="divider-slope flipped-y mb">
+
+	<section id="what-i-do" class="content">
+		<div class="ui container">
+			<h2 class="ui white header">I do</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cumque incidunt cupiditate amet at repudiandae delectus inventore, praesentium assumenda blanditiis quisquam laborum nisi corrupti fuga dicta facere commodi id doloribus voluptatem animi natus neque perspiciatis. Sit vel suscipit laboriosam similique esse tempora laudantium enim porro asperiores, corporis distinctio dolorum, quae necessitatibus deleniti magni repellendus animi commodi tempore debitis ea! Ipsa error maiores placeat fugiat et minima saepe, laudantium? Nemo aspernatur aperiam enim ad nulla perferendis hic sapiente totam molestias dolorum molestiae laudantium, nam dicta doloribus ratione eaque animi autem, dolorem? Autem illum numquam corrupti adipisci, quae aliquid, nisi quos dolorum non, soluta necessitatibus minima. Quam maiores ipsa provident. Iure nam perspiciatis sapiente expedita distinctio minus voluptas omnis amet commodi consectetur ducimus fugiat quasi temporibus cupiditate ex excepturi laudantium modi tenetur accusamus, laborum beatae dicta fuga, aut officia! Omnis ratione at optio est aut non id praesentium, blanditiis dignissimos vel, modi inventore dolorum facilis, dolorem maxime, provident ducimus tempore quisquam. Eum error quis vel maiores inventore, cumque quo reiciendis assumenda corporis sunt molestias dolorem delectus repudiandae enim, fugiat dignissimos repellat facere, optio doloribus! Suscipit vel maiores id quaerat ex cupiditate debitis veniam recusandae magnam quisquam. Quidem repellat, quod illum omnis vel!</p>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-2.svg" class="divider-slope flipped-x">
+
+	<section id="recent-projects">
+		<div class="ui container">
 			<h2 class="ui header">Recent Projects</h2>
 			<div class="ui stackable four cards">
 
@@ -103,11 +96,12 @@ layout : default
 				{% endfor %}
 
 			</div>
-		</section>
-	</div>
+			<a href="" class="ui button mt">View More</a>
+		</div>
+	</section>
 
-	<img src="assets/img/res/polygon.svg" style="width: 100%; -webkit-transform: scaleX(-1) scaleY(-1);
-	transform: scaleX(-1) scaleY(-1); margin-bottom: -7px">
+	<img src="assets/img/res/polygon-3.svg" class="divider-slope flipped-y mb">
+
 	<section id="contact-form">
 		<div class="ui text container">
 			<h4 class="ui white header">Say hello.</h4>
@@ -131,7 +125,7 @@ layout : default
 		</div>
 	</section>
 
-	<img src="assets/img/res/polygon.svg" style="width: 100%;">
+	<img src="assets/img/res/polygon-3.svg" class="divider-slope flipped-x mb">
 
 	<section id="social-profiles" class="">
 		<div class="ui container">
@@ -161,6 +155,75 @@ layout : default
 					<img class="ui medium circular image" src="assets/img/social/youtube-logo.jpg">
 				</a>
 			</div>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-4.svg" class="divider-slope flipped-y mb">
+
+	<section id="photos-header" class="content">
+		<div class="ui container">
+			<h2 class="ui center aligned white header">Moments Captured By Me</h2>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-4.svg" class="divider-slope flipped-x mb">
+
+	<section id="recent-blogs" class="content">
+		<div class="ui container">
+			<div class="ui stackable four cards">
+
+				{% for photo in site.posts limit:4 %}
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+					</div>
+					<div class="content">
+						<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
+						<div class="meta">
+							<span class="date">{{ photo.date | date_to_string }}</span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+			<a href="" class="ui button mt">View More</a>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-5.svg" class="divider-slope flipped-y mb">
+
+	<section id="recent-blogs-header" class="content">
+		<div class="ui container">
+			<h2 class="ui center aligned white header">Recent blogs</h2>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-5.svg" class="divider-slope flipped-x mb">
+
+	<section id="recent-blogs" class="content">
+		<div class="ui container">
+			<div class="ui stackable four cards">
+				
+				{% for project in site.posts limit:4 %}
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+					</div>
+					<div class="content">
+						<a class="header" href="{{ project.url }}">{{ project.title }}</a>
+						<div class="meta">
+							<span class="date">{{ project.summary }}</span>
+						</div>
+						<div class="description">
+							{{ project.description | truncate: 64 }}
+						</div>
+					</div>
+				</div>
+				
+				{% endfor %}
+			</div>
+			<a href="" class="ui button mt">View More</a>
 		</div>
 	</section>
 
