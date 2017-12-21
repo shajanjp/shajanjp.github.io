@@ -232,6 +232,11 @@ section h4.white.header{
 	font-weight: 100;
 }
 
+section#about-me a,
+section#about-me .hl{
+	color: #e84545;
+}
+
 section#about-me p{
 	font-size: 1.3em;
 	font-weight: 100;
