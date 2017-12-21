@@ -1,42 +1,241 @@
 ---
-title: "About Me"
-tags: ["about", "shajan jacob", "shajanjp", "developer", "guys who code"]
-layout: page
+layout : default
 ---
-<section id="about-me">
- <p>I'm Shajan Jacob.</p>
- <p>Software engineer from kochi, working as NodeJS developer at <a href="https://cubettech.com/">Cubet Techno Labs.</a></p>
- <p><a href="https://en.wikipedia.org/wiki/MEAN_%28software_bundle%29" target="_blank">MEAN stack</a> is my playground. But I still remember the days I wrote PHP, bash, VB and lines of python.</p>
- <p>I help startup companies and local businesses to setup their online presence with custom websites and social marketing.</p>
- <p>As a full-stack web developer, I've worked for (and continue to work for) companies like <a href="http://www.guyswhocode.com" target="_blank">Guys Who Code</a>, <a href="http://altssolution.com" target="_blank">Alts Solutions</a> and <a href="http://www.bakebrand.com" target="_blank">BakeBrand</a>.</p>
- <p>I like working with people and organizations who dare to change the world to make it a better place.</p>
- <p>The green lines in printed circuit boards always fascinated me ever since I was a child.</p>
- <p>That's how I fell in love with electronics. Now I'm crazy about <a href="https://www.raspberrypi.org/help/what-is-a-raspberry-pi/" target="_blank">Pi</a> and <a href="https://en.wikipedia.org/wiki/Internet_of_Things" target="_blank">IoT</a>.</p>
- <p>But mostly, I hang out with my friends and family, play with lights, sleep under the woods, & listen to music.</p>
- <p>When you don't find me with them, I'm making <a href="https://github.com/shajanjp">magic</a> with machines, <a href="https://www.hackster.io/shajanjp">hacking</a> stuff, learning things, writing <a href="/blog" target="_blank"> blog</a>, and getting lost on the internet.</p>
- <p>I love what I do and always look forward to help others find what they love.</p>
- <p>Why not <a href="tel:+91-974795237">say hello</a>? I'd love <a href="mailto:shajanjp@gmail.com?Subject=Hello">hearing</a> from you.</p>
- <p>Lets connect..</p>
-</section>
 
-<section id="profile-urls">
-  <a href="http://www.facebook.com/shajanjp" target="_blank" class="color-facebook">Facebook</a>
-  <a href="http://www.youtube.com/user/shajanjp" target="_blank" class="color-youtube">Youtube</a>
-  <a href="http://www.twitter.com/shajanjacob" target="_blank" class="color-twitter">Twitter</a>
-  <a href="https://github.com/shajanjp" target="_blank" class="color-github">GitHub</a>
-  <a href="http://pinterest.com/shajanjp/" target="_blank" class="color-pinterest">Pinterest</a>
-  <a href="http://www.instagram.com/shajanjp" target="_blank" class="color-instagram">Instagram</a>
-  <a href="https://ifttt.com/people/shajanjp" target="_blank" class="color-ifttt">IFTTT</a>
-  <a href="https://plus.google.com/u/0/101168609596261617402" target="_blank" class="color-google-plus">Google+</a>
-  <a href="http://www.about.me/shajan" target="_blank"  class="color-about-me">About.me</a>
-  <a href="http://www.soundcloud.com/shajanjp" target="_blank" class="color-soundcloud">Soundcloud</a>
-  <a href="http://www.shajanjp.deviantart.com" target="_blank" class="color-deviantart">DeviantArt</a>
-  <a href="http://in.linkedin.com/in/shajanjp" target="_blank" class="color-linkedin">Linkedin</a>
-  <a href="http://www.reddit.com/user/shajanjp/" target="_blank" class="color-reddit">Reddit</a>
-  <a href="http://www.stumbleupon.com/stumbler/shajanjp" target="_blank" class="color-stumbleupon">Stumbler</a>
-  <a href="https://foursquare.com/user/23519081" target="_blank" class="color-foursquare">Foursquare</a>
-  <a href="http://www.slideshare.net/shajanjp" target="_blank" class="color-slideshare">Slideshare</a>
-  <a href="http://dribbble.com/shajanjp" target="_blank" class="color-dribbble">Dribbble</a>
-  <a href="http://www.kickstarter.com/profile/shajanjp" target="_blank" class="color-kickstarter">KickStarrter</a>
-  <a href="http://www.codepen.io/shajanjp" target="_blank" class="color-github">Codepen</a>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ site.title }}</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/reset.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/site.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/grid.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/container.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/button.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/table.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/image.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/header.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/card.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/menu.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/form.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/input.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.1/components/image.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="flat">
+
+	<section id="intro" style="background-image: url('{{ site.baseurl }}/assets/img/shajan-jacob.jpg');">
+		<div class="content">
+			<h1>{{ site.title }}</h1>
+			<p>{{ site.description }}</p>
+		</div>
+		<img src="assets/img/res/polygon-1.svg" class="divider-slope mb flipped-y">
+	</section>
+
+
+	<section id="main-jumbo">
+		<div class="ui container">
+			<div class="ui stackable grid">
+				<div class="three wide column">
+					<div class="ui fluid vertical menu flat">
+						<a class="active item">Home</a>
+						<a class="item">About</a>
+						<a class="item">Projects</a>
+						<a class="item">Contact</a>
+						<a class="item">Hire</a>
+						<a class="item">Resume</a>
+						<a class="item">Blog</a>
+						<a class="item">Photography</a>
+					</div>
+				</div>
+
+				<div class="thirteen wide column">
+
+					<section id="about-me">
+						<h2 class="ui header">Hello...</h2>
+						<p>I'm Shajan Jacob.</p>
+						<p>Software engineer from kochi, working as NodeJS developer at Cubet Techno Labs.</p>
+						<p>MEAN stack is my playground. But I still remember the days I wrote PHP, bash, VB and lines of python.
+							I help startup companies and local businesses to setup their online presence with custom websites and social marketing.
+							As a full-stack web developer, I've worked for (and continue to work for) companies like Guys Who Code, Alts Solutions and BakeBrand.
+						I like working with people and organizations who dare to change the world to make it a better place.</p>
+						<p>The green lines in printed circuit boards always fascinated me ever since I was a child.
+							That's how I fell in love with electronics. Now I'm crazy about Pi and IoT.
+							But mostly, I hang out with my friends and family, play with lights, sleep under the woods, &amp listen to music.
+						When you don't find me with them, I'm making magic with machines, hacking stuff, learning things, writing blog, and getting lost on the internet.</p>
+						<p>I love what I do and always look forward to help others find what they love.</p>
+					</section><!-- Recent Blogs -->
+
+				</div> <!-- Main Area -->
+
+			</div>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-2.svg" class="divider-slope flipped-y mb">
+
+	<section id="what-i-do" class="content">
+		<div class="ui container">
+			<h2 class="ui white header">I do</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cumque incidunt cupiditate amet at repudiandae delectus inventore, praesentium assumenda blanditiis quisquam laborum nisi corrupti fuga dicta facere commodi id doloribus voluptatem animi natus neque perspiciatis. Sit vel suscipit laboriosam similique esse tempora laudantium enim porro asperiores, corporis distinctio dolorum, quae necessitatibus deleniti magni repellendus animi commodi tempore debitis ea! Ipsa error maiores placeat fugiat et minima saepe, laudantium? Nemo aspernatur aperiam enim ad nulla perferendis hic sapiente totam molestias dolorum molestiae laudantium, nam dicta doloribus ratione eaque animi autem, dolorem? Autem illum numquam corrupti adipisci, quae aliquid, nisi quos dolorum non, soluta necessitatibus minima. Quam maiores ipsa provident. Iure nam perspiciatis sapiente expedita distinctio minus voluptas omnis amet commodi consectetur ducimus fugiat quasi temporibus cupiditate ex excepturi laudantium modi tenetur accusamus, laborum beatae dicta fuga, aut officia! Omnis ratione at optio est aut non id praesentium, blanditiis dignissimos vel, modi inventore dolorum facilis, dolorem maxime, provident ducimus tempore quisquam. Eum error quis vel maiores inventore, cumque quo reiciendis assumenda corporis sunt molestias dolorem delectus repudiandae enim, fugiat dignissimos repellat facere, optio doloribus! Suscipit vel maiores id quaerat ex cupiditate debitis veniam recusandae magnam quisquam. Quidem repellat, quod illum omnis vel!</p>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-2.svg" class="divider-slope flipped-x">
+
+	<section id="recent-projects">
+		<div class="ui container">
+			<h2 class="ui header">Recent Projects</h2>
+			<div class="ui stackable four cards">
+
+				{% for project in site.categories.project limit:4 %}
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+					</div>
+					<div class="content">
+						<a class="header" href="{{ project.url }}">{{ project.title }}</a>
+						<div class="meta">
+							<span class="date">{{ project.summary }}</span>
+						</div>
+						<div class="description">
+							{{ project.description | truncate: 64 }}
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+			<a href="" class="ui button mt">View More</a>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-3.svg" class="divider-slope flipped-y mb">
+
+	<section id="contact-form">
+		<div class="ui text container">
+			<h4 class="ui white header">Say hello.</h4>
+			<div class="ui form">
+				<div class="two fields">
+					<div class="field">
+						<label for="">Full Name</label>
+						<input type="text" placeholder="John Doe">
+					</div>
+					<div class="field">
+						<label for="">Email</label>
+						<input type="text" placeholder="johnd@gmail.com">
+					</div>
+				</div>
+				<div class="field">
+					<label for="">Message</label>
+					<textarea name="" id="" rows="6" placeholder="Your message goes here..."></textarea>
+				</div>
+				<button class="ui green button" type="submit">Submit</button>
+			</div>	
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-3.svg" class="divider-slope flipped-x mb">
+
+	<section id="social-profiles" class="">
+		<div class="ui container">
+			<div class="ui equal width doubling grid">
+				<a target="_blank" href="http://facebook.com/{{ site.social.facebook }}" class="column animated jello infinite" data-tooltip="facebook">
+					<img class="ui medium circular image" src="assets/img/social/facebook-logo.jpg">
+				</a>
+				<a target="_blank" href="http://github.com/{{ site.social.github }}" class="column animated jello infinite" data-tooltip="github">
+					<img class="ui medium circular image" src="assets/img/social/github-logo.jpg">
+				</a>
+				<a target="_blank" href="http://instagram.com/{{ site.social.instagram }}" class="column animated jello infinite" data-tooltip="instagram">
+					<img class="ui medium circular image" src="assets/img/social/instagram-logo.jpg">
+				</a>
+				<a target="_blank" href="http://linkedin.com/{{ site.social.linkedin }}" class="column animated jello infinite" data-tooltip="linkedin">
+					<img class="ui medium circular image" src="assets/img/social/linkedin-logo.jpg">
+				</a>
+				<a target="_blank" href="http://pinterest.com/{{ site.social.pinterest }}" class="column animated jello infinite" data-tooltip="pinterest">
+					<img class="ui medium circular image" src="assets/img/social/pinterest-logo.jpg">
+				</a>
+				<a target="_blank" href="http://skype.com/{{ site.social.skype }}" class="column animated jello infinite" data-tooltip="skype">
+					<img class="ui medium circular image" src="assets/img/social/skype-logo.jpg">
+				</a>
+				<a target="_blank" href="http://twitter.com/{{ site.social.twitter }}" class="column animated jello infinite" data-tooltip="twitter">
+					<img class="ui medium circular image" src="assets/img/social/twitter-logo.jpg">
+				</a>
+				<a target="_blank" href="http://youtube.com/{{ site.social.youtube }}" class="column animated jello infinite" data-tooltip="youtube">
+					<img class="ui medium circular image" src="assets/img/social/youtube-logo.jpg">
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-4.svg" class="divider-slope flipped-y mb">
+
+	<section id="photos-header" class="content">
+		<div class="ui container">
+			<h2 class="ui center aligned white header">Moments Captured By Me</h2>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-4.svg" class="divider-slope flipped-x mb">
+
+	<section id="recent-blogs" class="content">
+		<div class="ui container">
+			<div class="ui stackable four cards">
+
+				{% for photo in site.posts limit:4 %}
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+					</div>
+					<div class="content">
+						<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
+						<div class="meta">
+							<span class="date">{{ photo.date | date_to_string }}</span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+			<a href="" class="ui button mt">View More</a>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-5.svg" class="divider-slope flipped-y mb">
+
+	<section id="recent-blogs-header" class="content">
+		<div class="ui container">
+			<h2 class="ui center aligned white header">Recent blogs</h2>
+		</div>
+	</section>
+
+	<img src="assets/img/res/polygon-5.svg" class="divider-slope flipped-x mb">
+
+	<section id="recent-blogs" class="content">
+		<div class="ui container">
+			<div class="ui stackable four cards">
+				
+				{% for project in site.posts limit:4 %}
+				<div class="ui card flat">
+					<div class="image">
+						<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+					</div>
+					<div class="content">
+						<a class="header" href="{{ project.url }}">{{ project.title }}</a>
+						<div class="meta">
+							<span class="date">{{ project.summary }}</span>
+						</div>
+						<div class="description">
+							{{ project.description | truncate: 64 }}
+						</div>
+					</div>
+				</div>
+				
+				{% endfor %}
+			</div>
+			<a href="" class="ui button mt">View More</a>
+		</div>
+	</section>
+
+</body>
+</html>
