@@ -52,8 +52,7 @@ layout : default
 
 	<section id="what-i-do" class="content">
 		<div class="ui container">
-			<h2 class="ui white header">I do</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cumque incidunt cupiditate amet at repudiandae delectus inventore, praesentium assumenda blanditiis quisquam laborum nisi corrupti fuga dicta facere commodi id doloribus voluptatem animi natus neque perspiciatis. Sit vel suscipit laboriosam similique esse tempora laudantium enim porro asperiores, corporis distinctio dolorum, quae necessitatibus deleniti magni repellendus animi commodi tempore debitis ea! Ipsa error maiores placeat fugiat et minima saepe, laudantium? Nemo aspernatur aperiam enim ad nulla perferendis hic sapiente totam molestias dolorum molestiae laudantium, nam dicta doloribus ratione eaque animi autem, dolorem? Autem illum numquam corrupti adipisci, quae aliquid, nisi quos dolorum non, soluta necessitatibus minima. Quam maiores ipsa provident. Iure nam perspiciatis sapiente expedita distinctio minus voluptas omnis amet commodi consectetur ducimus fugiat quasi temporibus cupiditate ex excepturi laudantium modi tenetur accusamus, laborum beatae dicta fuga, aut officia! Omnis ratione at optio est aut non id praesentium, blanditiis dignissimos vel, modi inventore dolorum facilis, dolorem maxime, provident ducimus tempore quisquam. Eum error quis vel maiores inventore, cumque quo reiciendis assumenda corporis sunt molestias dolorem delectus repudiandae enim, fugiat dignissimos repellat facere, optio doloribus! Suscipit vel maiores id quaerat ex cupiditate debitis veniam recusandae magnam quisquam. Quidem repellat, quod illum omnis vel!</p>
+			<h2 class="ui white centered header" id="desc">I'm <span id="who"></span></h2>
 		</div>
 	</section>
 
@@ -213,5 +212,22 @@ layout : default
 		</div>
 	</section>
 
+	<script>
+		let me = ["a Photographer","a Hacker","an Engineer","a Programmer","a Maker","a Designer","a Storyteller"];
+		let whoDiv = document.getElementById("who");
+		let counter = 0;
+
+		function changeWho(){
+			if (counter >= me.length) {
+				counter = 0;
+			}
+			whoDiv.innerHTML = me[counter];
+			counter++;
+			setTimeout(changeWho, 1500);
+		}
+
+		changeWho();
+
+	</script>
 </body>
 </html>

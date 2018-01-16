@@ -186,9 +186,9 @@ section#what-i-do{
 	background-color: #e84545;
 	color: #fff;
 }
-section#what-i-do p{
-font-size: 1.3em;
-font-weight: 100;
+section#what-i-do h2{
+	font-size: 3em;
+	font-weight: 100;
 }
 
 section#contact-form{
