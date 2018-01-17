@@ -81,7 +81,7 @@ layout : default
 				{% endfor %}
 
 			</div>
-			<a href="" class="ui button mt">View More</a>
+			{% if site.categories.project > 0 %}<a href="" class="ui button mt">View More</a>{% endif %}
 		</div>
 	</section>
 
@@ -172,7 +172,7 @@ layout : default
 				{% endfor %}
 
 			</div>
-			<a href="" class="ui button mt">View More</a>
+			{% if site.categories.photography > 0 %}<a href="" class="ui button mt">View More</a>{% endif %}
 		</div>
 	</section>
 
@@ -208,7 +208,7 @@ layout : default
 				
 				{% endfor %}
 			</div>
-			<a href="" class="ui button mt">View More</a>
+			{% if site.categories.blog > 0 %}<a href="" class="ui button mt">View More</a>{% endif %}
 		</div>
 	</section>
 
