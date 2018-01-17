@@ -87,20 +87,18 @@ section.content h2{
 
 
 section#intro{
+	background-color: #333;
 	margin-bottom: 50px;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat, no-repeat;
-	background-color: #999;
 	background-blend-mode: multiply;
 }
-
 section#intro .content{
 	padding:200px 0px;
 }
-
 section#intro:hover{
-	background-color: #ccc;
+	background-color: #444;
 	background-blend-mode: multiply;
 	-webkit-transition: .3s background ease-in;
 	-o-transition: .3s background ease-in;
