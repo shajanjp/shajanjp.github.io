@@ -6,26 +6,24 @@ layout: page
 ---
 
 <section id="recent-projects">
-  <div class="ui container">
-    <div class="ui stackable four cards">
+  <div class="ui stackable four cards">
 
-      {% for project in site.categories.project %}
-      <div class="ui card flat">
-        <div class="image">
-          <img src="{% if project.thumbnail %}{{ site.baseurl }}/uploads/{{ project.thumbnail }}{% else %}{{ site.baseurl }}/uploads/projects/thumbnails/default-logo.jpg{% endif %}">
+    {% for project in site.categories.project %}
+    <div class="ui card flat">
+      <div class="image">
+        <img src="{% if project.thumbnail %}{{ site.baseurl }}/uploads/{{ project.thumbnail }}{% else %}{{ site.baseurl }}/uploads/projects/thumbnails/default-logo.jpg{% endif %}">
+      </div>
+      <div class="content">
+        <a class="header" href="{{ project.url }}">{{ project.title }}</a>
+        <div class="meta">
+          <span class="date">{{ project.summary }}</span>
         </div>
-        <div class="content">
-          <a class="header" href="{{ project.url }}">{{ project.title }}</a>
-          <div class="meta">
-            <span class="date">{{ project.summary }}</span>
-          </div>
-          <div class="description">
-            {{ project.description | truncate: 64 }}
-          </div>
+        <div class="description">
+          {{ project.description | truncate: 64 }}
         </div>
       </div>
-      {% endfor %}
-
     </div>
+    {% endfor %}
+
   </div>
 </section>
