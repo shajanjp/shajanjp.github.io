@@ -1,28 +1,7 @@
 ---
+layout: default
 ---
-<!DOCTYPE html>
-<html>
-<head>
-  {% include head_meta.html %}
-  {% include styles.html %}
-</head>
-<body>
-  <div class="container"> <!-- main container -->
-    <div class="row">
-      {% include navigation.html %}
-      <div class="col-sm-10"> <!-- content block -->
-        <div class="row">
-          <div class="col-sm-12">
-            <header>
-              <h1><a href="/">{{ site.title }}</a></h1> - <h2>{{ page.title }}</h2>
-            </header>
-            {{ content }}
-          </div>
-        </div>
-      </div> <!-- content block -->
-    </div>
-    {% include footer.html %}
-  </div> <!-- main containe -->
-  {% include scripts.html %}
-</body>
-</html>
+
+{% include jumbo-header.html %}
+<h1 class="ui centered page header" id="desc">{{ page.title }}</h1>
+{{ content }}
