@@ -2,232 +2,206 @@
 layout : default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>{{ site.title }}</title>
-	{% include styles.html %}
-</head>
-<body id="flat">
+{% include jumbo-header.html %}
 
-	<section id="intro">
-		<div class="content">
-			<h1>{{ site.title }}</h1>
-			<p>{{ site.description }}</p>
+
+<section id="main-jumbo">
+	<div class="ui container">
+		<div class="ui stackable grid">
+			<div class="three wide column">
+			{% include navigation.html %}
+			</div>
+
+			<div class="thirteen wide column">
+
+				<section id="about-me">
+					{% include about-me.html %}
+				</section><!-- Recent Blogs -->
+
+			</div> <!-- Main Area -->
+
 		</div>
-		<img src="assets/img/res/polygon-1.svg" class="divider-slope mb flipped-y">
-	</section>
+	</div>
+</section>
 
+<img src="{{ site.baseurl }}/assets/img/res/polygon-2.svg" class="divider-slope flipped-y mb">
 
-	<section id="main-jumbo">
-		<div class="ui container">
-			<div class="ui stackable grid">
-				<div class="three wide column">
-					<div class="ui fluid vertical menu flat">
-						<a class="active item">Home</a>
-						<a class="item">About</a>
-						<a class="item">Projects</a>
-						<a class="item">Contact</a>
-						<a class="item">Hire</a>
-						<a class="item">Resume</a>
-						<a class="item">Blog</a>
-						<a class="item">Photography</a>
+<section id="what-i-do" class="content">
+	<div class="ui container">
+		<h2 class="ui white centered header" id="desc">I'm <span id="who"></span></h2>
+	</div>
+</section>
+
+<img src="{{ site.baseurl }}/assets/img/res/polygon-2.svg" class="divider-slope flipped-x">
+
+<section id="recent-projects">
+	<div class="ui container">
+		<h2 class="ui header">Recent Projects</h2>
+		<div class="ui stackable four cards">
+
+			{% for project in site.categories.project limit:4 %}
+			<div class="ui card flat">
+				<div class="image">
+					<img src="{{ site.baseurl }}/uploads/{{ project.thumbnail }}">
+				</div>
+				<div class="content">
+					<a class="header" href="{{ project.url }}">{{ project.title }}</a>
+					<div class="meta">
+						<span class="date">{{ project.summary }}</span>
+					</div>
+					<div class="description">
+						{{ project.description | truncate: 64 }}
 					</div>
 				</div>
-
-				<div class="thirteen wide column">
-
-					<section id="about-me">
-						{% include about-me.html %}
-					</section><!-- Recent Blogs -->
-
-				</div> <!-- Main Area -->
-
 			</div>
+			{% endfor %}
+
 		</div>
-	</section>
+		{% if site.categories.project | size > 0 %}<a href="/projects.html" class="ui button mt">View More</a>{% endif %}
+	</div>
+</section>
 
-	<img src="assets/img/res/polygon-2.svg" class="divider-slope flipped-y mb">
+<img src="{{ site.baseurl }}/assets/img/res/polygon-3.svg" class="divider-slope flipped-y mb">
 
-	<section id="what-i-do" class="content">
-		<div class="ui container">
-			<h2 class="ui white centered header" id="desc">I'm <span id="who"></span></h2>
-		</div>
-	</section>
-
-	<img src="assets/img/res/polygon-2.svg" class="divider-slope flipped-x">
-
-	<section id="recent-projects">
-		<div class="ui container">
-			<h2 class="ui header">Recent Projects</h2>
-			<div class="ui stackable four cards">
-
-				{% for project in site.categories.project limit:4 %}
-				<div class="ui card flat">
-					<div class="image">
-						<img src="{{ site.baseurl }}/uploads/{{ project.thumbnail }}">
-					</div>
-					<div class="content">
-						<a class="header" href="{{ project.url }}">{{ project.title }}</a>
-						<div class="meta">
-							<span class="date">{{ project.summary }}</span>
-						</div>
-						<div class="description">
-							{{ project.description | truncate: 64 }}
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-
-			</div>
-			{% if site.categories.project > 0 %}<a href="" class="ui button mt">View More</a>{% endif %}
-		</div>
-	</section>
-
-	<img src="assets/img/res/polygon-3.svg" class="divider-slope flipped-y mb">
-
-	<section id="contact-form">
-		<div class="ui text container">
-			<h4 class="ui white header">Say hello.</h4>
-			<div class="ui form">
-				<div class="two fields">
-					<div class="field">
-						<label for="">Full Name</label>
-						<input type="text" placeholder="John Doe">
-					</div>
-					<div class="field">
-						<label for="">Email</label>
-						<input type="text" placeholder="johnd@gmail.com">
-					</div>
+<section id="contact-form">
+	<div class="ui text container">
+		<h4 class="ui white header">Say hello.</h4>
+		<div class="ui form">
+			<div class="two fields">
+				<div class="field">
+					<label for="">Full Name</label>
+					<input type="text" placeholder="John Doe">
 				</div>
 				<div class="field">
-					<label for="">Message</label>
-					<textarea name="" id="" rows="6" placeholder="Your message goes here..."></textarea>
+					<label for="">Email</label>
+					<input type="text" placeholder="johnd@gmail.com">
 				</div>
-				<button class="ui green button" type="submit">Submit</button>
-			</div>	
-		</div>
-	</section>
-
-	<img src="assets/img/res/polygon-3.svg" class="divider-slope flipped-x mb">
-
-	<section id="social-profiles" class="">
-		<div class="ui container">
-			<div class="ui equal width doubling grid">
-				<a target="_blank" href="http://facebook.com/{{ site.social.facebook }}" class="column animated jello infinite" data-tooltip="facebook">
-					<img class="ui medium circular image" src="assets/img/social/facebook-logo.jpg">
-				</a>
-				<a target="_blank" href="http://github.com/{{ site.social.github }}" class="column animated jello infinite" data-tooltip="github">
-					<img class="ui medium circular image" src="assets/img/social/github-logo.jpg">
-				</a>
-				<a target="_blank" href="http://instagram.com/{{ site.social.instagram }}" class="column animated jello infinite" data-tooltip="instagram">
-					<img class="ui medium circular image" src="assets/img/social/instagram-logo.jpg">
-				</a>
-				<a target="_blank" href="http://linkedin.com/{{ site.social.linkedin }}" class="column animated jello infinite" data-tooltip="linkedin">
-					<img class="ui medium circular image" src="assets/img/social/linkedin-logo.jpg">
-				</a>
-				<a target="_blank" href="http://pinterest.com/{{ site.social.pinterest }}" class="column animated jello infinite" data-tooltip="pinterest">
-					<img class="ui medium circular image" src="assets/img/social/pinterest-logo.jpg">
-				</a>
-				<a target="_blank" href="http://skype.com/{{ site.social.skype }}" class="column animated jello infinite" data-tooltip="skype">
-					<img class="ui medium circular image" src="assets/img/social/skype-logo.jpg">
-				</a>
-				<a target="_blank" href="http://twitter.com/{{ site.social.twitter }}" class="column animated jello infinite" data-tooltip="twitter">
-					<img class="ui medium circular image" src="assets/img/social/twitter-logo.jpg">
-				</a>
-				<a target="_blank" href="http://youtube.com/{{ site.social.youtube }}" class="column animated jello infinite" data-tooltip="youtube">
-					<img class="ui medium circular image" src="assets/img/social/youtube-logo.jpg">
-				</a>
 			</div>
+			<div class="field">
+				<label for="">Message</label>
+				<textarea name="" id="" rows="6" placeholder="Your message goes here..."></textarea>
+			</div>
+			<button class="ui green button" type="submit">Submit</button>
+		</div>	
+	</div>
+</section>
+
+<img src="{{ site.baseurl }}/assets/img/res/polygon-3.svg" class="divider-slope flipped-x mb">
+
+<section id="social-profiles" class="">
+	<div class="ui container">
+		<div class="ui equal width doubling grid">
+			<a target="_blank" href="http://facebook.com/{{ site.social.facebook }}" class="column animated jello infinite" data-tooltip="facebook">
+				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/facebook-logo.jpg">
+			</a>
+			<a target="_blank" href="http://github.com/{{ site.social.github }}" class="column animated jello infinite" data-tooltip="github">
+				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/github-logo.jpg">
+			</a>
+			<a target="_blank" href="http://instagram.com/{{ site.social.instagram }}" class="column animated jello infinite" data-tooltip="instagram">
+				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/instagram-logo.jpg">
+			</a>
+			<a target="_blank" href="http://linkedin.com/{{ site.social.linkedin }}" class="column animated jello infinite" data-tooltip="linkedin">
+				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/linkedin-logo.jpg">
+			</a>
+			<a target="_blank" href="http://pinterest.com/{{ site.social.pinterest }}" class="column animated jello infinite" data-tooltip="pinterest">
+				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/pinterest-logo.jpg">
+			</a>
+			<a target="_blank" href="http://skype.com/{{ site.social.skype }}" class="column animated jello infinite" data-tooltip="skype">
+				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/skype-logo.jpg">
+			</a>
+			<a target="_blank" href="http://twitter.com/{{ site.social.twitter }}" class="column animated jello infinite" data-tooltip="twitter">
+				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/twitter-logo.jpg">
+			</a>
+			<a target="_blank" href="http://youtube.com/{{ site.social.youtube }}" class="column animated jello infinite" data-tooltip="youtube">
+				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/youtube-logo.jpg">
+			</a>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<img src="assets/img/res/polygon-4.svg" class="divider-slope flipped-y mb">
+<img src="{{ site.baseurl }}/assets/img/res/polygon-4.svg" class="divider-slope flipped-y mb">
 
-	<section id="photos-header" class="content">
-		<div class="ui container">
-			<h2 class="ui center aligned white header">Moments Captured By Me</h2>
-		</div>
-	</section>
+<section id="photos-header" class="content">
+	<div class="ui container">
+		<h2 class="ui center aligned white header">Moments Captured By Me</h2>
+	</div>
+</section>
 
-	<img src="assets/img/res/polygon-4.svg" class="divider-slope flipped-x mb">
+<img src="{{ site.baseurl }}/assets/img/res/polygon-4.svg" class="divider-slope flipped-x mb">
 
-	<section id="recent-blogs" class="content">
-		<div class="ui container">
-			<div class="ui stackable four cards">
+<section id="recent-blogs" class="content">
+	<div class="ui container">
+		<div class="ui stackable four cards">
 
-				{% for photo in site.categories.photography limit:4 %}
-				<div class="ui card flat">
-					<div class="image">
-						<img src="{{ site.baseurl }}/uploads/photography/thumbnails/{{ photo.thumbnail }}">
-					</div>
-					<div class="content">
-						<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
-						<div class="meta">
-							<span class="date">{{ photo.date | date_to_string }}</span>
-						</div>
-					</div>
+			{% for photo in site.categories.photography limit:4 %}
+			<div class="ui card flat">
+				<div class="image">
+					<img src="{{ site.baseurl }}/uploads/{{ photo.thumbnail }}">
 				</div>
-				{% endfor %}
-
-			</div>
-			{% if site.categories.photography > 0 %}<a href="" class="ui button mt">View More</a>{% endif %}
-		</div>
-	</section>
-
-	<img src="assets/img/res/polygon-5.svg" class="divider-slope flipped-y mb">
-
-	<section id="recent-blogs-header" class="content">
-		<div class="ui container">
-			<h2 class="ui center aligned white header">Recent blogs</h2>
-		</div>
-	</section>
-
-	<img src="assets/img/res/polygon-5.svg" class="divider-slope flipped-x mb">
-
-	<section id="recent-blogs" class="content">
-		<div class="ui container">
-			<div class="ui stackable four cards">
-				
-				{% for project in site.categories.blog limit:4 %}
-				<div class="ui card flat">
-					<div class="image">
-						<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
-					</div>
-					<div class="content">
-						<a class="header" href="{{ project.url }}">{{ project.title }}</a>
-						<div class="meta">
-							<span class="date">{{ project.summary }}</span>
-						</div>
-						<div class="description">
-							{{ project.description | truncate: 64 }}
-						</div>
+				<div class="content">
+					<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
+					<div class="meta">
+						<span class="date">{{ photo.date | date_to_string }}</span>
 					</div>
 				</div>
-				
-				{% endfor %}
 			</div>
-			{% if site.categories.blog > 0 %}<a href="" class="ui button mt">View More</a>{% endif %}
+			{% endfor %}
+
 		</div>
-	</section>
+		{% if site.categories.photography | size > 0 %}<a href="/photography.html" class="ui button mt">View More</a>{% endif %}
+	</div>
+</section>
 
-	<script>
-		let me = ["a Photographer","a Hacker","an Engineer","a Programmer","a Maker","a Designer","a Storyteller"];
-		let whoDiv = document.getElementById("who");
-		let counter = 0;
+<img src="{{ site.baseurl }}/assets/img/res/polygon-5.svg" class="divider-slope flipped-y mb">
 
-		function changeWho(){
-			if (counter >= me.length) {
-				counter = 0;
-			}
-			whoDiv.innerHTML = me[counter];
-			counter++;
-			setTimeout(changeWho, 1500);
+<section id="recent-blogs-header" class="content">
+	<div class="ui container">
+		<h2 class="ui center aligned white header">Recent blogs</h2>
+	</div>
+</section>
+
+<img src="{{ site.baseurl }}/assets/img/res/polygon-5.svg" class="divider-slope flipped-x mb">
+
+<section id="recent-blogs" class="content">
+	<div class="ui container">
+		<div class="ui stackable four cards">
+
+			{% for project in site.categories.blog limit:4 %}
+			<div class="ui card flat">
+				<div class="image">
+					<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+				</div>
+				<div class="content">
+					<a class="header" href="{{ project.url }}">{{ project.title }}</a>
+					<div class="meta">
+						<span class="date">{{ project.summary }}</span>
+					</div>
+					<div class="description">
+						{{ project.description | truncate: 64 }}
+					</div>
+				</div>
+			</div>
+
+			{% endfor %}
+		</div>
+		{% if site.categories.blog | size > 0 %}<a href="/blog.html" class="ui button mt">View More</a>{% endif %}
+	</div>
+</section>
+
+<script>
+	let me = ["a Photographer","a Hacker","an Engineer","a Programmer","a Maker","a Designer","a Storyteller"];
+	let whoDiv = document.getElementById("who");
+	let counter = 0;
+
+	function changeWho(){
+		if (counter >= me.length) {
+			counter = 0;
 		}
+		whoDiv.innerHTML = me[counter];
+		counter++;
+		setTimeout(changeWho, 1500);
+	}
 
-		changeWho();
+	changeWho();
 
-	</script>
-</body>
-</html>
+</script>
