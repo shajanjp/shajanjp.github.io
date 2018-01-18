@@ -41,6 +41,7 @@ section.content h2{
 	font-weight: lighter;
 	font-size: 3em;
 	color: #444;
+	margin-bottom: 50px;
 }
 
 .animated:hover {
@@ -130,8 +131,6 @@ section#main-jumbo{
 }
 
 section#recent-projects{
-	/*background-color: #6be5b0;*/
-	padding: 40px 0px;
 }
 
 #flat h2{
