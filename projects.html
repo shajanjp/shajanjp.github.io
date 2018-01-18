@@ -1,21 +1,32 @@
 ---
 title: "Projects"
+description: ""
 tags: ["shajan jacob", "shajanjp", "projects", "developer", "guyswhocode"]
 layout: page
 ---
-<section id="projects">
-  <ul>
-    {% for project in site.data.projects %}    
-    <li class="project">
-      <p class="heading">{{ project.title }}</p>
-      <p><a href="{{ project.url }}" target="_blank">{{ project.url }}</a></p>
-      <p>{{ project.description }}</p>
-      <p class="tags">
-        {% for tag in project.tags %}    
-        <span>{{ tag }}</span>
-        {% endfor %}   
-      </p>
-    </li>
-    {% endfor %}
-  </ul>
+
+<section id="recent-projects">
+  <div class="ui container">
+    <div class="ui stackable four cards">
+
+      {% for project in site.categories.project %}
+      <div class="ui card flat">
+        <div class="image">
+          <img src="{% if project.thumbnail %}{{ site.baseurl }}/uploads/{{ project.thumbnail }}{% else %}{{ site.baseurl }}/uploads/projects/thumbnails/default-logo.jpg{% endif %}">
+        </div>
+        <div class="content">
+          <a class="header" href="{{ project.url }}">{{ project.title }}</a>
+          <div class="meta">
+            <span class="date">{{ project.summary }}</span>
+          </div>
+          <div class="description">
+            {{ project.description | truncate: 64 }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+    {% if site.categories.project | size > 0 %}<a href="/projects.html" class="ui button mt">View More</a>{% endif %}
+  </div>
 </section>
