@@ -3,69 +3,75 @@ title: "Resume"
 tags: ["shajan jacob", "shajanjp", "resume", "CV", "developer", "guyswhocode"]
 layout: page
 ---
+
 <section id="resume">
-  <a href="/shajan-jacob-resume.pdf" class="heading">Download Resume</a><br />
-  <div class="text-center">
-    <p>Shajan Jacob</p> 
-    <p>shajanjp@gmail.com</p>
-    <p>+91 9747952378</p>
-    <p>Cochin, India</p>
+
+  <a href="https://github.com/shajanjp/cv/raw/master/cv.pdf" class="ui right floated button">Download Resume</a><br />
+  <div class="name-and-brief">
+   <p>Shajan Jacob</p>
+   <p>shajanjp@gmail.com</p>
+   <p>+91 9747952378</p>
+   <p>Cochin, India</p>
+ </div>
+
+ <h3>EDUCATION</h3>
+ <p>Bachelor of Engineering in Computer Science (2012 - 2017)</p>
+ <p>T JOHN INSTITUTE OF TECHNOLOGY</p>
+
+ <h3>PROJECTS</h3>
+ <section id="projects">
+  <div class="ui stackable three cards">
+    {% for project in site.categories.project %}    
+    <div class="ui card">
+      <div class="content">
+        <a class="header">{{ project.title }}</a>
+        <div class="meta">
+          <span class="date">{{ project.description | truncate: 64 }}</span>
+        </div>
+      </div>
+      <div class="extra content">
+        <a href="{{ project.visit }}">
+          <i class="users icon"></i>
+          View
+        </a>
+      </div>
+    </div>
+    {% endfor %}
   </div>
+</section>
 
-  <h3>EDUCATION</h3>
-  <p>Bachelor of Engineering in Computer Science (2012 - 2017)</p>
-  <p>T JOHN INSTITUTE OF TECHNOLOGY</p>
+<h3>SKILLS</h3>
+<ul>
+  <li><p>HTML [Expert]</p></li>
+  <li><p>CSS [Expert]</p></li>
+  <li><p>NodeJS [Intermediate]</p></li>
+  <li><p>MongoDB [Intermediate]</p></li>
+  <li><p>PHP [Intermediate]</p></li>
+  <li><p>Linux [Expert]</p></li>
+  <li><p>JavaScript [Intermediate]</p></li>
+  <li><p>Bootstrap [Expert]</p></li>
+  <li><p>MySQL [Intermediate]</p></li>
+  <li><p>jQuery [Intermediate]</p></li>
+  <li><p>Python [Beginner]</p></li>
+  <li><p>AngularJS [Beginner]</p></li>
+</ul>
 
-  <h3>PROJECTS</h3>
-  <section id="projects">
-    <ul>
-      {% for project in site.data.projects %}    
-      <li class="project">
-        <p class="heading">{{ project.title }}</p>
-        <p><a href="{{ project.url }}" target="_blank">{{ project.url }}</a></p>
-        <p>{{ project.description }}</p>
-        <p class="tags">
-          {% for tag in project.tags %}    
-          <span>{{ tag }}</span>
-          {% endfor %}   
-        </p>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <h3>SKILLS</h3>
-  <ul>
-    <li><p>HTML [Expert]</p></li>
-    <li><p>CSS [Expert]</p></li>
-    <li><p>NodeJS [Intermediate]</p></li>
-    <li><p>MongoDB [Intermediate]</p></li>
-    <li><p>PHP [Intermediate]</p></li>
-    <li><p>Linux [Expert]</p></li>
-    <li><p>JavaScript [Intermediate]</p></li>
-    <li><p>Bootstrap [Expert]</p></li>
-    <li><p>MySQL [Intermediate]</p></li>
-    <li><p>jQuery [Intermediate]</p></li>
-    <li><p>Python [Beginner]</p></li>
-    <li><p>AngularJS [Beginner]</p></li>
-  </ul>
-
-  <h3>WORK SAMPLES &amp PROFILES</h3>
-  <ul>  
-    <li>
-      <a href="http://shajanjacob.com/blog">Blog</a>
-    </li>
-    <li>
-      <a href="http://github.com/shajanjp">Github</a>
-    </li>
-    <li>
-      <a href="http://behance.net/shajanjp">Behance</a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/shajanjp/">LinkedIn</a>
-    </li>
-    <li>
-      <a href="http://guyswhocode.com/shajanjp" title="Guys Who Code">Guys Who Code</a>
-    </li>
-  </ul>
+<h3>WORK SAMPLES &amp PROFILES</h3>
+<ul>  
+  <li>
+    <a href="http://shajanjacob.com/blog">Blog</a>
+  </li>
+  <li>
+    <a href="http://github.com/shajanjp">Github</a>
+  </li>
+  <li>
+    <a href="http://behance.net/shajanjp">Behance</a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/shajanjp/">LinkedIn</a>
+  </li>
+  <li>
+    <a href="http://guyswhocode.com/shajanjp" title="Guys Who Code">Guys Who Code</a>
+  </li>
+</ul>
 </section>
