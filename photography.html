@@ -1,12 +1,29 @@
 ---
-title: "Photography"
+title: "Moments I captured"
+description: ""
 tags: ["shajan jacob", "shajanjp", "photography", "gallery"]
 layout: page
 ---
-<section id="photography">
-	<div class="row">
-		{% for photograph in site.data.photographs %}
-		<div class="col-sm-3"><div class="photo"><img src="/posts/photography/thumbs/{{ photograph.file }}" alt="{{ photograph.title }}"><p class="tagline">{{ photograph.title }}</p></div></div>
-		{% endfor %}
+
+<section id="recent-blogs" class="content">
+	<div class="ui container">
+		<div class="ui stackable four cards">
+
+			{% for photo in site.categories.photography limit:4 %}
+			<div class="ui card flat">
+				<div class="image">
+					<img src="{{ site.baseurl }}/uploads/{{ photo.thumbnail }}">
+				</div>
+				<div class="content">
+					<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
+					<div class="meta">
+						<span class="date">{{ photo.date | date_to_string }}</span>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+
+		</div>
+		{% if site.categories.photography | size > 0 %}<a href="/photography.html" class="ui button mt">View More</a>{% endif %}
 	</div>
 </section>
