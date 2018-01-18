@@ -4,4 +4,13 @@ layout: default
 
 {% include jumbo-header.html %}
 <h1 class="ui centered page header" id="desc">{{ page.title }}</h1>
-{{ content }}
+<div class="ui container">	
+	<div class="ui grid">
+		<div class="three wide column">
+			{% include navigation.html %}
+		</div>
+		<div class="thirteen wide column">
+			{{ content }}
+		</div>
+	</div>
+</div>
