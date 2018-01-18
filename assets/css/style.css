@@ -29,6 +29,9 @@ body{
 #flat .mt{
 margin-top: 20px;
 }
+#flat .table{
+  border-radius: 0px;
+}
 section.content{
 	padding: 50px 0px;
 }
