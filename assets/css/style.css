@@ -37,6 +37,12 @@ section.content h2{
 	font-weight: lighter;
 }
 
+.ui.page.header{
+	font-weight: lighter;
+	font-size: 3em;
+	color: #444;
+}
+
 .animated:hover {
 	animation-duration: 1s;
 	animation-fill-mode: both;
