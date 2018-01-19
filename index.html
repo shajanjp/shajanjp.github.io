@@ -66,23 +66,24 @@ layout : default
 <section id="contact-form">
 	<div class="ui text container">
 		<h4 class="ui white header">Say hello.</h4>
-		<div class="ui form">
-			<div class="two fields">
-				<div class="field">
-					<label for="">Full Name</label>
-					<input type="text" placeholder="John Doe">
-				</div>
-				<div class="field">
-					<label for="">Email</label>
-					<input type="text" placeholder="johnd@gmail.com">
-				</div>
-			</div>
-			<div class="field">
-				<label for="">Message</label>
-				<textarea name="" id="" rows="6" placeholder="Your message goes here..."></textarea>
-			</div>
-			<button class="ui green button" type="submit">Submit</button>
-		</div>	
+    <form action="https://formspree.io/shajanjp@gmail.com" method="POST" class="ui form">
+      <div class="two fields">
+        <div class="field">
+          <label for="">Full Name</label>
+          <input type="text" name="name" placeholder="Full Name">
+        </div>
+        <div class="field">
+          <label for="">Email</label>
+          <input type="email" name="_replyto" placeholder="Email">
+        </div>
+      </div>
+      <div class="field">
+        <label for="">Message</label>
+        <textarea name="" id="" rows="6" name="feedback" rows="4" placeholder="Feedback here"></textarea>
+        <input type="hidden" name="_next" value="http://shajanjacob.com">
+      </div>
+      <button class="ui green button" type="submit">Submit</button>
+    </form> 	
 	</div>
 </section>
 
