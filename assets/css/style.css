@@ -12,7 +12,7 @@ body{
 	margin-bottom: -7px;
 }
 #flat section h2.white.header{
-	color: #efefef;
+	color: #555;
 }
 .divider-slope{
 	width: 100%;
@@ -189,8 +189,7 @@ section#recent-projects{
 	transition: border-color 0.2s ease-in-out;
 }
 section#what-i-do{
-	background-color: #e84545;
-	color: #fff;
+	color: #555;
 }
 section#what-i-do h2{
 	font-size: 3em;
@@ -222,14 +221,6 @@ section#social-profiles{
 section#social-profiles h2{
 	color: #777;
 	margin-bottom: 30px;
-}
-
-section#photos-header{
-	background-color: #1b4079;
-}
-
-section#recent-blogs-header{
-	background-color: #333333;
 }
 
 section h4.white.header{
