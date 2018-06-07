@@ -1,4 +1,4 @@
-<section id="intro" style="{% if page.thumbnail %}background-image: url('/uploads/{{page.thumbnail}}');{% endif %}background-size: cover;">
+<section id="intro" style="{% if page.cover %}background-image: url('/uploads/{{page.cover}}');{% endif %}background-size: cover;">
 	<div class="content">
 		<h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
 		<p>{%if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</p>
