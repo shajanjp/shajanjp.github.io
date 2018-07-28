@@ -1,7 +1,9 @@
 body{
 	background-color: #efefef;
 }
-
+article{
+	font-size: 1.2em;
+}
 .space.bottom{
 	margin-bottom:25px;
 }
