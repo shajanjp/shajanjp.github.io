@@ -8,3 +8,5 @@ visit: "https://github.com/shajanjp/wind-spinner"
 technologies: ["C", "OpenGL"]
 categories: ["project"]
 ---
+
+<p>Animated wind-spinner made with OpenGL.</p>

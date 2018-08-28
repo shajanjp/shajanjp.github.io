@@ -7,3 +7,5 @@ visit: "http://mindprick.github.io"
 technologies: ["NodeJS", "ExpressJS", "MongoDB", "EJS", "jQuery", "Bootstrap"]
 categories: ["project"]
 ---
+
+<p>Campus Management System with the all the features need for the smooth running of accademics. Contains 32 modules.</p>
