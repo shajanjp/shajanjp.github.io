@@ -1,0 +1,10 @@
+---
+layout: page
+---
+
+{{ content }}
+
+Tagged in :
+{% for tag in page.tags %}
+ <div class="ui tiny button">{{ tag }}</div>
+{% endfor %}

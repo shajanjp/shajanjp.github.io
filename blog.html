@@ -5,14 +5,14 @@ tags: ["shajan jacob", "shajanjp", "blog", "articles"]
 layout: page
 ---
 
-<section id="recent-blogs" class="content">
+<section id="recent-blogs">
 	<div class="ui container">
 		<div class="ui stackable four cards">
 
 			{% for project in site.categories.blog %}
 			<div class="ui card flat">
 				<div class="image">
-					<img src="https://api.adorable.io/avatars/256/abott@adorable.png">
+					<img src="https://api.adorable.io/avatars/256/{{ project.title }}.png">
 				</div>
 				<div class="content">
 					<a class="header" href="{{ project.url }}">{{ project.title }}</a>
@@ -24,8 +24,8 @@ layout: page
 					</div>
 				</div>
 			</div>
-
 			{% endfor %}
+
 		</div>
 	</div>
 </section>
