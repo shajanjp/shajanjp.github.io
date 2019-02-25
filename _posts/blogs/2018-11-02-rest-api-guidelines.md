@@ -1,7 +1,7 @@
 ---		
 layout: blog
 title: "REST API Guidelines"
-thumbnail: "blogs/thumbnails/rest-api-guidelines.png"
+thumbnail: "blogs/thumbnails/rest-api-guidelines.jpg"
 summary: "Checklist for building REST APIs"
 description: ""
 tags: ["test", "tech"]
