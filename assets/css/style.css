@@ -235,6 +235,7 @@ section#about-me .hl{
 }
 
 section#about-me p{
+	text-align: justify; 
 	font-size: 1.3em;
 	font-weight: 100;
 }
