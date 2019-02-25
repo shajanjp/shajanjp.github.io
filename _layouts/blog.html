@@ -1,10 +1,23 @@
 ---
-layout: page
+layout: default
 ---
 
-{{ content }}
-
-Tagged in :
-{% for tag in page.tags %}
- <div class="ui tiny button">{{ tag }}</div>
-{% endfor %}
+{% include jumbo-header.html %}
+<div class="ui container">  
+  <div class="ui stackable grid" style="margin-top: 20px;">
+    <div class="three wide column">
+      {% include navigation.html %}
+    </div>
+    <div class="nine wide column">
+      {{ content }}
+      Tagged in :
+      {% for tag in page.tags %}
+      <div class="ui tiny button">{{ tag }}</div>
+      {% endfor %}
+    </div>
+    <div class="four wide column">
+      <!-- Ads and related contents -->
+    {% include recent-posts.html %}
+    </div>
+  </div>
+</div>
