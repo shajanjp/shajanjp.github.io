@@ -101,9 +101,6 @@ section#intro{
 	background-color: #111111;
 	background-size: cover; 
 	background-position: center;
-	-webkit-transition: .5s all ease-in-out;
-	-o-transition: .5s all ease-in-out;
-	transition: .5s all ease-in-out;
 }
 section#intro .content{
 	padding:200px 0px;
@@ -113,6 +110,9 @@ section#intro:hover{
 	background-image: url("../img/res/home-pattern.png");
 	background-size: auto auto;
 	background-position: center;
+		-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 section#intro h1{
 	font-size: 3em;
