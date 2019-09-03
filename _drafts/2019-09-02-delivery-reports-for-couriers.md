@@ -22,15 +22,23 @@ IFTTT is a service for connecting and automating online services. Almost any web
 One of the interesting thing that IFTTT offers is the webhook service, which can accept and emit web requests. This event can be chained with another service "Notifications" which will do our job.
 
 So, this is how it's going to work.
-We will setup an IFTTT webhook, use it as a trigger and uses "Notifications" service as an action. Encode the webhook request into a QRCode image. Stick this inside the package. Done !
+We will set up an IFTTT webhook, use it as a trigger and uses "Notifications" service as an action. Encode the webhook request into a QRCode image. Stick this inside the package. Done!
 
-Lets break this into steps.
+Let's break this into steps.
 
 Steps :
   * Sign-up / sign-in to IFTTT.
   * Install IFTTT application on mobile.
   * Goto https://ifttt.com/create
   * Click This and choose Webhooks
-  * 
-  8  
-https://ifttt.com/maker_webhooks
+  * Select 'Recieve a web request'
+  * Set Event name as 'ALERT'.
+  * Selet that as notifications
+  * Select 'Send a rich ntification from the IFTTT app'
+  * Fill in title and description for notification
+  * Go to https://ifttt.com/maker_webhooks
+  * Click Documentation and copy key
+  * Goto http://goqr.me/#t=url 
+  * Paste this https://maker.ifttt.com/trigger/ALERT/with/key/<your-webhook-key-here>?value1=PACKAGE_1&value2=DONE
+  * Download QR and stick this inside the package
+  * Wait for the delivery
