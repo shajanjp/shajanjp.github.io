@@ -1,3 +1,4 @@
 #!/bin/bash
-rm ./site/ -rf
+rm ./site/ -rfv
+rm ./.jekyll-cache/ -rfv
 jekyll serve --baseurl "" --watch
