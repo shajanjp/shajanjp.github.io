@@ -11,7 +11,7 @@ layout: page
 		{% for photo in site.categories.photography %}
 		<div class="ui card flat">
 			<div class="image">
-				<img src="{{ site.baseurl }}/uploads/{{ photo.thumbnail }}">
+				<img src="{{ photo.thumbnail }}">
 			</div>
 			<div class="content">
 				<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
