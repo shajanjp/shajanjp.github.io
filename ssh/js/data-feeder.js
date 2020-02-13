@@ -36,7 +36,7 @@ function lsCommand() {
     return line(renderObject(currentPath()));
   } else {
     filesystemPrediction = Object.keys(currentPath());
-    return line(Object.keys(currentPath()).join(' '));
+    return line(Object.keys(currentPath()).join('</br>'));
   }
 }
 
