@@ -16,7 +16,12 @@ function line(content) {
 function renderObject(data) {
   let rData = '';
   for (var k in data) {
+    if(k == 'view'){
+    rData += `<p><span class="c-faded">${k}</span> : <a href="${data[k]}" target="_blank">View</a></p>`;
+    }
+    else{
     rData += `<p><span class="c-faded">${k}</span> : ${data[k]}</p>`;
+    }
   }
   return rData;
 }
@@ -36,7 +41,7 @@ function lsCommand() {
     return line(renderObject(currentPath()));
   } else {
     filesystemPrediction = Object.keys(currentPath());
-    return line(Object.keys(currentPath()).join(' '));
+    return line(Object.keys(currentPath()).join('</br>'));
   }
 }
 

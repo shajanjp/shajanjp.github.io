@@ -4,19 +4,19 @@
   outline: none !important;
 }
 a, a:visited{
-  color: #999;
+  color: #080;
 }
 body{
   font-family: 'Share Tech Mono', monospace;
   background: #000; 
-  color: #fff;
+  color: #0f0;
   font-size: 1em;
 }
 .stdout-text{
   color: #0f0;
 }
 .c-faded{
-  color: #AAA;
+  color: #080;
 }
 table td{
   padding-left: 10px;
@@ -27,7 +27,7 @@ input{
   font-size: 1em;
   height: 1em;
   font-family: 'Share Tech Mono', monospace;
-  color: white;
+  color: #0f0;
   background: black;
   border-color: black !important;
   border: none !important;
