@@ -29,10 +29,10 @@ article{
 	-webkit-transform: scaleX(-1) scaleY(-1);
 }
 #flat .mt{
-margin-top: 20px;
+	margin-top: 20px;
 }
 #flat .table{
-  border-radius: 0px;
+	border-radius: 0px;
 }
 section.content{
 	padding: 50px 0px;
@@ -110,7 +110,7 @@ section#intro:hover{
 	background-image: url("../img/res/home-pattern.png");
 	background-size: auto auto;
 	background-position: center;
-		-webkit-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
@@ -137,6 +137,7 @@ section#main-jumbo{
 section#recent-projects{
 }
 
+/* Flat Plugin */
 #flat h2{
 	color: #444;
 	font-weight: 100;
@@ -247,13 +248,24 @@ section#resume p{
 
 /* Footer Styles*/
 footer{
-  padding: 20px 0px 10px 0px; 
+	padding: 20px 0px 10px 0px; 
 }
 footer span.icon-hearts{
-  color: red;
+	color: red;
 }
 footer p{
-  text-align: center;
+	text-align: center;
+}
+
+/* Thoughts */
+#thoughts-page .card .content{
+	border-radius: 0px !important;
+}
+
+#thoughts-page .card .content{
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
 }
 
 /*9df3c4-6be5b0-62d2a2-1fab89-18876b*/
