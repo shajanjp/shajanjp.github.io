@@ -129,7 +129,7 @@ layout : default
 			{% for photo in site.categories.photography limit:4 %}
 			<div class="ui card flat">
 				<div class="image">
-					<img src="{{ photo.photo }}">
+					<img src="{{site.url}}/uploads/photography/{{ photo.photo }}">
 				</div>
 				<div class="content">
 					<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
