@@ -1,7 +1,7 @@
 ---		
 layout: photo
 title: "Morning sounds are beautiful"
-photo: "https://instagram.fmaa1-4.fna.fbcdn.net/vp/125d410f7476af1374ce2b33829ef952/5E52AC99/t51.2885-15/e35/76961902_1365042196993902_1651133434248737694_n.jpg?_nc_ht=instagram.fmaa1-4.fna.fbcdn.net&_nc_cat=106 1080w"
+photo: "morning-sounds-are-beautiful.jpg"
 description: "ഇടക്കൊക്കെ രാവിലെ എഴുന്നേറ്റ് ചുമ്മാ കണ്ണടച്ചിരുന്നു ശ്രദ്ധിച്ച് കേൾക്കണം.
 എന്തൊക്കെ തരം ശബ്ദങ്ങളാണ്.
 അമ്മ അടുപ്പിൽ തീ കത്തിക്കുന്നത്,
