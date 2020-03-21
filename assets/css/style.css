@@ -244,4 +244,16 @@ section#about-me p{
 section#resume p{
 	font-size: 1.3em;
 }
+
+/* Footer Styles*/
+footer{
+  padding: 20px 0px 10px 0px; 
+}
+footer span.icon-hearts{
+  color: red;
+}
+footer p{
+  text-align: center;
+}
+
 /*9df3c4-6be5b0-62d2a2-1fab89-18876b*/
