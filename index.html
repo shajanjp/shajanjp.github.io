@@ -116,14 +116,9 @@ layout : default
 	</div>
 </section>
 
-<section id="photos-header">
+<section id="recent-photos" class="content">
 	<div class="ui container">
 		<h2 class="ui header">Few moments through my camera</h2>
-	</div>
-</section>
-
-<section id="recent-blogs" class="content">
-	<div class="ui container">
 		<div class="ui stackable four cards">
 
 			{% for photo in site.categories.photography limit:4 %}
@@ -145,14 +140,9 @@ layout : default
 	</div>
 </section>
 
-<section id="recent-blogs-header">
-	<div class="ui container">
-		<h2 class="ui header">Recent blogs</h2>
-	</div>
-</section>
-
 <section id="recent-blogs" class="content">
 	<div class="ui container">
+		<h2 class="ui header">Recent blogs</h2>
 		<div class="ui stackable four cards">
 
 			{% for project in site.categories.blog limit:4 %}

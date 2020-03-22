@@ -134,13 +134,27 @@ section#main-jumbo{
 	padding-bottom: 30px;
 }
 
-section#recent-projects{
+
+/* Diagonal headers*/
+header{
+	padding: 50px 0px 60px 0px;
+	font-family: 'Roboto', sans-serif;
+}
+header h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 4em;
+	color: #555;
+}
+header p{
+	color: #777;
+	font-size: 1.5em;
 }
 
 /* Flat Plugin */
 #flat h2{
 	color: #444;
-	font-weight: 100;
+	font-weight: 300;
 	font-size: 2.5em;
 }
 #flat .button{
@@ -195,7 +209,7 @@ section#what-i-do{
 }
 section#what-i-do h2{
 	font-size: 3em;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 section#contact-form{
@@ -227,7 +241,7 @@ section#social-profiles h2{
 section h4.white.header{
 	color:#fff;
 	font-size: 2em;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 section#about-me a,
@@ -238,7 +252,7 @@ section#about-me .hl{
 section#about-me p{
 	text-align: justify; 
 	font-size: 1.3em;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 
@@ -269,7 +283,7 @@ footer p{
 }
 
 #thoughts-page .thought{
-font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 /*9df3c4-6be5b0-62d2a2-1fab89-18876b*/
