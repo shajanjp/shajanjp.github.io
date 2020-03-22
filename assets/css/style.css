@@ -134,7 +134,21 @@ section#main-jumbo{
 	padding-bottom: 30px;
 }
 
-section#recent-projects{
+
+/* Diagonal headers*/
+header{
+	padding: 50px 0px 60px 0px;
+	font-family: 'Roboto', sans-serif;
+}
+header h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 4em;
+	color: #555;
+}
+header p{
+	color: #777;
+	font-size: 1.5em;
 }
 
 /* Flat Plugin */
@@ -269,7 +283,7 @@ footer p{
 }
 
 #thoughts-page .thought{
-font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 /*9df3c4-6be5b0-62d2a2-1fab89-18876b*/
