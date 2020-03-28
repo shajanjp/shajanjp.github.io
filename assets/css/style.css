@@ -286,4 +286,13 @@ footer p{
 	font-size: 1.5em;
 }
 
+/* Photography */
+.photo-bg{
+	min-height: 100%;
+	background-size: cover !important;
+	background-position: center center !important; 
+	box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, 0.5);
+}
+
+
 /*9df3c4-6be5b0-62d2a2-1fab89-18876b*/
