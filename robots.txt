@@ -1,4 +1,5 @@
 User-Agent: *
 Disallow: /lab/
+Disallow: /home.html
 
 Sitemap: http://shajanjacob.com/sitemap.xml
