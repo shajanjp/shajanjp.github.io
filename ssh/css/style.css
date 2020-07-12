@@ -1,33 +1,42 @@
 * {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
-  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
   outline: none !important;
 }
-a, a:visited{
-  color: #080;
+
+a,
+a:visited {
+  color: #4444FF;
 }
-body{
-  font-family: 'Share Tech Mono', monospace;
-  background: #000; 
-  color: #0f0;
+
+body {
+  font-family: "Hack", sans-serif;
+  background: #000;
+  color: #00cc00;
   font-size: 1em;
+  line-height: 1.3em;
+  padding: 5px;
 }
-.stdout-text{
-  color: #0f0;
+
+.stdout-text {
+  color: #55FF55;
 }
-.c-faded{
-  color: #080;
+
+.c-faded {
+  color: #AAA;
 }
-table td{
+
+table td {
   padding-left: 10px;
-  text-align: left; 
-} 
-input{
+  text-align: left;
+}
+
+input {
   padding-left: 4px;
   font-size: 1em;
   height: 1em;
-  font-family: 'Share Tech Mono', monospace;
-  color: #0f0;
+  font-family: "Hack", sans-serif;
+  color: #00cc00;
   background: black;
   border-color: black !important;
   border: none !important;
