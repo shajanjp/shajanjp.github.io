@@ -2,15 +2,16 @@
 Color palette:  https://coolors.co/ffdd77-77cc77-11bbee-ff7766-666666
 */
 :root {
-  --palette-primary: #1BE;
-  --palette-secondary: #7C7;
+  --palette-primary: #1be;
+  --palette-secondary: #7c7;
   --main-padding: 15px;
 }
 
 body {
   font-size: 16px;
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   line-height: 1.5em;
+  --text-grey: #444;
   --text-primary: #eee;
   --text-secondary: #bbb;
   --bg-primary: #222;
@@ -34,7 +35,7 @@ body {
   --bg-secondary: #bbb;
 }
 
- body {
+body {
   color: var(--text-primary);
   background-color: var(--bg-primary);
   margin: 0;
@@ -129,7 +130,7 @@ main {
 }
 
 .fa-primary {
-  color:var(--text-primary-color);
+  color: var(--text-primary-color);
 }
 
 .fa-secondary {
@@ -251,11 +252,23 @@ main {
   margin-left: auto;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.5em;
   font-weight: lighter;
   display: inline-block;
-  background-image: linear-gradient(90deg, var(--text-primary-color), var(--text-secondary-color));
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    90deg,
+    var(--text-primary-color),
+    var(--text-secondary-color)
+  );
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -263,15 +276,15 @@ h1,h2,h3,h4,h5,h6 {
   text-fill-color: transparent;
 }
 
-::-moz-selection { /* Code for Firefox */
-  color: var(--bg-primary) !important;
-  background: var(--text-primary-color) !important;
-}
+/* ::-moz-selection { */
+/* color: var(--bg-primary) !important; */
+/* background: var(--text-primary-color) !important; */
+/* } */
 
-::selection {
-  color: var(--bg-primary) !important;
-  background: var(--text-primary-color) !important;
-}
+/* ::selection { */
+/* color: var(--bg-primary) !important; */
+/* background: var(--text-primary-color) !important; */
+/* } */
 
 .grid {
   display: flex;
@@ -284,9 +297,37 @@ h1,h2,h3,h4,h5,h6 {
 .photo-preview {
   padding: 1px;
   margin: 1em;
-  background-image: linear-gradient(135deg, var(--palette-primary), var(--palette-secondary));
+  background-image: linear-gradient(
+    135deg,
+    var(--palette-primary),
+    var(--palette-secondary)
+  );
 }
 
-.photo-preview img{
+.photo-preview img {
   width: 100%;
+}
+
+.text-bg {
+  padding: 0 0.25em;
+  color: var(--text-grey);
+}
+.bg-javascript {
+  background: #f7e017;
+}
+.bg-electronics {
+  background: #06d6a0;
+}
+.bg-art{
+  background: #ee6c4d;
+}
+.bg-photograph{
+  background: #0096c7;
+}
+.bg-companies{
+  background: #b07d62;
+}
+
+section#about{
+  line-height: 1.8em;
 }
