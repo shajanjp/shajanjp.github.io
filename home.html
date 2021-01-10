@@ -28,36 +28,39 @@
 
       <section id="about">
         Hi,
-        <li>I'm a full-stack software engineer from Kerala.</li>
-        <li>
-          Absorbs and emits plenty of
-          <span class="text-bg bg-javascript">JavaScript</span>.
-        </li>
-        <li>
-          IoT and <span class="text-bg bg-electronics">electronics</span> fills
-          in my spare time.
-        </li>
-        <li>
-          Appreciates all forms of <span class="text-bg bg-art">art</span>, from
-          picking a color for a font, to building a garden inside my room and
-          everything in between.
-        </li>
-        <li>
-          Apart from my gardening and crafts, I admire taking
-          <span class="text-bg bg-photograph">photographs</span> of moments that
-          anyone doesn't want to miss in a lifetime.
-        </li>
-        <li>
-          I've worked for
-          <span class="text-bg bg-companies">companies</span> like Cubet,
-          BakeBrand and GWC.
-        </li>
+        <ul>
+          <li>I'm a full-stack software engineer from Kerala.</li>
+          <li>
+            Absorbs and emits plenty of
+            <span class="text-bg bg-javascript">JavaScript</span>.
+          </li>
+          <li>
+            IoT and
+            <span class="text-bg bg-electronics">electronics</span> fills in my
+            spare time.
+          </li>
+          <li>
+            Appreciates all forms of <span class="text-bg bg-art">art</span>,
+            from picking a color for a font, to building a garden inside my room
+            and everything in between.
+          </li>
+          <li>
+            Apart from my gardening and crafts, I admire taking
+            <span class="text-bg bg-photograph">photographs</span> of moments
+            that anyone doesn't want to miss in a lifetime.
+          </li>
+          <li>
+            I've worked for
+            <span class="text-bg bg-companies">companies</span> like Cubet,
+            BakeBrand and GWC.
+          </li>
+        </ul>
       </section>
 
       <section id="projects">
         <h2 class="text-gradient">Projects</h2>
         <!-- <div class="row">   -->
-        <ul>
+        <ul class="links">
           {% for project in site.categories.project limit:4 %}
           <!-- <div class="col-lg-6"> -->
           <!-- <div class="image">
@@ -78,7 +81,7 @@
 
       <section id="blog">
         <h2 class="text-gradient">Blog</h2>
-        <ul>
+        <ul class="links">
           {% for blog in site.categories.blog limit:4 %}
           <li>
             <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>

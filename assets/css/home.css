@@ -26,6 +26,14 @@ a {
   text-decoration: none;
 }
 
+a.link:before {
+  content: "↳";
+  display: block;
+  height: 1em;
+  float: left;
+  margin: 0 6px 0 0;
+}
+
 .dark {
   --text-primary: #eee;
   --text-secondary: #bbb;
@@ -182,6 +190,11 @@ main {
 ul,
 ul li:first-child h3 {
   margin-top: 0px;
+}
+
+ul li {
+  list-style-type: "➜";
+  padding-inline-start: 1ch;
 }
 
 /* Small screens */
