@@ -8,7 +8,7 @@ Color palette:  https://coolors.co/ffdd77-77cc77-11bbee-ff7766-666666
 }
 
 body {
-  font-size: 16px;
+  font-size: 1.1em;
   font-family: "Fira Code", monospace;
   line-height: 1.5em;
   --text-grey: #444;
@@ -293,14 +293,14 @@ h6 {
 
 .photo-thumbnail img {
   border-radius: 10%;
-  box-shadow: 0 .8em .8em -1em rgba(0,0,0,0.3);
+  box-shadow: 0 0.8em 0.8em -1em rgba(0, 0, 0, 0.3);
   width: 100%;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .photo-thumbnail img:hover {
-  transition: all .3s ease-in-out;
-  box-shadow: 0 2em 2em -2em rgba(0,0,0,0.5);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2em 2em -2em rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
 }
 
@@ -314,16 +314,16 @@ h6 {
 .bg-electronics {
   background: #06d6a0;
 }
-.bg-art{
+.bg-art {
   background: #ee6c4d;
 }
-.bg-photograph{
+.bg-photograph {
   background: #0096c7;
 }
-.bg-companies{
+.bg-companies {
   background: #b07d62;
 }
 
-section#about{
+section#about {
   line-height: 1.8em;
 }
