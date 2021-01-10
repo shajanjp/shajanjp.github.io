@@ -21,6 +21,11 @@ body {
   --transition-speed: 600ms;
 }
 
+a {
+  color: #06d6a0;
+  text-decoration: none;
+}
+
 .dark {
   --text-primary: #eee;
   --text-secondary: #bbb;

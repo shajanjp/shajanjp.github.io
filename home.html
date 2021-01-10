@@ -22,26 +22,33 @@
       <h1 class="text-gradient">Shajan Jacob</h1>
       
       <section id="about">
-        <br>Hi,
-        <br>I'm a full-stack software engineer from Kerala.
-        <br>Absorbs and emits plenty of <span class="text-bg bg-javascript">JavaScript</span>.
-        <br>IoT and <span class="text-bg bg-electronics">electronics</span> fills in my spare time.
-        <br>Appreciates all forms of <span class="text-bg bg-art">art</span>, from picking a color for a font, to building a garden inside my room and everything in between. 
-        <br>Apart from my gardening and crafts, I admire taking <span class="text-bg bg-photograph">photographs</span> of moments that anyone doesn't want to miss in a lifetime. 
-        <br>I've worked for <span class="text-bg bg-companies">companies</span> like Cubet, BakeBrand and GWC.
-      </section>
-      
-      <section id="thoughts">
-        <h2 class="text-gradient">Thougths</h2>
-        <br>
-        In India, there is a rich heritage of ancient folktales as well as a compiled body of short fiction which shaped the sensibility of modern Indian short story. Some of the famous Sanskrit collection of legends, folktales, fairy tales, and fables are Panchatantra, Hitopadesha and Kathasaritsagara. Jataka tales, originally written in Pali, is a compilation of tales concerning the previous births of Lord Gautama Buddha. The Frame story or frame narrative or story within a story is a narrative technique that probably originated in ancient Indian works such as Panchatantra.        
-        In Europe, the oral story-telling tradition began to develop into written stories in the early 14th century, most notably with Geoffrey Chaucer's Canterbury Tales and Giovanni Boccaccio's Decameron. Both of these books are composed of individual short stories (which range from farce or humorous anecdotes to well-crafted literary fiction) set within a larger narrative story (a frame story), although the frame-tale device was not adopted by all writers. At the end of the 16th century, some of the most popular short stories in Europe were the darkly tragic "novella" of Matteo Bandello (especially in their French translation).
+        Hi,
+        <li>I'm a full-stack software engineer from Kerala.</li>
+        <li>Absorbs and emits plenty of <span class="text-bg bg-javascript">JavaScript</span>.</li>
+        <li>IoT and <span class="text-bg bg-electronics">electronics</span> fills in my spare time.</li>
+        <li>Appreciates all forms of <span class="text-bg bg-art">art</span>, from picking a color for a font, to building a garden inside my room and everything in between. </li>
+        <li>Apart from my gardening and crafts, I admire taking <span class="text-bg bg-photograph">photographs</span> of moments that anyone doesn't want to miss in a lifetime. </li>
+        <li>I've worked for <span class="text-bg bg-companies">companies</span> like Cubet, BakeBrand and GWC.</li>
       </section>
       
       <section id="blog">
         <h2 class="text-gradient">Blog</h2>
         <br>
-        The mid 17th century in France saw the development of a refined short novel, the "nouvelle", by such authors as Madame de Lafayette. In the 1690s, traditional fairy tales began to be published (one of the most famous collections was by Charles Perrault). The appearance of Antoine Galland's first modern translation of the Thousand and One Nights (or Arabian Nights) (from 1704; another translation appeared in 1710–12) would have an enormous influence on the 18th-century European short stories of Voltaire, Diderot and others. 
+        <!-- <div class="row">   -->
+          {% for blog in site.categories.blog limit:4 %}
+          <!-- <div class="col-lg-6"> -->
+            <!-- <div class="image">
+              <img src="{{ site.baseurl }}/uploads/{{blog.thumbnail}}">
+            </div> -->
+            <li>
+              <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
+            <div class="meta">
+              <span class="date">{{ blog.summary }}</span>
+            </div>
+          </li>
+            <!-- </div> -->
+          {% endfor %}
+        <!-- </div> -->
       </section>
       
       <section id="photography">
@@ -61,6 +68,14 @@
           {% endfor %}
         </div>
       </section>
+
+      <section id="thoughts">
+        <h2 class="text-gradient">Thougths</h2>
+        <br>
+        In India, there is a rich heritage of ancient folktales as well as a compiled body of short fiction which shaped the sensibility of modern Indian short story. Some of the famous Sanskrit collection of legends, folktales, fairy tales, and fables are Panchatantra, Hitopadesha and Kathasaritsagara. Jataka tales, originally written in Pali, is a compilation of tales concerning the previous births of Lord Gautama Buddha. The Frame story or frame narrative or story within a story is a narrative technique that probably originated in ancient Indian works such as Panchatantra.        
+        In Europe, the oral story-telling tradition began to develop into written stories in the early 14th century, most notably with Geoffrey Chaucer's Canterbury Tales and Giovanni Boccaccio's Decameron. Both of these books are composed of individual short stories (which range from farce or humorous anecdotes to well-crafted literary fiction) set within a larger narrative story (a frame story), although the frame-tale device was not adopted by all writers. At the end of the 16th century, some of the most popular short stories in Europe were the darkly tragic "novella" of Matteo Bandello (especially in their French translation).
+      </section>
+
     </div>   
   </main>
 </body>
