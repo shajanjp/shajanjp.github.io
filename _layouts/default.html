@@ -5,15 +5,12 @@
   </head>
   <body>
     {% include navbar.html %}
-    <main>
-      <div class="container">
-        <h1 class="text-gradient">
-          {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif
-          %}
-        </h1>
-        <p class="text-gradient">{{page.description}}</p>
-        {{ content }}
-      </div>
+    <main class="container">
+      <h1 class="text-gradient">
+        {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+      </h1>
+      <p class="text-gradient">{{page.description}}</p>
+      {{ content }}
     </main>
     {% include footer.html %} {% include scripts.html %}
   </body>

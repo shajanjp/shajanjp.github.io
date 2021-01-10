@@ -26,28 +26,33 @@ a {
   text-decoration: none;
 }
 
-a.link:before {
-  content: "↳";
+h2 a:after,
+h3 a:after {
+  content: "\2197";
   display: block;
   height: 1em;
-  float: left;
-  margin: 0 6px 0 0;
+  float: right;
+  margin: 0 0 0 6px;
 }
 
 .dark {
-  --text-primary: #eee;
-  --text-secondary: #bbb;
-  --text-dimmed: #777;
   --bg-primary: #222;
-  --bg-secondary: #333;
+  --bg-secondary: #444;
+  --text-dimmed: #777;
+  --text-secondary: #bbb;
+  --text-primary: #ddd;
+  --shadow-primary: rgba(255, 255, 255, 0.3);
+  --shadow-secondary: rgba(255, 255, 255, 0.6);
 }
 
 .light {
-  --text-primary: #555;
-  --text-secondary: #777;
-  --text-dimmed: #bbb;
-  --bg-primary: #eee;
+  --bg-primary: #ddd;
   --bg-secondary: #bbb;
+  --text-dimmed: #888;
+  --text-secondary: #444;
+  --text-primary: #222;
+  --shadow-primary: rgba(0, 0, 0, 0.3);
+  --shadow-secondary: rgba(0, 0, 0, 0.6);
 }
 
 body {
@@ -70,8 +75,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  margin-left: 5rem;
-  padding: 1rem;
+  min-height: calc(100vh - 70px);
 }
 
 .navbar {
@@ -255,8 +259,8 @@ footer p {
     margin: 0 1rem;
   }
 
-  main {
-    margin: 0;
+  body {
+    margin-bottom: 80px;
   }
 }
 
@@ -303,7 +307,6 @@ footer p {
   padding-left: 4vw;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 75px;
 }
 
 h1,
@@ -346,14 +349,14 @@ h6 {
 
 .photo-thumbnail img {
   border-radius: 10%;
-  box-shadow: 0 0.8em 0.8em -1em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.8em 0.8em -1em var(--shadow-primary);
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
 
 .photo-thumbnail img:hover {
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 2em 2em -2em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2em 2em -2em var(--shadow-secondary);
   transform: scale(1.1);
 }
 
