@@ -179,8 +179,9 @@ main {
   transform: rotate(-360deg);
 }
 
-ul, ul li:first-child h3{
-  margin-top:0px;
+ul,
+ul li:first-child h3 {
+  margin-top: 0px;
 }
 
 /* Small screens */

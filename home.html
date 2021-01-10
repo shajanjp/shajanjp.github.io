@@ -4,72 +4,94 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script defer src="{{ site.baseurl }}/assets/js/theme.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/flexboxgrid.min.css">
   <link
-  href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
-  rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css" />
+  <link
+    rel="stylesheet"
+    href="{{ site.baseurl }}/assets/css/flexboxgrid.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+    rel="stylesheet"
   />
 </head>
 
 <body>
-  
   {% include navbar.html %}
-  
+
   <main>
     <div class="container">
       <h1 class="text-gradient">Shajan Jacob</h1>
-      
+
       <section id="about">
         Hi,
         <li>I'm a full-stack software engineer from Kerala.</li>
-        <li>Absorbs and emits plenty of <span class="text-bg bg-javascript">JavaScript</span>.</li>
-        <li>IoT and <span class="text-bg bg-electronics">electronics</span> fills in my spare time.</li>
-        <li>Appreciates all forms of <span class="text-bg bg-art">art</span>, from picking a color for a font, to building a garden inside my room and everything in between. </li>
-        <li>Apart from my gardening and crafts, I admire taking <span class="text-bg bg-photograph">photographs</span> of moments that anyone doesn't want to miss in a lifetime. </li>
-        <li>I've worked for <span class="text-bg bg-companies">companies</span> like Cubet, BakeBrand and GWC.</li>
+        <li>
+          Absorbs and emits plenty of
+          <span class="text-bg bg-javascript">JavaScript</span>.
+        </li>
+        <li>
+          IoT and <span class="text-bg bg-electronics">electronics</span> fills
+          in my spare time.
+        </li>
+        <li>
+          Appreciates all forms of <span class="text-bg bg-art">art</span>, from
+          picking a color for a font, to building a garden inside my room and
+          everything in between.
+        </li>
+        <li>
+          Apart from my gardening and crafts, I admire taking
+          <span class="text-bg bg-photograph">photographs</span> of moments that
+          anyone doesn't want to miss in a lifetime.
+        </li>
+        <li>
+          I've worked for
+          <span class="text-bg bg-companies">companies</span> like Cubet,
+          BakeBrand and GWC.
+        </li>
       </section>
-      
+
       <section id="projects">
         <h2 class="text-gradient">Projects</h2>
         <!-- <div class="row">   -->
-          <ul>
+        <ul>
           {% for project in site.categories.project limit:4 %}
           <!-- <div class="col-lg-6"> -->
-            <!-- <div class="image">
+          <!-- <div class="image">
               <img src="{{ site.baseurl }}/uploads/{{blog.thumbnail}}">
             </div> -->
 
-              <li>
-                <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
-                <div class="meta">
-                  <span class="date">{{ project.summary }}</span>
-                </div>
-              </li>
-              <!-- </div> -->
-              {% endfor %}
-            </ul>
+          <li>
+            <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+            <div class="meta">
+              <span class="date">{{ project.summary }}</span>
+            </div>
+          </li>
+          <!-- </div> -->
+          {% endfor %}
+        </ul>
         <!-- </div> -->
       </section>
 
       <section id="blog">
         <h2 class="text-gradient">Blog</h2>
-<ul>
-
-  {% for blog in site.categories.blog limit:4 %}
-  <li>
-    <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
-    <div class="meta">
-      <span class="date">{{ blog.summary }}</span>
-    </div>
-  </li>
-  <!-- </div> -->
-  {% endfor %}
-</ul>
+        <ul>
+          {% for blog in site.categories.blog limit:4 %}
+          <li>
+            <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
+            <div class="meta">
+              <span class="date">{{ blog.summary }}</span>
+            </div>
+          </li>
+          <!-- </div> -->
+          {% endfor %}
+        </ul>
         <!-- </div> -->
       </section>
-      
+
       <section id="photography">
         <h2 class="text-gradient">Photography</h2>
         <br />
@@ -90,11 +112,26 @@
 
       <section id="thoughts">
         <h2 class="text-gradient">Thougths</h2>
-        <br>
-        In India, there is a rich heritage of ancient folktales as well as a compiled body of short fiction which shaped the sensibility of modern Indian short story. Some of the famous Sanskrit collection of legends, folktales, fairy tales, and fables are Panchatantra, Hitopadesha and Kathasaritsagara. Jataka tales, originally written in Pali, is a compilation of tales concerning the previous births of Lord Gautama Buddha. The Frame story or frame narrative or story within a story is a narrative technique that probably originated in ancient Indian works such as Panchatantra.        
-        In Europe, the oral story-telling tradition began to develop into written stories in the early 14th century, most notably with Geoffrey Chaucer's Canterbury Tales and Giovanni Boccaccio's Decameron. Both of these books are composed of individual short stories (which range from farce or humorous anecdotes to well-crafted literary fiction) set within a larger narrative story (a frame story), although the frame-tale device was not adopted by all writers. At the end of the 16th century, some of the most popular short stories in Europe were the darkly tragic "novella" of Matteo Bandello (especially in their French translation).
+        <br />
+        In India, there is a rich heritage of ancient folktales as well as a
+        compiled body of short fiction which shaped the sensibility of modern
+        Indian short story. Some of the famous Sanskrit collection of legends,
+        folktales, fairy tales, and fables are Panchatantra, Hitopadesha and
+        Kathasaritsagara. Jataka tales, originally written in Pali, is a
+        compilation of tales concerning the previous births of Lord Gautama
+        Buddha. The Frame story or frame narrative or story within a story is a
+        narrative technique that probably originated in ancient Indian works
+        such as Panchatantra. In Europe, the oral story-telling tradition began
+        to develop into written stories in the early 14th century, most notably
+        with Geoffrey Chaucer's Canterbury Tales and Giovanni Boccaccio's
+        Decameron. Both of these books are composed of individual short stories
+        (which range from farce or humorous anecdotes to well-crafted literary
+        fiction) set within a larger narrative story (a frame story), although
+        the frame-tale device was not adopted by all writers. At the end of the
+        16th century, some of the most popular short stories in Europe were the
+        darkly tragic "novella" of Matteo Bandello (especially in their French
+        translation).
       </section>
-
-    </div>   
+    </div>
   </main>
 </body>
