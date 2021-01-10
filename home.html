@@ -28,7 +28,7 @@
 
       <section id="about">
         Hi,
-        <ul>
+        <ul class="list">
           <li>I'm a full-stack software engineer from Kerala.</li>
           <li>
             Absorbs and emits plenty of
@@ -60,7 +60,7 @@
       <section id="projects">
         <h2 class="text-gradient">Projects</h2>
         <!-- <div class="row">   -->
-        <ul class="links">
+        <ul class="list">
           {% for project in site.categories.project limit:4 %}
           <!-- <div class="col-lg-6"> -->
           <!-- <div class="image">
@@ -81,7 +81,7 @@
 
       <section id="blog">
         <h2 class="text-gradient">Blog</h2>
-        <ul class="links">
+        <ul class="list">
           {% for blog in site.categories.blog limit:4 %}
           <li>
             <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
