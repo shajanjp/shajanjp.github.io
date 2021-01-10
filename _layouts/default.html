@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	{% include head-meta.html %}
-	<title>{{ site.title }}</title>
-	{% include styles.html %}
-</head>
-<body id="flat">
-
-  {{ content }}
-  {% include footer.html %}
-  {% include scripts.html %}
-</body>
+  <head>
+    {% include head-meta.html %} {% include styles.html %}
+  </head>
+  <body>
+    {% include navbar.html %}
+    <main>
+      <div class="container">
+        <h1 class="text-gradient">Shajan Jacob</h1>
+        
+        
+        {{ content }}
+      </div>
+      </main>
+    {% include footer.html %} {% include scripts.html %}
+  </body>
 </html>

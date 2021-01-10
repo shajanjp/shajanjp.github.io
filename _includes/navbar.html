@@ -9,7 +9,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="#about" class="nav-link">
+      <a href="{% if page.url == "/" %}#about{% else %}/about{% endif %}" class="nav-link">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -37,7 +37,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="#blog" class="nav-link">
+      <a href="{% if page.url == "/" %}#blog{% else %}/blog{% endif %}" class="nav-link">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -61,7 +61,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="#contact" class="nav-link">
+      <a href="{% if page.url == "/" %}#projects{% else %}/projects{% endif %}" class="nav-link">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -105,7 +105,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="#photography" class="nav-link">
+      <a href="{% if page.url == "/" %}#photography{% else %}/photography{% endif %}" class="nav-link">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -149,7 +149,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="#thoughts" class="nav-link">
+      <a href="{% if page.url == "/" %}#thoughts{% else %}/thoughts{% endif %}" class="nav-link">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -201,7 +201,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="{% if page.url == "/" %}#contact{% else %}/contact{% endif %}" class="nav-link">
         <svg
           aria-hidden="true"
           focusable="false"

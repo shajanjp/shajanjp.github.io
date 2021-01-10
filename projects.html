@@ -1,29 +1,15 @@
 ---
 title: "Projects"
 description: "All about the electrons I push, applications I write and things I hack"
-tags: ["shajan jacob", "shajanjp", "projects", "developer", "guyswhocode"]
+tags: ["projects", "developer", "software", "application"]
 layout: page
 ---
 
-<section id="recent-projects">
-  <div class="ui stackable four cards">
-
-    {% for project in site.categories.project %}
-    <div class="ui card flat">
-      <div class="image">
-        <img src="{% if project.thumbnail %}{{ site.baseurl }}/uploads/{{ project.thumbnail }}{% else %}{{ site.baseurl }}/uploads/projects/thumbnails/default-logo.jpg{% endif %}">
-      </div>
-      <div class="content">
-        <a class="header" href="{{ project.url }}">{{ project.title }}</a>
-        <div class="meta">
-          <span class="date">{{ project.summary }}</span>
-        </div>
-        <div class="description">
-          {{ project.description | truncate: 64 }}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-
-  </div>
-</section>
+<ul class="list">
+  {% for project in site.categories.project %}
+  <li>
+    <a class="header" href="{{ project.url }}">{{ project.title }}</a> - <span class="date">{{ project.summary }}</span>
+    <div class="description">{{ project.description | truncate: 64 }}</div>
+  </li>
+  {% endfor %}
+</ul>

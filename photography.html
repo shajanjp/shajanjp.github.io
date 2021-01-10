@@ -1,26 +1,20 @@
 ---
 title: "Moments I captured"
 description: "Stories converted into pixels."
-tags: ["shajan jacob", "shajanjp", "photography", "gallery"]
+tags: ["photography", "gallery", "images", "clicks"]
 layout: page
 ---
 
-<section id="recent-blogs">
-	<div class="ui stackable four cards">
-
-		{% for photo in site.categories.photography %}
-		<div class="ui card flat">
-			<div class="image">
-				<img src="{{site.url}}/uploads/photography/{{ photo.photo }}">
-			</div>
-			<div class="content">
-				<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
-				<div class="meta">
-					<span class="date">{{ photo.date | date_to_string }}</span>
-				</div>
-			</div>
-		</div>
-		{% endfor %}
-
-	</div>
-</section>
+<div class="row center-lg">
+    {% for photo in site.categories.photography %}
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+      <div class="photo-thumbnail">
+        <img
+          src="{{site.url}}/uploads/photography/{{ photo.photo }}"
+          alt="{{ photo.title }}"
+          title="{{ photo.title }}"
+        />
+      </div>
+    </div>
+    {% endfor %}
+  </div>

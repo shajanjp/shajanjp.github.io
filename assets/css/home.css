@@ -197,6 +197,10 @@ ul.list li {
   padding-inline-start: 1ch;
 }
 
+footer p{
+  text-align: center;
+}
+
 /* Small screens */
 @media only screen and (max-width: 600px) {
   .navbar {

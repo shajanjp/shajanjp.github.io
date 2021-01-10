@@ -1,186 +1,95 @@
 ---
-layout : default
+layout: default
 ---
 
-{% include jumbo-header.html %}
-
-
-<section id="main-jumbo">
-	<div class="ui container">
-		<div class="ui stackable grid">
-			<div class="three wide column">
-			{% include navigation.html %}
-			</div>
-
-			<div class="thirteen wide column">
-
-				<section id="about-me">
-					{% include about-me.html %}
-				</section><!-- Recent Blogs -->
-
-			</div> <!-- Main Area -->
-
-		</div>
-	</div>
+<section id="about">
+  Hi,
+  <ul class="list">
+    <li>I'm a full-stack software engineer from Kerala.</li>
+    <li>
+      Absorbs and emits plenty of
+      <span class="text-bg bg-javascript">JavaScript</span>.
+    </li>
+    <li>
+      IoT and
+      <span class="text-bg bg-electronics">electronics</span> fills in my spare
+      time.
+    </li>
+    <li>
+      Appreciates all forms of <span class="text-bg bg-art">art</span>, from
+      picking a color for a font, to building a garden inside my room and
+      everything in between.
+    </li>
+    <li>
+      Apart from my gardening and crafts, I admire taking
+      <span class="text-bg bg-photograph">photographs</span> of moments that
+      anyone doesn't want to miss in a lifetime.
+    </li>
+    <li>
+      I've worked for
+      <span class="text-bg bg-companies">companies</span> like Cubet, BakeBrand
+      and GWC.
+    </li>
+  </ul>
 </section>
 
-<section id="what-i-do" class="content">
-	<div class="ui container">
-		<h2 class="ui white centered header" id="desc">I'm <span id="who"></span></h2>
-	</div>
-</section>
+<section id="projects">
+  <h2 class="text-gradient">Projects</h2>
+  <!-- <div class="row">   -->
+  <ul class="list">
+    {% for project in site.categories.project limit:4 %}
+    <!-- <div class="col-lg-6"> -->
+    <!-- <div class="image">
+              <img src="{{ site.baseurl }}/uploads/{{blog.thumbnail}}">
+            </div> -->
 
-<section id="recent-projects" class="content">
-	<div class="ui container">
-		<h2 class="ui header">Recent Projects</h2>
-		<div class="ui stackable four cards">
-
-			{% for project in site.categories.project limit:4 %}
-			<div class="ui card flat">
-				<div class="image">
-					<img src="{{ site.baseurl }}/uploads/{%if project.thumbnail %}{{ project.thumbnail }}{% else %}/projects/thumbnails/default-logo.jpg{% endif %}">
-				</div>
-				<div class="content">
-					<a class="header" href="{{ project.url }}">{{ project.title }}</a>
-					<div class="meta">
-						<span class="date">{{ project.summary }}</span>
-					</div>
-					<div class="description">
-						{{ project.description | truncate: 64 }}
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-
-		</div>
-		{% if site.categories.project | size > 0 %}<a href="/projects.html" class="ui button mt">View More</a>{% endif %}
-	</div>
-</section>
-
-<img src="{{ site.baseurl }}/assets/img/res/polygon-3.svg" class="divider-slope flipped-y mb">
-
-<section id="contact-form">
-	<div class="ui text container">
-		<h4 class="ui white header">Say hello.</h4>
-    <form action="https://formspree.io/shajanjp@gmail.com" method="POST" class="ui form">
-      <div class="two fields">
-        <div class="field">
-          <label for="">Full Name</label>
-          <input type="text" name="name" placeholder="Full Name">
-        </div>
-        <div class="field">
-          <label for="">Email</label>
-          <input type="email" name="_replyto" placeholder="Email">
-        </div>
+    <li>
+      <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+      <div class="meta">
+        <span class="date">{{ project.summary }}</span>
       </div>
-      <div class="field">
-        <label for="">Message</label>
-        <textarea name="" id="" rows="6" name="feedback" rows="4" placeholder="Feedback here"></textarea>
-        <input type="hidden" name="_next" value="http://shajanjacob.com">
+    </li>
+    <!-- </div> -->
+    {% endfor %}
+  </ul>
+  <!-- </div> -->
+</section>
+
+<section id="blog">
+  <h2 class="text-gradient">Blog</h2>
+  <ul class="list">
+    {% for blog in site.categories.blog limit:4 %}
+    <li>
+      <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
+      <div class="meta">
+        <span class="date">{{ blog.summary }}</span>
       </div>
-      <button class="ui green button" type="submit">Submit</button>
-    </form> 	
-	</div>
+    </li>
+    <!-- </div> -->
+    {% endfor %}
+  </ul>
+  <!-- </div> -->
 </section>
 
-<img src="{{ site.baseurl }}/assets/img/res/polygon-3.svg" class="divider-slope flipped-x mb">
-
-<section id="social-profiles" class="">
-	<div class="ui container">
-		<div class="ui equal width doubling grid">
-			<a target="_blank" href="http://facebook.com/{{ site.social.facebook }}" class="column animated jello infinite" data-tooltip="facebook">
-				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/facebook-logo.jpg">
-			</a>
-			<a target="_blank" href="http://github.com/{{ site.social.github }}" class="column animated jello infinite" data-tooltip="github">
-				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/github-logo.jpg">
-			</a>
-			<a target="_blank" href="http://instagram.com/{{ site.social.instagram }}" class="column animated jello infinite" data-tooltip="instagram">
-				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/instagram-logo.jpg">
-			</a>
-			<a target="_blank" href="http://linkedin.com/{{ site.social.linkedin }}" class="column animated jello infinite" data-tooltip="linkedin">
-				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/linkedin-logo.jpg">
-			</a>
-			<a target="_blank" href="http://pinterest.com/{{ site.social.pinterest }}" class="column animated jello infinite" data-tooltip="pinterest">
-				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/pinterest-logo.jpg">
-			</a>
-			<a target="_blank" href="http://skype.com/{{ site.social.skype }}" class="column animated jello infinite" data-tooltip="skype">
-				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/skype-logo.jpg">
-			</a>
-			<a target="_blank" href="http://twitter.com/{{ site.social.twitter }}" class="column animated jello infinite" data-tooltip="twitter">
-				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/twitter-logo.jpg">
-			</a>
-			<a target="_blank" href="http://youtube.com/{{ site.social.youtube }}" class="column animated jello infinite" data-tooltip="youtube">
-				<img class="ui medium circular image" src="{{ site.baseurl }}/assets/img/social/youtube-logo.jpg">
-			</a>
-		</div>
-	</div>
+<section id="photography">
+  <h2 class="text-gradient">Photography</h2>
+  <br />
+  <div class="row center-lg">
+    {% for photo in site.categories.photography limit:6 %}
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+      <div class="photo-thumbnail">
+        <img
+          src="{{site.url}}/uploads/photography/{{ photo.photo }}"
+          alt="{{ photo.title }}"
+          title="{{ photo.title }}"
+        />
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 
-<section id="recent-photos" class="content">
-	<div class="ui container">
-		<h2 class="ui header">Few moments through my camera</h2>
-		<div class="ui stackable four cards">
-
-			{% for photo in site.categories.photography limit:4 %}
-			<div class="ui card flat">
-				<div class="image">
-					<img src="{{site.url}}/uploads/photography/{{ photo.photo }}">
-				</div>
-				<div class="content">
-					<a class="header" href="{{ photo.url }}">{{ photo.title }}</a>
-					<div class="meta">
-						<span class="date">{{ photo.date | date_to_string }}</span>
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-
-		</div>
-		{% if site.categories.photography | size > 0 %}<a href="/photography.html" class="ui button mt">View More</a>{% endif %}
-	</div>
-</section>
-
-<section id="recent-blogs" class="content">
-	<div class="ui container">
-		<h2 class="ui header">Recent blogs</h2>
-		<div class="ui stackable four cards">
-
-			{% for project in site.categories.blog limit:4 %}
-			<div class="ui card flat">
-				<div class="image">
-					<img src="{{ site.baseurl }}/uploads/{{project.thumbnail}}">
-				</div>
-				<div class="content">
-					<a class="header" href="{{ project.url }}">{{ project.title }}</a>
-					<div class="meta">
-						<span class="date">{{ project.summary }}</span>
-					</div>
-					<div class="description">
-						{{ project.description | truncate: 64 }}
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-			
-		</div>
-		{% if site.categories.blog | size > 0 %}<a href="/blog.html" class="ui button mt">View More</a>{% endif %}
-	</div>
-</section>
-
-<script>
-	let me = ["a Photographer","a Hacker","an Engineer","a Programmer","a Maker","a Designer","a Storyteller"];
-	let whoDiv = document.getElementById("who");
-	let counter = 0;
-
-	function changeWho(){
-		if (counter >= me.length) {
-			counter = 0;
-		}
-		whoDiv.innerHTML = me[counter];
-		counter++;
-		setTimeout(changeWho, 1500);
-	}
-
-	changeWho();
-
-</script>
+<!-- <section id="thoughts">
+  <h2 class="text-gradient">Thougths</h2>
+  <br />
+</section> -->
