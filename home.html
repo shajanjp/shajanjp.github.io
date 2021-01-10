@@ -31,23 +31,42 @@
         <li>I've worked for <span class="text-bg bg-companies">companies</span> like Cubet, BakeBrand and GWC.</li>
       </section>
       
-      <section id="blog">
-        <h2 class="text-gradient">Blog</h2>
-        <br>
+      <section id="projects">
+        <h2 class="text-gradient">Projects</h2>
         <!-- <div class="row">   -->
-          {% for blog in site.categories.blog limit:4 %}
+          <ul>
+          {% for project in site.categories.project limit:4 %}
           <!-- <div class="col-lg-6"> -->
             <!-- <div class="image">
               <img src="{{ site.baseurl }}/uploads/{{blog.thumbnail}}">
             </div> -->
-            <li>
-              <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
-            <div class="meta">
-              <span class="date">{{ blog.summary }}</span>
-            </div>
-          </li>
-            <!-- </div> -->
-          {% endfor %}
+
+              <li>
+                <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
+                <div class="meta">
+                  <span class="date">{{ project.summary }}</span>
+                </div>
+              </li>
+              <!-- </div> -->
+              {% endfor %}
+            </ul>
+        <!-- </div> -->
+      </section>
+
+      <section id="blog">
+        <h2 class="text-gradient">Blog</h2>
+<ul>
+
+  {% for blog in site.categories.blog limit:4 %}
+  <li>
+    <h3><a href="{{ blog.url }}">{{ blog.title }}</a></h3>
+    <div class="meta">
+      <span class="date">{{ blog.summary }}</span>
+    </div>
+  </li>
+  <!-- </div> -->
+  {% endfor %}
+</ul>
         <!-- </div> -->
       </section>
       
@@ -55,7 +74,7 @@
         <h2 class="text-gradient">Photography</h2>
         <br />
         <div class="row center-lg">
-          {% for photo in site.categories.photography limit:10 %}
+          {% for photo in site.categories.photography limit:6 %}
           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
             <div class="photo-thumbnail">
               <img

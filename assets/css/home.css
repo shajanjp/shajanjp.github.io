@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: #06d6a0;
+  color: #0096c7;
   text-decoration: none;
 }
 
@@ -179,6 +179,10 @@ main {
   transform: rotate(-360deg);
 }
 
+ul, ul li:first-child h3{
+  margin-top:0px;
+}
+
 /* Small screens */
 @media only screen and (max-width: 600px) {
   .navbar {
@@ -311,22 +315,23 @@ h6 {
 
 .text-bg {
   padding: 0 0.25em;
-  color: var(--text-grey);
+  /* border-bottom: 2px solid; */
+  /* color: var(--text-grey); */
 }
 .bg-javascript {
-  background: #f7e017;
+  color: #f7e017;
 }
 .bg-electronics {
-  background: #06d6a0;
+  color: #06d6a0;
 }
 .bg-art {
-  background: #ee6c4d;
+  color: #ee6c4d;
 }
 .bg-photograph {
-  background: #0096c7;
+  color: #0096c7;
 }
 .bg-companies {
-  background: #b07d62;
+  color: #b07d62;
 }
 
 section#about {
