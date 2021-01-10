@@ -362,23 +362,23 @@ h6 {
 
 .text-bg {
   padding: 0 0.25em;
-  /* border-bottom: 2px solid; */
-  /* color: var(--text-grey); */
+  color: var(--text-grey);
 }
+
 .bg-javascript {
-  color: #f7e017;
+  background-color: #f7e017;
 }
 .bg-electronics {
-  color: #06d6a0;
+  background-color: #06d6a0;
 }
 .bg-art {
-  color: #ee6c4d;
+  background-color: #ee6c4d;
 }
 .bg-photograph {
-  color: #0096c7;
+  background-color: #0096c7;
 }
 .bg-companies {
-  color: #b07d62;
+  background-color: #b07d62;
 }
 
 section#about {
