@@ -1,5 +1,5 @@
 /*
-Color palette:  https://coolors.co/ffdd77-77cc77-11bbee-ff7766-666666
+Color palette:  https://coolors.co/666666-ffdd77-77cc77-11bbee-ff7766-8d6b94-fa7921-ff595e-ee92c2
 */
 :root {
   --palette-primary: #1be;
@@ -37,6 +37,7 @@ a.link:before {
 .dark {
   --text-primary: #eee;
   --text-secondary: #bbb;
+  --text-dimmed: #777;
   --bg-primary: #222;
   --bg-secondary: #333;
 }
@@ -44,6 +45,7 @@ a.link:before {
 .light {
   --text-primary: #555;
   --text-secondary: #777;
+  --text-dimmed: #bbb;
   --bg-primary: #eee;
   --bg-secondary: #bbb;
 }
@@ -187,17 +189,41 @@ main {
   transform: rotate(-360deg);
 }
 
-ul,
-ul li:first-child h3 {
+#contact-form input,
+#contact-form textarea {
+  margin-top: 1em;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--text-primary-color);
+  color: var(--text-primary);
+}
+
+#contact-form button {
+  background: var(--palette-primary);
+  border: none;
+  padding: 0.6em 0.8em;
+  margin-top: 10px;
+  color: var(--text-primary);
+}
+
+ul.list {
+  list-style: none;
+}
+
+ul.list,
+ul.list li:first-child h3 {
   margin-top: 0px;
 }
 
-ul.list li {
-  list-style-type: "➜";
+ul.list li:before {
+  content: "-";
+  color: var(--text-dimmed);
+  margin-left: -1em;
   padding-inline-start: 1ch;
 }
 
-footer p{
+footer p {
   text-align: center;
 }
 

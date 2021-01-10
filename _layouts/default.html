@@ -7,12 +7,14 @@
     {% include navbar.html %}
     <main>
       <div class="container">
-        <h1 class="text-gradient">Shajan Jacob</h1>
-        
-        
+        <h1 class="text-gradient">
+          {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif
+          %}
+        </h1>
+        <p class="text-gradient">{{page.description}}</p>
         {{ content }}
       </div>
-      </main>
+    </main>
     {% include footer.html %} {% include scripts.html %}
   </body>
 </html>
