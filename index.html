@@ -85,6 +85,7 @@ layout: default
           alt="{{ photo.title }}"
           title="{{ photo.title }}"
         />
+        <div>{{photo.date | date: "%d-%m-%Y" }}</div>
       </div>
     </div>
     {% endfor %}

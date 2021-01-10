@@ -1,11 +1,11 @@
 ---
 title: "Moments I captured"
-description: "Stories converted into pixels."
+description: "Stories reborn as pixels."
 tags: ["photography", "gallery", "images", "clicks"]
 layout: page
 ---
 
-<div class="row center-lg">
+<div class="row center-lg center-md center-sm center-xs">
     {% for photo in site.categories.photography %}
     <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
       <div class="photo-thumbnail">
@@ -14,6 +14,7 @@ layout: page
           alt="{{ photo.title }}"
           title="{{ photo.title }}"
         />
+        <div>{{photo.date | date: "%d-%m-%Y" }}</div>
       </div>
     </div>
     {% endfor %}
