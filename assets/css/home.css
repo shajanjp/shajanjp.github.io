@@ -149,6 +149,10 @@ main {
   margin: 0 1.5rem;
 }
 
+.view-only-mobile{
+  display: none;
+}
+
 .fa-primary {
   color: var(--text-primary-color);
 }
@@ -262,6 +266,14 @@ footer p {
 
   body {
     margin-bottom: 80px;
+  }
+  
+  .view-only-mobile{
+    display: block;
+  }
+
+  .view-only-desktop{
+    display: none;
   }
 }
 
