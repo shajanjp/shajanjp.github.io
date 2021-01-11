@@ -27,7 +27,8 @@ a {
 }
 
 h2 a:after,
-h3 a:after {
+h3 a:after,
+a.link:after {
   content: "\2197";
   display: block;
   height: 1em;
