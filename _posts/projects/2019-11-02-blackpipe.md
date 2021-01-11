@@ -5,6 +5,7 @@ summary: "Expose realtime terminal outputs without sacrificing security."
 description: "BlackPipe is a simple tool to expose realtime terminal outputs without sacrificing security."
 thumbnail: "projects/thumbnails/blackpipe-example.jpg"
 visit: "https://shajanjacob.com/blackpipe/"
+source: "https://github.com/shajanjp/blackpipe"
 technologies: ["NodeJS", "ExpressJS", "MongoDB", "EJS"]
 categories: ["project"]
 ---
