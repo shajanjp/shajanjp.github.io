@@ -330,6 +330,20 @@ h5,
 h6 {
   line-height: 1.5em;
   font-weight: lighter;
+}
+
+li>h1,
+li>h2,
+li>h3,
+li>h4,
+li>h5,
+li>h6,
+h1.heading,
+h2.heading,
+h3.heading,
+h4.heading,
+h5.heading,
+h6.heading {
   display: inline-block;
 }
 
@@ -402,7 +416,30 @@ h6 {
 .bg-companies {
   background-color: #b07d62;
 }
-
 section#about {
   line-height: 1.8em;
+}
+.button {
+  border:none;
+  color: var(--palette-primary);
+  background: var(--bg-secondary);
+  margin-top: .6em;
+}
+.button:active {
+  color: var(--bg-primary);
+  background: var(--palette-primary);
+}
+
+.tags .tag{
+  display: inline-block;
+  margin: .2em;
+  padding: .3em .5em;
+  background: var(--bg-secondary);
+  border: 1px solid var(--bg-secondary);
+  color: var(--palette-primary);
+  transition: all 0.5s ease-in-out;
+}
+.tags .tag:hover {
+  border: 1px solid var(--palette-primary);
+  transition: all 0.5s ease-in;
 }

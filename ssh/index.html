@@ -22,7 +22,7 @@
 
       {{ site.categories.project | size }} <a href="/projects">projects</a> completed.<br>
       {{ site.categories.blog | size }} <a href="/blog">blogs</a> written.<br>
-      {{ site.categories.photography | size }} beautiful <a href="/photography">moments</a> photographed.<br><br>
+      {{ site.categories.photograph | size }} beautiful <a href="/photographs">moments</a> photographed.<br><br>
 
       *** Everything working perfect ***<br>
       Last login: Fri Sep 20 16:44:06 2019 from 122.166.65.49<br>
@@ -44,8 +44,8 @@
               }
         {% unless forloop.last %},{% endunless %}{% endfor %}},
         
-        "photography": {
-              {% for post in site.categories.photography %}
+        "photograph": {
+              {% for post in site.categories.photograph %}
               {{ post.title | jsonify }} : {
                 "title": {{ post.title | jsonify }},
                 "description": {{ post.description | jsonify }},
