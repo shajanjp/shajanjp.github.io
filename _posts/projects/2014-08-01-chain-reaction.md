@@ -6,6 +6,7 @@ thumbnail: "projects/thumbnails/chain-reaction-game-logo.jpg"
 cover: "projects/covers/chain-reaction-game-cover.jpg"
 description: "Popular android game Chain Reaction written in HTML, CSS & JS."
 visit: "http://shajanjacob.com/chain-reaction/"
+source: "https://github.com/shajanjp/chain-reaction"
 technologies: ["HTML", "CSS", "Javascript"]
 categories: ["project"]
 ---

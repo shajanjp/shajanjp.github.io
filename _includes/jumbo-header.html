@@ -1,7 +1,0 @@
-<section id="intro" style="{% if page.cover %}background-image: url('/uploads/{{page.cover}}');{% endif %}background-size: cover; background-position: center;">
-	<div class="content">
-		<h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-		<p>{%if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</p>
-	</div>
-	<img src="{{ site.baseurl }}/assets/img/res/polygon-1.svg" class="divider-slope mb flipped-y">
-</section>

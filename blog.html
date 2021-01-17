@@ -1,31 +1,18 @@
 ---
 title: "Blog"
 description: "Thoughts, DIYs, hacks, scripts, stories and everythig in between"
-tags: ["shajan jacob", "shajanjp", "blog", "articles"]
+tags: ["blog", "tech", "articles", "posts"]
 layout: page
 ---
 
-<section id="recent-blogs">
-	<div class="ui container">
-		<div class="ui stackable three cards">
-
-			{% for blog in site.categories.blog %}
-			<div class="ui card flat">
-				<div class="image">
-					<img src="{{ site.baseurl }}/uploads/{{ blog.thumbnail }}">
-				</div>
-				<div class="content">
-					<a class="header" href="{{ blog.url }}">{{ blog.title }}</a>
-					<div class="meta">
-						<span class="date">{{ blog.summary }}</span>
-					</div>
-					<div class="description">
-						{{ blog.description | truncate: 64 }}
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-
-		</div>
-	</div>
-</section>
+<ul>
+  {% for blog in site.categories.blog %}
+  <li>
+    <div class="content">
+      <a class="header" href="{{ blog.url }}">{{ blog.title }}</a>
+      <div class="meta">{{ blog.summary }}</div>
+      <div class="description">{{ blog.description | truncate: 64 }}</div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

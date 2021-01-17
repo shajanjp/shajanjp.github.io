@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	{% include head-meta.html %}
-	<title>{{ site.title }}</title>
-	{% include styles.html %}
-</head>
-<body id="flat">
-
-  {{ content }}
-  
-  {% include scripts.html %}
-</body>
+  <head>
+    {% include head-meta.html %} {% include styles.html %}
+  </head>
+  <body>
+    {% include navbar.html %}
+    <main class="container">
+      <h1 class="heading text-gradient">
+        {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+      </h1>
+      <p class="text-gradient">{{page.description}}</p>
+      {{ content }}
+    </main>
+    {% include footer.html %} {% include scripts.html %}
+  </body>
 </html>
