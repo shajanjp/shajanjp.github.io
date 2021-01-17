@@ -430,7 +430,7 @@ section#about {
   background: var(--palette-primary);
 }
 
-.tags .tag{
+.tags-cloud .tag{
   display: inline-block;
   margin: .2em;
   padding: .3em .5em;
@@ -439,7 +439,12 @@ section#about {
   color: var(--palette-primary);
   transition: all 0.5s ease-in-out;
 }
-.tags .tag:hover {
+.tags-cloud .tag:hover {
   border: 1px solid var(--palette-primary);
   transition: all 0.5s ease-in;
+}
+
+.hint {
+  border-left: 2px solid var(--bg-secondary);
+  padding-left: 0.5em;
 }
