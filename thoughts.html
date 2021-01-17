@@ -1,25 +1,21 @@
 ---
 title: "Thoughts"
 description: "When I'm alone, and my mind is free."
-tags: ["shajan jacob", "shajanjp", "thoughts", "mindset", "life"]
+tags: ["thoughts", "mindset", "life"]
 layout: page
 ---
 
-<section id="thoughts-page">
-  <div class="ui three column doubling stackable masonry grid">
-    {% for thought in site.categories.thoughts %}
-    {% assign content = thought.content | strip_html | strip_newlines | strip %}
-    {% if content != '' %}
-
-    <div class="column">
-      <div class="ui fluid card flat thought">
-        <p class="content" style="background-image: url('{{ site.baseurl }}/uploads/{{ thought.image }}');">
-          {{ thought.content | strip_html }}
-        </p>
-      </div>
+<div class="row">
+  {% for thought in site.categories.thoughts %} {% assign content =
+  thought.content | strip_html | strip_newlines | strip %} {% if content != ''
+  %}
+  <div class="col-sm-4">
+    <div
+      class="thought-card"
+      style="background-image: url('{{ site.baseurl }}/uploads/{{ thought.image }}');"
+    >
+      {{ thought.content | strip_html }}
     </div>
-    
-    {% endif %}
-    {% endfor %}
   </div>
-</section>
+  {% endif %} {% endfor %}
+</div>

@@ -5,6 +5,7 @@ summary: "Simple hackernews feed reader"
 description: "Minimal and simple feed UI for hackernews"
 thumbnail: "projects/thumbnails/hacker-news-screenshot.jpg"
 visit: "http://guyswhocode.com/HN/"
+source: "https://github.com/guyswhocode/HN"
 technologies: ["HTML", "CSS", "Javascript"]
 categories: ["project"]
 ---

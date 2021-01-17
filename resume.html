@@ -1,167 +1,101 @@
 ---
 title: "Resume"
-tags: ["shajan jacob", "shajanjp", "resume", "CV", "developer", "guyswhocode"]
+tags: ["resume", "CV", "developer", "engineer"]
 layout: page
 ---
 
 <section id="resume">
-
-  <a href="https://github.com/shajanjp/cv/raw/master/shajan-jacob-CV.pdf" class="ui right floated button">Download Resume</a><br />
+  <a
+    href="https://github.com/shajanjp/cv/raw/master/shajan-jacob-CV.pdf"
+    class="ui right floated button"
+    >Download Resume</a
+  ><br />
   <div class="name-and-brief">
-   <p>Shajan Jacob</p>
-   <p>shajanjp@gmail.com</p>
-   <p>+91 9747952378</p>
-   <p>Cochin, India</p>
- </div>
-
- <h3>EDUCATION</h3>
- <div class="ui stackable three cards">
-  <div class="ui card">
-    <div class="content">
-      <a class="header">Bachelor of Engineering (CS)</a>
-      <div class="meta">
-        <span class="date">T JOHN INSTITUTE OF TECHNOLOGY</span>
-      </div>
-    </div>
-    <div class="extra content">
-      <a>
-        <i class="users icon"></i>
-        2017
-      </a>
-    </div>
-  </div>
-  
-  <div class="ui card">
-    <div class="content">
-      <a class="header">Pre University</a>
-      <div class="meta">
-        <span class="date">Bappuji Central School, Peruva</span>
-      </div>
-    </div>
-    <div class="extra content">
-      <a>
-        <i class="users icon"></i>
-        2011
-      </a>
-    </div>
+    <p>Shajan Jacob</p>
+    <p>shajanjp@gmail.com</p>
+    <p>+91 9747952378</p>
+    <p>Cochin, India</p>
   </div>
 
-  <div class="ui card">
-    <div class="content">
-      <a class="header">10th Standard</a>
-      <div class="meta">
-        <span class="date">Bappuji Public School, Elivaly</span>
-      </div>
-    </div>
-    <div class="extra content">
-      <a>
-        <i class="users icon"></i>
-        2008
-      </a>
-    </div>
-  </div>
-</div>
-
-<br/>
-
-<h3>PROJECTS</h3>
-<section id="projects">
-  <div class="ui stackable three cards">
-    {% for project in site.categories.project %}    
-    <div class="ui card">
+  <h3 class="text-gradient">EDUCATION</h3>
+  <ul class="list">
+    <li>
       <div class="content">
-        <a class="header">{{ project.title }}</a>
-        <div class="meta">
-          <span class="date">{{ project.description | truncate: 64 }}</span>
+        <a class="header">Bachelor of Engineering (CS)</a>
+        <div class="meta">T JOHN INSTITUTE OF TECHNOLOGY</div>
+      </div>
+      <div class="extra content">2017</div>
+    </li>
+    <li>
+      <div class="content">
+        <a class="header">Pre University</a>
+        <div class="meta">Bappuji Central School, Peruva</div>
+      </div>
+      <div class="extra content">2011</div>
+    </li>
+    <li>
+      <div class="content">
+        <a class="header">10th Standard</a>
+        <div class="meta">Bappuji Public School, Elivaly</div>
+      </div>
+      <div class="extra content">2008</div>
+    </li>
+  </ul>
+
+  <br />
+
+  <h3 class="text-gradient">PROJECTS</h3>
+  <section id="projects">
+    <ul class="list">
+      {% for project in site.categories.project %}
+      <li>
+        <div class="content">
+          <a class="header">{{ project.title }}</a>
+          <div class="meta">
+            <span class="date">{{ project.description }}</span>
+          </div>
         </div>
-      </div>
-      <div class="extra content">
-        <a href="{{ project.visit }}">
-          <i class="users icon"></i>
-          View
-        </a>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
+        <div class="extra content">
+          <a href="{{ project.visit }}"> View </a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-<h3>SKILLS</h3>
-<table class="ui striped table">
-  <thead>
-    <tr>
-      <th>Technology</th>
-      <th>Experience</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>HTML</td>
-      <td>Expert</td>
-    </tr>
-    <tr>
-      <td>CSS</td>
-      <td>Expert</td>
-    </tr>
-    <tr>
-      <td>NodeJS</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>MongoDB</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>PHP</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>Linux</td>
-      <td>Expert</td>
-    </tr>
-    <tr>
-      <td>JavaScript</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>Bootstrap</td>
-      <td>Expert</td>
-    </tr>
-    <tr>
-      <td>MySQL</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>jQuery</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>Python</td>
-      <td>Beginner</td>
-    </tr>
-    <tr>
-      <td>AngularJS</td>
-      <td>Beginner</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3>WORK SAMPLES &amp PROFILES</h3>
-<ul>  
-  <li>
-    <a href="http://shajanjacob.com/blog">Blog</a>
-  </li>
-  <li>
-    <a href="http://github.com/shajanjp">Github</a>
-  </li>
-  <li>
-    <a href="http://behance.net/shajanjp">Behance</a>
-  </li>
-  <li>
-    <a href="https://www.linkedin.com/in/shajanjp/">LinkedIn</a>
-  </li>
-  <li>
-    <a href="http://guyswhocode.com/shajanjp" title="Guys Who Code">Guys Who Code</a>
-  </li>
-</ul>
+  <h3 class="text-gradient">SKILLS</h3>
+  <ul class="list">
+    <li>HTML - Expert</li>
+    <li>CSS - Expert</li>
+    <li>NodeJS - Intermediate</li>
+    <li>MongoDB - Intermediate</li>
+    <li>PHP - Intermediate</li>
+    <li>Linux - Expert</li>
+    <li>JavaScript - Intermediate</li>
+    <li>Bootstrap - Expert</li>
+    <li>MySQL - Intermediate</li>
+    <li>jQuery - Intermediate</li>
+    <li>Python - Beginner</li>
+    <li>AngularJS - Beginner</li>
+  </ul>
+  <h3 class="text-gradient">WORK SAMPLES &amp PROFILES</h3>
+  <ul class="list">
+    <li>
+      <a href="http://shajanjacob.com/blog">Blog</a>
+    </li>
+    <li>
+      <a href="http://github.com/shajanjp">Github</a>
+    </li>
+    <li>
+      <a href="http://behance.net/shajanjp">Behance</a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/shajanjp/">LinkedIn</a>
+    </li>
+    <li>
+      <a href="http://guyswhocode.com/shajanjp" title="Guys Who Code"
+        >Guys Who Code</a
+      >
+    </li>
+  </ul>
 </section>
