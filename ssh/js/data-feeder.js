@@ -16,12 +16,18 @@ function line(content) {
 
 function renderObject(data) {
   let rData = '';
-  for (var k in data) {
-    if(k == 'view'){
-    rData += `<p><span class="c-faded">${k}</span> : <a href="${data[k]}" target="_blank">View</a></p>`;
-    }
-    else{
-    rData += `<p><span class="c-faded">${k}</span> : ${data[k]}</p>`;
+
+  for (const k in data) {
+    switch(k){
+      case 'view':
+        rData += `<p><span class="c-faded">${k}</span> : <a href="${data[k]}" target="_blank">View</a></p>`;
+        break;
+      case 'isEnd':
+      case 'nodeType':
+        break; 
+      default:
+        rData += `<p><span class="c-faded">${k}</span> : ${data[k]}</p>`;
+        break;
     }
   }
   return rData;
