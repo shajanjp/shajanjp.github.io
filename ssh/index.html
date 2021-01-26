@@ -22,11 +22,12 @@
 
       {{ site.categories.project | size }} <a href="/projects">projects</a> completed.<br>
       {{ site.categories.blog | size }} <a href="/blog">blogs</a> written.<br>
-      {{ site.categories.photograph | size }} beautiful <a href="/photographs">moments</a> photographed.<br><br>
+      {{ site.categories.photographs | size }} beautiful <a href="/photographs">moments</a> photographed.<br>
+      {{ site.categories.thoughts | size }} wild <a href="/thoughts">thoughts</a> processed.<br><br>
 
       *** Everything working perfect ***<br>
       Last login: Fri Sep 20 16:44:06 2019 from 122.166.65.49<br>
-      <span class="stdout-text">~</span>$<input type="text" autocorrect="off" autocapitalize="off"/>
+      <span class="stdout-text"></span>$<input type="text" autocorrect="off" autocapitalize="off"/>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -54,8 +55,19 @@
               }
         {% unless forloop.last %},{% endunless %}{% endfor %}},
 
-          "blogs": {
+        "blogs": {
               {% for post in site.categories.blog %}
+              {{ post.title | jsonify }} : {
+                "title": {{ post.title | jsonify }},
+                "description": {{ post.description | jsonify }},
+                "view": {{ post.url | jsonify }},
+                "isEnd": true,
+                "nodeType": "BLOG"
+              }
+        {% unless forloop.last %},{% endunless %}{% endfor %}},
+
+        "thoughts": {
+              {% for post in site.categories.thoughts %}
               {{ post.title | jsonify }} : {
                 "title": {{ post.title | jsonify }},
                 "description": {{ post.description | jsonify }},
