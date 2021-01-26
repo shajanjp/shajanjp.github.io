@@ -69,17 +69,6 @@
               }
         {% unless forloop.last %},{% endunless %}{% endfor %}},
 
-        "thoughts": {
-              {% for post in site.categories.thoughts %}
-              {{ post.title | jsonify }} : {
-                "title": {{ post.title | jsonify }},
-                "description": {{ post.description | jsonify }},
-                "view": {{ post.url | jsonify }},
-                "isEnd": true,
-                "nodeType": "THOUGHT"
-              }
-        {% unless forloop.last %},{% endunless %}{% endfor %}},
-
         "skills": {
           "isEnd": true,
           "javascript": "* * * *  "
