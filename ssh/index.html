@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Terminal</title>
+    <title>{{ site.title }} - Terminal</title>
     <meta name="theme-color" content="#000"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
@@ -14,11 +14,14 @@
   </head>
   <body>
     <div class="window">
-      Welcome to <a href="http://shajanjacob.com">shajanjacob.com</a><br>
-      * Home: <a href="http://shajanjacob.com">http://shajanjacob.com</a><br>
-      * Blog: <a href="http://shajanjacob.com/blog">http://shajanjacob.com/blog</a><br>
-      * Projects: <a href="http://shajanjacob.com/projects">http://shajanjacob.com/projects</a><br>
-      * Contact: <a href="http://shajanjacob.com/contact">http://shajanjacob.com/contact</a><br><br>
+      Welcome to <a href="{{ site.baseurl }}">shajanjacob.com</a><br>
+      * Home: <a href="{{ site.baseurl }}">/</a><br>
+      * Blog: <a href="{{ site.baseurl }}/blog">/blog</a><br>
+      * Projects: <a href="{{ site.baseurl }}/projects">/projects</a><br>
+      * Contact: <a href="{{ site.baseurl }}/contact">/contact</a><br>
+      * Resume: <a href="{{ site.baseurl }}/resume">/resume</a><br>
+      * About: <a href="{{ site.baseurl }}/about">/about</a><br>
+      * Uses: <a href="{{ site.baseurl }}/uses">/uses</a><br><br>
 
       {{ site.categories.project | size }} <a href="/projects">projects</a> completed.<br>
       {{ site.categories.blog | size }} <a href="/blog">blogs</a> written.<br>
@@ -73,9 +76,14 @@
                 "description": {{ post.description | jsonify }},
                 "view": {{ post.url | jsonify }},
                 "isEnd": true,
-                "nodeType": "BLOG"
+                "nodeType": "THOUGHT"
               }
-        {% unless forloop.last %},{% endunless %}{% endfor %}}
+        {% unless forloop.last %},{% endunless %}{% endfor %}},
+
+        "skills": {
+          "isEnd": true,
+          "javascript": "* * * *  "
+        }
       }
 
     </script>
