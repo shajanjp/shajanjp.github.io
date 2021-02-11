@@ -6,53 +6,26 @@ layout: default
   Hi,
   <ul class="list">
     <li>I'm a full-stack software engineer from Kerala.</li>
-    <li>
-      Absorbs and emits plenty of
-      <span class="text-bg bg-javascript">JavaScript</span>.
-    </li>
-    <li>
-      IoT and
-      <span class="text-bg bg-electronics">electronics</span> fills in my spare
-      time.
-    </li>
-    <li>
-      Appreciates all forms of <span class="text-bg bg-art">art</span>, from
-      picking a color for a font, to building a garden inside my room and
-      everything in between.
-    </li>
-    <li>
-      Apart from my gardening and crafts, I admire taking
-      <span class="text-bg bg-photograph">photographs</span> of moments that
-      anyone doesn't want to miss in a lifetime.
-    </li>
-    <li>
-      I've worked for
-      <span class="text-bg bg-companies">companies</span> like Cubet, BakeBrand
-      and GWC.
-    </li>
+    <li>Absorbs and emits plenty of<span class="text-bg bg-javascript">JavaScript</span>.</li>
+    <li>IoT and <span class="text-bg bg-electronics">electronics</span> fills in my spare time.</li>
+    <li>Appreciates all forms of <span class="text-bg bg-art">art</span>, from picking a color for a font, to building a garden inside my room and everything in between.</li>
+    <li>Apart from my gardening and crafts, I admire taking <span class="text-bg bg-photograph">photographs</span> of moments that anyone doesn't want to miss in a lifetime.</li>
+    <li>I've worked for <span class="text-bg bg-companies">companies</span> like Cubet, BakeBrand and GWC.</li>
   </ul>
 </section>
 
 <section id="projects">
   <h2 class="heading text-gradient"><a href="/projects">Projects</a></h2>
-  <!-- <div class="row">   -->
   <ul class="list">
     {% for project in site.categories.project limit:4 %}
-    <!-- <div class="col-lg-6"> -->
-    <!-- <div class="image">
-              <img src="{{ site.baseurl }}/uploads/{{blog.thumbnail}}">
-            </div> -->
-
     <li>
       <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
       <div class="meta">
         <span class="date">{{ project.summary }}</span>
       </div>
     </li>
-    <!-- </div> -->
     {% endfor %}
   </ul>
-  <!-- </div> -->
 </section>
 
 <section id="blog">
@@ -65,10 +38,8 @@ layout: default
         <span class="date">{{ blog.summary }}</span>
       </div>
     </li>
-    <!-- </div> -->
     {% endfor %}
   </ul>
-  <!-- </div> -->
 </section>
 
 <section id="photographs">
@@ -89,8 +60,3 @@ layout: default
     {% endfor %}
   </div>
 </section>
-
-<!-- <section id="thoughts">
-  <h2 class="heading text-gradient">Thougths</h2>
-  <br />
-</section> -->

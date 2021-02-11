@@ -218,6 +218,11 @@ main {
 
 ul.list {
   list-style: none;
+  display: table;
+}
+
+ul.list li{
+  display: table-row;
 }
 
 ul.list,
@@ -227,9 +232,9 @@ ul.list li:first-child h3 {
 
 ul.list li:before {
   content: "-";
+  display: table-cell;
   color: var(--text-dimmed);
-  margin-left: -1em;
-  padding-inline-start: 1ch;
+  padding-right: 0.5em;
 }
 
 footer p {
