@@ -57,13 +57,16 @@ function pwdCommand(){
 }
 
 function cdCommand(relativePath) {
+  const previousPath = currentPathStack.join('/');
+
   if(relativePath == ''){
     currentPathStack = []
-    return line('');
-  }
-  else {
+    
+    return line(previousPath);
+  } else {
     relativePath = relativePath.trim();
     let paths = relativePath.split('/');
+    
     paths.forEach(path => {
       if (currentPath()[path]) {
         currentPathStack.push(path);
@@ -72,7 +75,8 @@ function cdCommand(relativePath) {
         currentPathStack.pop();
       }
     });
-    return line('');
+    
+    return line(previousPath);
   }
 }
 
@@ -122,8 +126,6 @@ function getReplay(command) {
     renderedReplay = `<p>${command}: command not found</p>`;
     break;
   }
-  renderedReplay += `<span class="stdout-text">${currentPathStack.join(
-    '/'
-    )}</span> $<input class="stdin-text" type="text" autocorrect="off" autocapitalize="off">`;
+
   return renderedReplay;
 }

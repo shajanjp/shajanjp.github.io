@@ -42,7 +42,19 @@ input {
   border: none !important;
 }
 
-.stdin-text{
+.stdin-text {
   width: auto;
   display: inline-block;
+}
+
+#tab-button {
+  position: fixed;
+  bottom: .5em;
+  left: .5em;
+  font-size: .8em;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #AAA;
+  border-radius: 4px;
+  padding: 2px 6px;
+  cursor: pointer;
 }

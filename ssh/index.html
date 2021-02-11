@@ -14,23 +14,28 @@
   </head>
   <body>
     <div class="window">
-      Welcome to <a href="{{ site.baseurl }}">shajanjacob.com</a><br>
-      * Home: <a href="{{ site.baseurl }}">/</a><br>
-      * Blog: <a href="{{ site.baseurl }}/blog">/blog</a><br>
-      * Projects: <a href="{{ site.baseurl }}/projects">/projects</a><br>
-      * Contact: <a href="{{ site.baseurl }}/contact">/contact</a><br>
-      * Resume: <a href="{{ site.baseurl }}/resume">/resume</a><br>
-      * About: <a href="{{ site.baseurl }}/about">/about</a><br>
-      * Uses: <a href="{{ site.baseurl }}/uses">/uses</a><br><br>
-
-      {{ site.categories.project | size }} <a href="/projects">projects</a> completed.<br>
-      {{ site.categories.blog | size }} <a href="/blog">blogs</a> written.<br>
-      {{ site.categories.photographs | size }} beautiful <a href="/photographs">moments</a> photographed.<br>
-      {{ site.categories.thoughts | size }} wild <a href="/thoughts">thoughts</a> processed.<br><br>
-
-      *** Everything working perfect ***<br>
-      Last login: Fri Sep 20 16:44:06 2019 from 122.166.65.49<br>
-      <span class="stdout-text"></span>$<input type="text" autocorrect="off" autocapitalize="off"/>
+      <div id="stdout">
+        Welcome to <a href="{{ site.baseurl }}">shajanjacob.com</a><br>
+        * Home: <a href="{{ site.baseurl }}">/</a><br>
+        * Blog: <a href="{{ site.baseurl }}/blog">/blog</a><br>
+        * Projects: <a href="{{ site.baseurl }}/projects">/projects</a><br>
+        * Contact: <a href="{{ site.baseurl }}/contact">/contact</a><br>
+        * Resume: <a href="{{ site.baseurl }}/resume">/resume</a><br>
+        * About: <a href="{{ site.baseurl }}/about">/about</a><br>
+        * Uses: <a href="{{ site.baseurl }}/uses">/uses</a><br><br>
+        
+        {{ site.categories.project | size }} <a href="/projects">projects</a> completed.<br>
+        {{ site.categories.blog | size }} <a href="/blog">blogs</a> written.<br>
+        {{ site.categories.photographs | size }} beautiful <a href="/photographs">moments</a> photographed.<br>
+        {{ site.categories.thoughts | size }} wild <a href="/thoughts">thoughts</a> processed.<br><br>
+        
+        *** Login successful ***<br>
+        Last login: Fri Sep 20 16:44:06 2019 from 122.166.65.49<br>
+      </div>
+      <div class="stdin">
+        <span class="carrot">$</span><input id="stdin-input-box" type="text" autocorrect="off" autocapitalize="off"/>
+      </div>
+      <!-- <div id="tab-button" onclick="handleTabPress()">Tab</div> -->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
