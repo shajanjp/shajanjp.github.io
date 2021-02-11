@@ -386,16 +386,16 @@ h6.heading {
   box-shadow: 0 2em 2em -2em var(--shadow-secondary);
   transform: scale(1.1);
 }
+
 .thought-card {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  color: var(--text-grey);
+  color: var(--text-primary);
   margin-top: 2em;
   border-radius: 1em;
   padding: 1em;
   text-align: center;
+  background: var(--bg-secondary);
 }
+
 .text-bg {
   padding: 0 0.25em;
   color: var(--text-grey);

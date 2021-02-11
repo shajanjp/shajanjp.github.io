@@ -10,10 +10,7 @@ layout: page
   thought.content | strip_html | strip_newlines | strip %} {% if content != ''
   %}
   <div class="col-sm-4">
-    <div
-      class="thought-card"
-      style="background-image: url('{{ site.baseurl }}/uploads/{{ thought.image }}');"
-    >
+    <div class="thought-card">
       {{ thought.content | strip_html }}
     </div>
   </div>
