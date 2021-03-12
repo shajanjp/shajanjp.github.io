@@ -41,3 +41,8 @@ input {
   border-color: black !important;
   border: none !important;
 }
+
+.stdin-text{
+  width: auto;
+  display: inline-block;
+}

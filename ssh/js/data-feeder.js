@@ -8,6 +8,7 @@ const commadsList = {
   "uptime": "tell how long the system has been running",
   "whoami": "print effective username",
 };
+let currentPathStack = [];
 
 function line(content) {
   return `<p>${content}</p>`;
@@ -15,24 +16,30 @@ function line(content) {
 
 function renderObject(data) {
   let rData = '';
-  for (var k in data) {
-    if(k == 'view'){
-    rData += `<p><span class="c-faded">${k}</span> : <a href="${data[k]}" target="_blank">View</a></p>`;
-    }
-    else{
-    rData += `<p><span class="c-faded">${k}</span> : ${data[k]}</p>`;
+
+  for (const k in data) {
+    switch(k){
+      case 'view':
+        rData += `<p><span class="c-faded">${k}</span> : <a href="${data[k]}" target="_blank">View</a></p>`;
+        break;
+      case 'isEnd':
+      case 'nodeType':
+        break; 
+      default:
+        rData += `<p><span class="c-faded">${k}</span> : ${data[k]}</p>`;
+        break;
     }
   }
   return rData;
 }
 
-let currentPathStack = [];
-
 function currentPath() {
   let cPath = mainTree;
+
   currentPathStack.forEach(path => {
     cPath = cPath[path];
   });
+
   return cPath;
 }
 
@@ -76,7 +83,7 @@ function catCommand(path){
 function getReplay(command) {
   let renderedReplay = '';
   let commandSplit = command.split(' ');
-  console.log('commandSplit.slice(1)', commandSplit.slice(1));
+
   switch (commandSplit[0]) {
     case 'ls':
     renderedReplay = lsCommand();
@@ -104,7 +111,7 @@ function getReplay(command) {
     break;
 
     case 'whoami':
-    renderedReplay = line('shajan');
+    renderedReplay = line('shajanjp');
     break;
 
     case 'help':
@@ -117,6 +124,6 @@ function getReplay(command) {
   }
   renderedReplay += `<span class="stdout-text">${currentPathStack.join(
     '/'
-    )}</span> $<input type="text" autocorrect="off" autocapitalize="off">`;
+    )}</span> $<input class="stdin-text" type="text" autocorrect="off" autocapitalize="off">`;
   return renderedReplay;
 }
