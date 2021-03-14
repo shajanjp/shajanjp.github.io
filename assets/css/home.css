@@ -403,9 +403,21 @@ section#about {
   margin: 0;
   display: grid;
   grid-template-rows: 1fr auto;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   break-inside: avoid;
 }
+
+header {
+  margin-bottom: 2em;
+} 
+
+header .description {
+  margin-top: 0.5em;
+} 
+
+header h1 {
+  margin-bottom: 0;
+} 
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
