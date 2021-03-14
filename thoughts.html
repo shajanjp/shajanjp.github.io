@@ -5,11 +5,11 @@ tags: ["thoughts", "mindset", "life"]
 layout: page
 ---
 
-<div class="row">
+<div class="masonry">
   {% for thought in site.categories.thoughts %} {% assign content =
   thought.content | strip_html | strip_newlines | strip %} {% if content != ''
   %}
-  <div class="col-sm-4">
+  <div class="item">
     <div class="thought-card">
       {{ thought.content | strip_html }}
     </div>
