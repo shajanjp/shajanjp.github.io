@@ -79,6 +79,10 @@ main {
   min-height: calc(100vh - 70px);
 }
 
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
@@ -200,6 +204,8 @@ main {
 
 #contact-form input,
 #contact-form textarea {
+  padding: 0.5em 0;
+  font-size: 1.2em;
   margin-top: 1em;
   width: 100%;
   background-color: transparent;
