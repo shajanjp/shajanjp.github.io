@@ -375,18 +375,21 @@ section#about {
   background: var(--palette-primary);
 }
 
-.tags-cloud .tag{
-  display: inline-block;
-  margin: .2em;
-  padding: .3em .5em;
+.tag{
+  margin: 0.4em 0.2em;
+  padding: 0.3em 0.5em;
   background: var(--bg-secondary);
   border: 1px solid var(--bg-secondary);
   color: var(--palette-primary);
   transition: all 0.5s ease-in-out;
 }
-.tags-cloud .tag:hover {
+.tag:hover {
   border: 1px solid var(--palette-primary);
   transition: all 0.5s ease-in;
+}
+
+.tags-cloud .tag {
+  display: inline-block;
 }
 
 .hint {
