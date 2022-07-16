@@ -375,6 +375,7 @@ section#about {
   color: var(--palette-primary);
   background: var(--bg-secondary);
   margin-top: .6em;
+  cursor: pointer;
 }
 .button:active {
   color: var(--bg-primary);
@@ -498,4 +499,12 @@ header h1 {
   .navbar:hover .logo-text {
     left: 0px;
   }
+}
+
+.blog h2, 
+.blog h3, 
+.blog h4, 
+.blog h5, 
+.blog h6 {
+  color: var(--palette-primary);
 }
