@@ -1,17 +1,19 @@
 ---   
 layout: blog
 title: "My journey of using and contributing to google maps"
-# thumbnail: "blogs/thumbnails/the-story-of-a-light-bulb-thumbnail.jpg"
-# cover: "blogs/thumbnails/the-story-of-a-light-bulb-thumbnail.jpg"
-summary: "How I started with maps"
+thumbnail: "blogs/thumbnails/my-journey-of-using-and-contributing-to-google-maps-thumbnail.jpg"
+cover: "blogs/thumbnails/my-journey-of-using-and-contributing-to-google-maps-thumbnail.jpg"
+summary: "How I started with google maps and reached level 10 as a contributed"
 description: ""
 tags: ["live", "tech", "experience", "google"]
 categories: ["blog"]
 ---
 
+<img src="{{site.baseUrl}}/uploads/blogs/my-journey-of-using-and-contributing-to-google-maps.jpg" style=" height: auto; width:100%;">
+
 ## My perspective on maps
 
-The map is a spectacular invention, without any doubt. Plotting and understanding the planet we live in to a single image is a tremendous achievement. Every time I zoom out on the map, I realize how tiny I am and my surroundings. Seeing photos of places around the world without physically going there is a luxury. I’ve not traveled to any places outside of my country. I've not even visited 1% of the places in the country I’m living in, still, I can imagine how certain places look like, or how to navigate to places. I also like the idea of knowing and letting others know about places.
+The map is a spectacular invention, without any doubt. Plotting and understanding the planet we live in to a single image is a tremendous achievement. Every time I zoom out on the map, I realize how tiny I am and my surroundings. Seeing photos of places around the world without physically going there is a luxury. I’ve not traveled to any places outside of my country. I've not even visited 1% of the places in the country I’m living-in, still, I can imagine how certain places look like, or how to navigate to places. I also like the idea of knowing and letting others know about places.
 
 ## How I use Google Maps
 
