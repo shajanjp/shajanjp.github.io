@@ -28,7 +28,7 @@ I used [KSEB’s official electricity bill calculator](https://bills.kseb.in/) t
 - If consumption falls between 500 and 600 units, the rate is ₹6.40 per unit.
 - Between 600 and 700 units, it increases to ₹7.25 for the lower slab and ₹7.60 for the higher one.
 
-That month, I had consumed nearly 600 units, which explained the steep bill. To ensure this didn’t happen again, I decided to track my energy usage on a daily basis.
+That month, I had consumed nearly 600 units, which explained the steep bill. To ensure this didn’t happen again, I decided to track my power usage on a daily basis.
 
 ## Meter reading tracking
 
@@ -65,7 +65,7 @@ This setup allows me to effortlessly track my electricity consumption, with the 
 
 By tracking my electricity consumption daily, I’ve managed to stay on top of my usage and avoid unexpected spikes in my bill. The combination of Notion, the Deno REST API, and iPhone automation has made the process efficient and seamless.
 
-If you’ve ever been surprised by a high electricity bill, setting up a similar system could help you gain better control over your energy consumption. If you are lazy, atleast write down the meter readings in a book once in a while and analyse it.
+If you’ve ever been surprised by a high electricity bill, setting up a similar system could help you gain better control over your electricity consumption. If you are lazy, atleast write down the meter readings in a book once in a while and analyse it.
 
 I know there are other smarter methods to track this, like a Wi-Fi connected electricity meter, etc., but this is the easiest and cheapest way I found to solve the issue.
 
