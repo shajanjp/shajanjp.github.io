@@ -15,7 +15,7 @@ categories: ["blog"]
 
 After receiving an unexpectedly high electricity bill, I built a system to track and predict my electricity consumption using a [Deno](https://deno.com/) REST API thats connected to a [Notion](https://www.notion.so) database. It calculates daily usage, current costs using the KSEB API, and future bill predictions. I log my meter readings via an [iPhone Shortcut](https://support.apple.com/en-in/guide/shortcuts/welcome/ios), and an iOS widget created with [Scriptable](https://scriptable.app/) displays the data on my phone home screen.
 
-## How I track and predict my electricity consumption
+## The bill that started it all
 
 About six months ago, I received an electricity bill that was almost three times higher than what I usually pay. This unexpected spike made me take a closer look at my electricity usage to figure out what had gone wrong and how I could prevent it from happening again.
 
