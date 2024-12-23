@@ -1,6 +1,6 @@
 ---   
 layout: blog
-title: "Merry Pixels: A hand crafted programmable christmas star"
+title: "Merry Pixels: Hand crafted programmable christmas star"
 thumbnail: "blogs/thumbnails/merry-pixels-a-hand-crafted-programmable-christmas-star.jpg"
 cover: "blogs/thumbnails/merry-pixels-a-hand-crafted-programmable-christmas-star.jpg"
 summary: "A hand crafted christmas star thats programmable using javascript by anyone around the world"
@@ -10,10 +10,10 @@ categories: ["blog"]
 ---
 
 ## TLDR:
-I created a christmas star with 300 led bulbs and hung it in front of my house, which can be programmed by anyone around the world the way they want.
+I created a christmas star with 300 led bulbs and hung it in front of my house, which can be programmed by anyone around the world the way they want. Give it a [try here](https://merry-pixels.deno.dev/).
 
 ## Backstory:
-Like a lot of other people, I like the December season very much. The holidays, snow weather, lights, gifts, and Christmas cake. The time spent on decorating the house with lights and making the Christmas crib always gives a warm feeling. This season brings back good childhood memories too. Colorful lights blinking everywhere make me happy. I’ve written a few lines on how obsessed I am with lights here.
+Like a lot of other people, I like the December season very much. The holidays, snow weather, lights, gifts, and Christmas cake. The time spent on decorating the house with lights and making the Christmas crib always gives a warm feeling. This season brings back good childhood memories too. Colorful lights blinking everywhere always make me happy. I’ve written a few lines on how obsessed I am with lights [here](https://shajanjacob.com/blog/2022/07/16/the-story-of-a-light-bulb.html). 
 
 Nowadays there are a lot of Christmas stars available in the market. Everyone is buying them, and almost all the stars in the neighborhood look the same, which is boring. Me, together with my wife, wanted to make a star handcrafted from locally available materials and hang it in front of the house, which would be special compared to what others have.
 
@@ -33,7 +33,7 @@ I chose to use the ESP32 as the controller to drive the LEDs. I had an M5Stack A
 
 <img src="{{site.baseUrl}}/uploads/blogs/merry-pixels-webpage.jpg" style=" height: auto; width:100%;">
 
-I also created a web page that has an emulator of the star using HTML canvas with the same number of lights and the same shape as the physical star. I also added a code editor to the web page, which can be used to program the star. The editor has a boilerplate JavaScript function called twinkle() which can be programmed to return a string that includes the colors for each LED in the star and a delay value that will decide how much time that particular color should stay lit.
+I also created a [web page that has an emulator of the star](https://merry-pixels.deno.dev/) using HTML canvas with the same number of lights and the same shape as the physical star. I also added a code editor to the web page, which can be used to program the star. The editor has a boilerplate JavaScript function called twinkle() which can be programmed to return a string that includes the colors for each LED in the star and a delay value that will decide how much time that particular color should stay lit.
 
 Each leg of the star has 60 LEDs (30 LEDs on each side), which makes 300 LEDs in total for the star. To animate it, we need 300 colors to be there in a single frame (colors of the star at a given moment). Also, for creating an animation (for example: to make an LED run from start to end), we need 300 frames. I decided to take the color input in hexadecimal colors.
 
@@ -63,7 +63,7 @@ Even though I reduced the 6-character color (eg FF0000) to a 3-character hex col
 I decided to get rid of the JSON format and use plain text input instead. Also, instead of returning all the frames at once, I made changes in the Deno server to make the response a stream. I updated the ESP32 to handle the stream and process the colors, which resolved the issue.
 
 ## Why and What’s Next:
-Like every other hobby project, I started this as a fun activity with my wife. This taught me so many things, like powering so many LEDs, streaming API responses, and creating each animation like solving an algorithm problem. I enjoyed spending time with my wife making the star together.
+Like every other hobby project, I started this as a weekend fun activity. This taught me so many things, like powering so many LEDs, streaming API responses, and creating each animation like solving an algorithm problem. I enjoyed spending time with my wife making the star together.
 
 Anyone can contribute animations. I will be running all the animations together and posting a video showing all the submissions in one go.
 

@@ -1,15 +1,15 @@
 <meta charset="UTF-8" />
-<title>{{ site.title }}</title>
+<title>{{ page.title | default: site.title }}</title>
 <meta name="theme-color" content="#111" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta name="description" content="{{ site.description }}" />
+<meta name="description" content="{{ page.description | default: site.description }}" />
 <meta name="keywords" content="Shajan Jacob,programmer,web,kerala,freelancer,guyswhocode,gwc,shajanjp" />
 <meta name="author" content="{{ site.title }}" />
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ site.title }}" />
+<meta property="og:title" content="{{ page.title | default: site.title }}" />
 <meta property="og:url" content="{{ site.baseurl }}" />
-<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:description" content="{{ page.description | default: site.description }}" />
 <meta property="og:image" content="{{ site.avatar }}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:locale" content="en_US" />
@@ -17,7 +17,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="{{ site.baseurl }}" />
-<meta name="twitter:description" content="{{ site.description }}" />
+<meta name="twitter:description" content="{{ page.description | default: site.description }}" />
 <meta name="twitter:title" content="{{ site.title }}" />
 <meta name="twitter:image" content="{{ site.avatar }}" />
 
