@@ -9,6 +9,7 @@ tags: ["terrarium", "personal", "nature"]
 categories: ["blog"]
 ---
 
+<img src="{{site.baseUrl}}/uploads/blogs/a-tiny-terrarium-i-made.jpg" style="height: auto; width: 100%;">
 Plants have a quiet way of making everything feel more alive—and I love that. Something about plants and greenery instantly lifts my mood. There’s a calmness in them, a sense of life that makes everything feel just a little better.
 
 ## Discovering the Magic of Terrariums
