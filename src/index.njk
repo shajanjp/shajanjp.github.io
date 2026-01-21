@@ -24,7 +24,7 @@ description: "Software Engineer | Hacker"
             <a class="mt-4" href="{{ project.url }}" class="group block">
                 <h3 class="font-medium decoration-zinc-400">{{ project.data.title }}</h3>
             </a>
-            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{{ project.data.description }}</p>
+            <p class="mt-1 text-sm text-justify text-zinc-500 dark:text-zinc-400">{{ project.data.description }}</p>
             <span class="text-xs text-zinc-400 dark:text-zinc-600">{{ project.date | humanDate }}</span>
         </article>
         {% endfor %}
@@ -46,7 +46,7 @@ description: "Software Engineer | Hacker"
             <a class="mt-4" href="{{ post.url }}" class="group block">
                 <h3 class="font-medium group-hover:underline decoration-zinc-400 underline-offset-4">{{ post.data.title }}</h3>
             </a>
-            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{{ post.data.description }}</p>
+            <p class="mt-1 text-sm text-justify text-zinc-500 dark:text-zinc-400">{{ post.data.description }}</p>
             <div class="mt-1 mt-4flex gap-2">
                 {% for tag in post.data.tags %}
                 {% if tag != "posts" %}

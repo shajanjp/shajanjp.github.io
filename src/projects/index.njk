@@ -24,7 +24,7 @@ permalink: "/projects/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageN
                 </a>
                 <span class="text-sm text-zinc-400 dark:text-zinc-600">{{ project.date.getFullYear() }}</span>
             </div>
-            <p class="text-zinc-600 dark:text-zinc-400 mb-2 leading-relaxed">
+            <p class="text-justify text-zinc-600 dark:text-zinc-400 mb-2 leading-relaxed">
                 {{ project.data.description }}
             </p>
             <a href="{{ project.data.link }}" class="text-sm underline underline-offset-4 decoration-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300">View Source</a>
