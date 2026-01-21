@@ -1,0 +1,17 @@
+- [x] Add support for pagination in blogs/photography and projects page.
+- [x] Dynamic tailwind css generation
+- [x] Add dynamic sitemap.xml
+- [x] Set up footer content
+- [ ] Add meta tags to pages
+- [ ] Content migration
+  - [ ] Blog posts
+  - [ ] Photos
+  - [ ] Projects
+- [ ] Fix urls in projects
+- [ ] Optimize images
+- [ ] Move navigation to burger menu in mobile screen
+- [ ] Adds support for source code and try now button for projects
+- [ ] Add support for google analytics
+- [ ] Setup contact page
+- [ ] Add support for tags page for blogs
+- [ ] Fix dark mode flicker issue

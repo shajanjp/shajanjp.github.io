@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+title: CV
+eleventyExcludeFromCollections: true
+---
+
+<main class="space-y-5">
+  <section>
+    <a
+    href="https://github.com/shajanjp/cv/raw/master/shajan-jacob-CV.pdf"
+    class="ui right floated button"
+    >Download Resume</a
+    ><br />
+    <div class="name-and-brief">
+      <p>Shajan Jacob</p>
+      <p>shajanjp@gmail.com</p>
+      <p><a href="https://www.shajanjacob.com">shajanjacob.com</a></p>
+      <p>Cochin, Kerala, India</p>
+    </div>
+  </section>
+
+  <section>
+
+    <h3 class="text-gradient">EDUCATION</h3>
+    <ul class="list">
+      <li>
+        <div class="content">
+          <a class="header">Bachelor of Engineering (CS)</a>
+          <div class="meta">T JOHN INSTITUTE OF TECHNOLOGY</div>
+        </div>
+        <div class="extra content">2017</div>
+      </li>
+      <li>
+        <div class="content">
+          <a class="header">Pre University</a>
+          <div class="meta">Bappuji Central School, Peruva</div>
+        </div>
+        <div class="extra content">2011</div>
+      </li>
+      <li>
+        <div class="content">
+          <a class="header">10th Standard</a>
+          <div class="meta">Bappuji Public School, Elivaly</div>
+        </div>
+        <div class="extra content">2008</div>
+      </li>
+    </ul>
+  </section>
+    
+<section>
+  <h3 class="text-gradient">PROJECTS</h3>
+    <ul class="list">
+      {% for project in site.categories.project %}
+      <li>
+        <div class="content">
+          <a class="header">{{ project.title }}</a>
+          <div class="meta">
+            <span class="date">{{ project.description }}</span>
+          </div>
+        </div>
+        <div class="extra content">
+          <a href="{{ project.visit }}"> View </a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+</section>
+  <h3 class="text-gradient">SKILLS</h3>
+  <ul class="list">
+    <li>HTML - Expert</li>
+    <li>CSS - Expert</li>
+    <li>NodeJS - Intermediate</li>
+    <li>MongoDB - Intermediate</li>
+    <li>PHP - Intermediate</li>
+    <li>Linux - Expert</li>
+    <li>JavaScript - Intermediate</li>
+    <li>Bootstrap - Expert</li>
+    <li>MySQL - Intermediate</li>
+    <li>jQuery - Intermediate</li>
+    <li>Python - Beginner</li>
+    <li>AngularJS - Beginner</li>
+  </ul>
+  <h3 class="text-gradient">WORK SAMPLES &amp PROFILES</h3>
+  <ul class="list">
+    <li>
+      <a href="http://shajanjacob.com/blog">Blog</a>
+    </li>
+    <li>
+      <a href="http://github.com/shajanjp">Github</a>
+    </li>
+    <li>
+      <a href="http://behance.net/shajanjp">Behance</a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/shajanjp/">LinkedIn</a>
+    </li>
+    <li>
+      <a href="http://guyswhocode.com/shajanjp" title="Guys Who Code"
+        >Guys Who Code</a
+      >
+    </li>
+  </ul>
+</main>

@@ -1,0 +1,36 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+		<loc>/</loc>
+	</url>
+	<url>
+		<loc>{{site.url}}/projects</loc>
+	</url>
+	<url>
+		<loc>{{site.url}}/blog</loc>
+	</url>
+	<url>
+		<loc>{{site.url}}/cv</loc>
+	</url>
+  <url>
+		<loc>{{site.url}}/ssh</loc>
+	</url>
+	<url>
+		<loc>{{site.url}}/photography</loc>
+	</url>
+	<url>
+		<loc>{{site.url}}/blog</loc>
+	</url>
+{%- for page in collections.all %}
+  {%- if page.url and page.data.excludeFromSitemap != true %}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ (page.date or page.data.date) | htmlDateString }}</lastmod>
+  </url>
+  {%- endif %}
+{%- endfor %}
+</urlset>

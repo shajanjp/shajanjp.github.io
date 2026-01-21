@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* This replaces theme.extend.fontFamily */
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+/* This replaces darkMode: 'class' */
+@variant dark (&:where(.dark, .dark *));
+
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}

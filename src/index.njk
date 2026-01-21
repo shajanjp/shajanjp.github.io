@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+title: Shajan Jacob
+description: "Software Engineer | Hacker"
+---
+
+<section class="mb-8">
+    <div class="leading-relaxed text-zinc-800 dark:text-zinc-300 text-justify space-y-2">
+        <p>Hi,</p>
+        <p>I'm a passionate software engineer from Kerala. I absorb and emit a lot of JavaScript, and when I'm not coding, I'm usually tinkering with IoT and electronics — if it has wires, buttons, or blinking lights, I'm in.</p>
+        <p>I appreciate all forms of art, from choosing the perfect font color to turning my space into a mini jungle with plants. I also enjoy capturing subtle moments that people often overlook.</p>
+        <p>I've had the opportunity to work with teams at Cubet and Sorice, building products with care, curiosity, and creativity.</p>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="mb-8">
+    <div class="flex justify-between items-baseline mb-6">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-600">Projects</h2>
+    </div>
+    <div class="space-y-4">
+        {% for project in collections.projects | reverse | batch(4) | first %}
+        <article class="mt-4">
+            <a class="mt-4" href="{{ project.url }}" class="group block">
+                <h3 class="font-medium decoration-zinc-400">{{ project.data.title }}</h3>
+            </a>
+            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{{ project.data.description }}</p>
+            <span class="text-xs text-zinc-400 dark:text-zinc-600">{{ project.date | humanDate }}</span>
+        </article>
+        {% endfor %}
+    </div>
+    <div class="mt-6 text-right">
+        <a href="/projects/" class="text-xs text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex items-center justify-end gap-1 group">
+            See more projects<span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </a>
+    </div>
+</section>
+
+<section class="mb-8">
+    <div class="flex justify-between items-baseline mb-6">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-600">Blog</h2>
+    </div>
+    <div class="space-y-4">
+        {% for post in collections.blog | reverse | batch(4) | first %}
+        <article class="mt-4">
+            <a class="mt-4" href="{{ post.url }}" class="group block">
+                <h3 class="font-medium group-hover:underline decoration-zinc-400 underline-offset-4">{{ post.data.title }}</h3>
+            </a>
+            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{{ post.data.description }}</p>
+            <div class="mt-1 mt-4flex gap-2">
+                {% for tag in post.data.tags %}
+                {% if tag != "posts" %}
+                <span class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm">{{ tag }}</span>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <span class="mt-1 text-xs text-zinc-400 dark:text-zinc-600">{{ post.date | humanDate }}</span>
+        </article>
+        {% endfor %}
+    </div>
+    <div class="mt-6 text-right">
+        <a href="/blog/" class="text-xs text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex items-center justify-end gap-1 group">
+            See more blogs<span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </a>
+    </div>
+</section>
+
+
+<section class="mb-8">
+    <div class="flex justify-between items-baseline mb-6">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-600">Photography</h2>
+    </div>
+    {% set photos = collections.photos | reverse | batch(4) | first %}
+    {% include "components/photo-grid.njk" %}
+    
+    <div class="mt-6 text-right">
+        <a href="/photography/" class="text-xs text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex items-center justify-end gap-1 group">
+            See more photos<span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+        </a>
+    </div>
+</section>
