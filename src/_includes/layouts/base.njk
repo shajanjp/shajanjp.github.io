@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.url === "/" %}
+        {{ site.title }}
+    {% elseif title %}
+        {{ title }} | {{ site.title }}
+    {% else %}
+        {{ site.title }}
+    {% endif %}</title>
+    <meta name="description" content="{{ description | default(site.description) }}"/>
+    <!-- @todo make this dynamic -->
+    <meta name="theme-color" content="#111" />
+    <meta name="keywords" content="Shajan Jacob,engineer,programmer,shajanjp" />
+    <meta name="author" content="{{ site.title }}" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ title | default(site.title) }}" />
+    <meta property="og:url" content="{{ site.baseurl }}" />
+    <meta property="og:description" content="{{ description | default(site.description) }}" />
+    <meta property="og:image" content="{{ site.avatar }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="{{ site.baseurl }}" />
+    <meta name="twitter:description" content="{{ description | default(site.description) }}" />
+    <meta name="twitter:title" content="{{ site.title }}" />
+    <meta name="twitter:image" content="{{ site.avatar }}" />
+
+    <!-- Favicons  -->
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/img/mstile-144x144.png" />
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="{{ site.baseurl }}/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-zinc-900 selection:bg-black selection:text-white dark:bg-zinc-900 dark:text-zinc-100 dark:selection:bg-white dark:selection:text-black transition-colors duration-300">
+    <main class="max-w-3xl mx-auto px-4 py-12 relative">
+        <!-- Header -->
+        <header class="mb-12">
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <a href="/" class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden flex-shrink-0 border border-zinc-200 dark:border-zinc-800">
+                            <img src="/assets/me.jpg" alt="Shajan Jacob" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" onerror="this.style.display='none'">
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-medium tracking-tight">Shajan Jacob</h1>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-1">Software Engineer | Hacker | Dim</p>
+                        </div>
+                    </a>
+                </div>
+                <button id="theme-toggle" class="p-2 -mt-2 -mr-2 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+            </div>
+
+            {% if page.url != "/" %}
+                <!-- Navigation (Only on inner pages) -->
+                {% include "components/page-navigation.njk" %}
+            {% endif %}
+        </header>
+
+        
+        <div class="mt-8">
+            {{ content | safe }}
+        </div>
+        
+        
+        <footer class="mt-8 pt-8 text-center text-xs text-zinc-800 dark:text-zinc-200">
+            <p id="footer-text" >Made with ❤️ by Shajan</p>
+        </footer>
+    </main>
+
+    <script>
+        // Theme toggle script
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Check for saved theme in localStorage or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            // Toggle icons
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            // Toggle theme
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        const footerTextLines = [
+            "Built with curiosity & caffeine by Shajan",
+            "A small corner of the internet by Shajan",
+            "Built at 2 AM by Shajan",
+            "Built while the world slept",
+            "Built with curiosity, fixed with coffee",
+            "Grown from late nights by Shajan",
+            "Made with ❤️ by Shajan"
+        ];
+
+        let index = 0;
+        const el = document.getElementById("footer-text");
+        el.textContent = footerTextLines[Math.floor(Math.random() * footerTextLines.length)];
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+---
+layout: layouts/post.njk
+title: Blog
+eleventyExcludeFromCollections: true
+eleventyAllowMissingExtension: true
+
+pagination:
+  data: collections.blog
+  size: 10
+  reverse: true
+  alias: posts
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+<section>
+  <h2 class="text-2xl font-medium mb-8">Thoughts / Logs / Notes </h2>
+  <div class="space-y-4">
+    {% for post in posts | reverse %}
+    <article class="mt-4">
+      <a class="mt-4" href="{{ post.url }}" class="group block">
+        <h3 class="font-medium group-hover:underline decoration-zinc-400 underline-offset-4">{{ post.data.title }}</h3>
+      </a>
+      <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{{ post.data.description }}</p>
+      <div class="mt-1 mt-4flex gap-2">
+        {% for tag in post.data.tags %}
+        {% if tag != "posts" %}
+        <span class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm">{{ tag }}</span>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <span class="mt-1 text-xs text-zinc-400 dark:text-zinc-600">{{ post.date | humanDate }}</span>
+    </article>
+    {% endfor %}
+  </div>
+  {% set entityName = "posts" %}
+  {% include "components/pagination-nav.njk" %}
+</section>

@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "654cf0185f99f970",
+    "type": "split",
+    "children": [
+      {
+        "id": "f39892df7534c69b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8dfc43f182382db6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/a-bottle-full-of-nature/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d435562e33126622",
+    "type": "split",
+    "children": [
+      {
+        "id": "0729a24a59c93baa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35403c7c4b641c1c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "76d5e44207987817",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "677437bf5ab15bee",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "84e127a6456cb910",
+    "type": "split",
+    "children": [
+      {
+        "id": "73b8e9c1f53d4dd8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4675dd3373eefc91",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/a-bottle-full-of-nature/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for index"
+            }
+          },
+          {
+            "id": "a5d456566cab92ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/a-bottle-full-of-nature/index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from index"
+            }
+          },
+          {
+            "id": "32680a1320ca956b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "89d2bf44831db0bd",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "cbde9a3d3ba0e11e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/a-bottle-full-of-nature/index.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "8dfc43f182382db6",
+  "lastOpenFiles": [
+    "blog/representing-ip-address-using-rgb-leds/ip-address-using-rgb-leds.jpg",
+    "blog/representing-ip-address-using-rgb-leds/representing-ip-address-using-rgb-leds.jpg",
+    "blog/representing-ip-address-using-rgb-leds/index.md",
+    "blog/representing-ip-address-using-rgb-leds/2019-02-25-representing-ip-address-using-rgb-leds.md",
+    "blog/representing-ip-address-using-rgb-leds",
+    "blog/2019-02-25-representing-ip-address-using-rgb-leds.md",
+    "blog/2019-02-25-representing-ip-address-using-rgb-leds/2019-02-25-representing-ip-address-using-rgb-leds.md",
+    "blog/2019-02-25-representing-ip-address-using-rgb-leds",
+    "blog/untitled folder",
+    "blog/my-journey-of-using-and-contributing-to-google-maps/my-journey-of-using-and-contributing-to-google-maps.jpg",
+    "blog/my-journey-of-using-and-contributing-to-google-maps/index.md",
+    "blog/my-journey-of-using-and-contributing-to-google-maps/2022-11-24-my-journey-of-using-and-contributing-to-google-maps.md",
+    "blog/my-journey-of-using-and-contributing-to-google-maps",
+    "blog/merry-pixels-a-hand-crafted-programmable-christmas-star/merry-pixels-webpage.jpg",
+    "blog/merry-pixels-a-hand-crafted-programmable-christmas-star/star-hung-in-front-of-house.jpg",
+    "blog/merry-pixels-a-hand-crafted-programmable-christmas-star/star-wooden-frame.jpg",
+    "blog/merry-pixels-a-hand-crafted-programmable-christmas-star/star-led-panel-and-light-strip.jpg",
+    "blog/merry-pixels-a-hand-crafted-programmable-christmas-star/index.md",
+    "blog/merry-pixels-a-hand-crafted-programmable-christmas-star/merry-pixels-a-hand-crafted-programmable-christmas-star.md",
+    "blog/merry-pixels-a-hand-crafted-programmable-christmas-star/2024-12-23-merry-pixels-a-hand-crafted-programmable-christmas-star.md",
+    "blog/merry-pixels-a-hand-crafted-programmable-christmas-star",
+    "blog/the-story-of-a-light-bulb/the-story-of-a-light-bulb.jpg",
+    "blog/the-story-of-a-light-bulb/globo-iot-mood-light-table.jpg",
+    "blog/the-story-of-a-light-bulb/index.md",
+    "blog/2022-07-16-the-story-of-a-light-bulb.md",
+    "blog/the-story-of-a-light-bulb/2022-07-16-the-story-of-a-light-bulb.md",
+    "blog/the-story-of-a-light-bulb",
+    "blog/how-i-track-and-predict-electricity-consumption-at-home/index.md",
+    "blog/how-i-track-and-predict-electricity-consumption-at-home/notion-electricity-reading-db.jpg",
+    "blog/how-i-track-and-predict-electricity-consumption-at-home/how-i-track-and-predict-electricity-consumption-at-home.jpg",
+    "blog/how-i-track-and-predict-electricity-consumption-at-home/2024-10-05-how-i-track-and-predict-electricity-consumption-at-home.md",
+    "blog/how-i-track-and-predict-electricity-consumption-at-home",
+    "blog/a-bottle-full-of-nature/index.md"
+  ]
+}

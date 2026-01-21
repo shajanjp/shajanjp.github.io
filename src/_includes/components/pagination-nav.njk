@@ -1,0 +1,15 @@
+<nav class="mt-6 flex items-center justify-between text-xs">
+  {% if pagination.href.previous %}
+  <a href="{{ pagination.href.previous }}" class="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex items-center gap-1 group">
+    <span class="group-hover:-translate-x-1 transition-transform">←</span> Newer {{ entityName }}
+  </a>
+  {% else %}
+  <span></span>
+  {% endif %}
+  
+  {% if pagination.href.next %}
+  <a href="{{ pagination.href.next }}" class="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex items-center gap-1 group"> Older {{ entityName }}
+    <span class="group-hover:translate-x-1 transition-transform">→</span>
+  </a>
+  {% endif %}
+</nav>

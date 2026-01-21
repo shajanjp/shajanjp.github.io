@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+---
+<article>
+    <header class="mb-8 not-prose">
+        <h1 class="text-3xl font-bold tracking-tight">{{ title }}</h1>
+        <p class="mt-2 text-sm text-zinc-500 dark:text-zinc-400">{{ page.date | humanDate }}</p>
+        <div class="mt-2 mt-4flex gap-2">
+            {% for tag in tags %}
+            {% if tag != "posts" %}
+            <span class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm">{{ tag }}</span>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </header>
+    <div class="prose dark:prose-invert max-w-none">
+        {{ content | safe }}
+    </div>
+</article>

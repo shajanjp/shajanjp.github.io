@@ -1,0 +1,25 @@
+{
+  "name": "sj-website-redesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "concurrently \"npm:watch:*\"",
+    "watch:eleventy": "eleventy --serve",
+    "watch:tailwind": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/style.css --watch",
+    "build": "npm run build:tailwind && npm run build:eleventy",
+    "build:eleventy": "eleventy",
+    "build:tailwind": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/style.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@tailwindcss/cli": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
+    "concurrently": "^9.2.1"
+  }
+}

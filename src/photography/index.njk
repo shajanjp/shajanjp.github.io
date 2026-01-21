@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+title: Photography
+eleventyExcludeFromCollections: true
+eleventyAllowMissingExtension: true
+
+pagination:
+  data: collections.photos
+  size: 16
+  reverse: true
+  alias: photos
+permalink: "/photography/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+<section>
+    <h2 class="text-2xl font-medium mb-8">Photography</h2>
+    {% include "components/photo-grid.njk" %}
+    {% set entityName = "photos" %}
+    {% include "components/pagination-nav.njk" %}
+</section>

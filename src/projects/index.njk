@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: Projects
+description: "Personal hobby projects I have built"
+eleventyExcludeFromCollections: true
+eleventyAllowMissingExtension: true
+
+pagination:
+  data: collections.projects
+  size: 10
+  reverse: true
+  alias: projects
+permalink: "/projects/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+<section>
+    <h2 class="text-2xl font-medium mb-8">Projects</h2>
+    <div class="space-y-4">
+        {% for project in projects | reverse %}
+        <div class="group">
+            <div class="flex justify-between items-baseline mb-2">
+                <a href="{{ project.url }}">
+                    <h3 class="text-lg font-medium decoration-zinc-400">{{ project.data.title }}</h3>
+                </a>
+                <span class="text-sm text-zinc-400 dark:text-zinc-600">{{ project.date.getFullYear() }}</span>
+            </div>
+            <p class="text-zinc-600 dark:text-zinc-400 mb-2 leading-relaxed">
+                {{ project.data.description }}
+            </p>
+            <a href="{{ project.data.link }}" class="text-sm underline underline-offset-4 decoration-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300">View Source</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% set entityName = "projects" %}
+    {% include "components/pagination-nav.njk" %}
+</section>

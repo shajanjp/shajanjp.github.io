@@ -1,0 +1,48 @@
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {% for photo in photos %}
+    <div class="group cursor-pointer photo-card" data-caption="{{ photo.data.title }}" data-image="{{ photo.data.image }}">
+        <div class="aspect-w-3 aspect-h-4 bg-zinc-100 dark:bg-zinc-900 rounded-sm overflow-hidden relative">
+            <img src="{{ photo.data.image }}" alt="{{ photo.data.title }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300">
+        </div>
+        <p class="mt-2 pb-2 text-xs text-zinc-800 text-center dark:text-zinc-200 truncate">{{ photo.data.title }}</p>
+    </div>
+    {% endfor %}
+
+    {% include "components/photo-modal.njk" %}
+    <script>
+         // Photo modal script
+        const photoModal = document.getElementById('photo-modal');
+        if (photoModal) {
+            const modalImage = document.getElementById('modal-image');
+            const modalCaption = document.getElementById('modal-caption');
+            const closeModal = document.getElementById('close-modal');
+
+            document.querySelectorAll('.photo-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const caption = card.getAttribute('data-caption');
+                    const image = card.getAttribute('data-image');
+                    
+                    if (modalImage && image) {
+                        modalImage.src = image;
+                    }
+                    if (caption && modalCaption) {
+                        modalCaption.textContent = caption;
+                    }
+                    photoModal.classList.remove('hidden');
+                });
+            });
+
+            if (closeModal) {
+                closeModal.addEventListener('click', () => {
+                    photoModal.classList.add('hidden');
+                });
+            }
+
+            photoModal.addEventListener('click', (e) => {
+                if (e.target === photoModal) {
+                    photoModal.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</div>
