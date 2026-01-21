@@ -1,6 +1,7 @@
 ---
 title: "Hacker News - Reader"
 description: "Minimal and simple feed UI for hackernews"
+date: "2021-10-01"
 tags:
   - iot
   - light
