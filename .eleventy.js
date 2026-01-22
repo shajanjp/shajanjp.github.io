@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
   // Pass through any static assets if you add them later (e.g., images)
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/blog/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/photography/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/projects/**/*.jpg");
 
 
   // Filters
