@@ -13,3 +13,19 @@
 body {
   font-family: 'IBM Plex Mono', monospace;
 }
+
+@keyframes grayscaleSmooth {
+  0% {
+    filter: grayscale(100%);
+  }
+  50% {
+    filter: grayscale(0%);
+  }
+  100% {
+    filter: grayscale(100%);
+  }
+}
+
+.animate-grayscale {
+  animation: grayscaleSmooth 4s ease-in-out infinite;
+}

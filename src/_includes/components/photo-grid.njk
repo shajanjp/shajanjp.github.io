@@ -1,8 +1,8 @@
 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     {% for photo in photos %}
-    <div class="group cursor-pointer photo-card" data-caption="{{ photo.data.title }}" data-image="{{ photo.data.image }}">
+    <div class="cursor-pointer photo-card" data-caption="{{ photo.data.title }}" data-image="{{ photo.data.image }}">
         <div class="aspect-w-3 aspect-h-4 bg-zinc-100 dark:bg-zinc-900 rounded-sm overflow-hidden relative">
-            {% image photo.data.image, photo.data.title or "Photo", "100px", "w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" %}
+            {% image photo.data.image, photo.data.title or "Photo", "100px", "w-full h-full object-cover grayscale animate-grayscale" %}
         </div>
         <p class="mt-2 pb-2 text-xs text-zinc-800 text-center dark:text-zinc-200 truncate">{{ photo.data.title }}</p>
     </div>
