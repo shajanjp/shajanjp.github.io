@@ -1,4 +1,4 @@
 ---
 title: "Dreams Come True"
-image: "/assets/photography/dreams-come-true.jpg"
+image: "./src/assets/photography/dreams-come-true.jpg"
 ---

@@ -2,7 +2,7 @@
     {% for photo in photos %}
     <div class="group cursor-pointer photo-card" data-caption="{{ photo.data.title }}" data-image="{{ photo.data.image }}">
         <div class="aspect-w-3 aspect-h-4 bg-zinc-100 dark:bg-zinc-900 rounded-sm overflow-hidden relative">
-            <img src="{{ photo.data.image }}" alt="{{ photo.data.title }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300">
+            {% image photo.data.image, photo.data.title or "Photo", "100px", "w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" %}
         </div>
         <p class="mt-2 pb-2 text-xs text-zinc-800 text-center dark:text-zinc-200 truncate">{{ photo.data.title }}</p>
     </div>
@@ -23,7 +23,8 @@
                     const image = card.getAttribute('data-image');
                     
                     if (modalImage && image) {
-                        modalImage.src = image;
+                        let fixedImageUrl = image.replace('./src', '..');
+                        modalImage.src = fixedImageUrl;
                     }
                     if (caption && modalCaption) {
                         modalCaption.textContent = caption;

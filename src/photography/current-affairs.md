@@ -1,4 +1,4 @@
 ---
 title: "Current Affairs"
-image: "/assets/photography/current-affairs.jpg"
+image: "./src/assets/photography/current-affairs.jpg"
 ---

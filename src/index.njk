@@ -72,7 +72,6 @@ description: "Software Engineer | Hacker"
     </div>
     {% set photos = collections.photos | reverse | batch(4) | first %}
     {% include "components/photo-grid.njk" %}
-    
     <div class="mt-6 text-right">
         <a href="/photography/" class="text-xs text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex items-center justify-end gap-1 group">
             See more photos<span class="group-hover:translate-x-1 transition-transform">&rarr;</span>

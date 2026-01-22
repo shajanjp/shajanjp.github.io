@@ -1,4 +1,4 @@
 ---
 title: "Deep in Christmas"
-image: "/assets/photography/deep-in-christmas.jpg"
+image: "./src/assets/photography/deep-in-christmas.jpg"
 ---

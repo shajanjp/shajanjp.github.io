@@ -1,5 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+const Image = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -22,7 +22,7 @@ module.exports = function(eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
   return {
     dir: {
@@ -35,3 +35,32 @@ module.exports = function(eleventyConfig) {
     dataTemplateEngine: "njk",
   };
 };
+
+async function imageShortcode(
+  src,
+  alt,
+  sizes = "100vw",
+  className = ""
+) {
+  console.log("IMAGE SRC:", src);
+  if (!alt) {
+    throw new Error(`Missing alt text for image: ${src}`);
+  }
+
+  const metadata = await Image(src, {
+    widths: [320, 640, 960, 1280],
+    formats: ["avif", "webp", "jpeg"],
+    outputDir: "_site/img/",
+    urlPath: "/img/",
+  });
+
+  const imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+    class: className,
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);
+}
