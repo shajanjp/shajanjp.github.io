@@ -13,7 +13,7 @@ tags:
 date: 2024-10-05
 ---
 
-<img src="./how-i-track-and-predict-electricity-consumption-at-home.jpg" style=" height: auto; width:100%;">
+<img src="./how-i-track-and-predict-electricity-consumption-at-home.jpg" alt="My iphone widget for tracking electricity consumption" style=" height: auto; width:100%;">
 
 ## TLDR
 
@@ -38,7 +38,7 @@ That month, I had consumed nearly 600 units, which explained the steep bill. To 
 
 The digital electricity meter in my home shows various details, including voltage, frequency, and meter readings. Since I use Notion as my personal organization tool, I thought it would be convenient to store and monitor my electricity data also there.
 
-<img src="./notion-electricity-reading-db.jpg" style=" height: auto; width:100%;">
+<img src="./notion-electricity-reading-db.jpg" alt="Notion electricity reading database" style=" height: auto; width:100%;">
 
 I built a Deno REST API server to handle the tracking. It has two main endpoints:
 
@@ -54,7 +54,7 @@ This API retrieves a summary that includes my average daily electricity consumpt
 
 To make the logging process easier, I created a Shortcut on my iPhone. Every time I enter the current meter reading, the shortcut automatically sends the data to the **POST API**, logging it in Notion.
 
-<img src="./electricity-reading-ios-shortcut.jpg" style=" height: auto; width:100%;">
+<img src="./electricity-reading-ios-shortcut.jpg" alt="iPhone electricity reading shortcut" style=" height: auto; width:100%;">
 
 For quick access to the data, I also built an iOS widget using the Scriptable app. This widget pulls data from the summary API and displays key information like:
 

@@ -9,7 +9,7 @@ tags:
  - google
 ---
 
-<img src="./my-journey-of-using-and-contributing-to-google-maps.jpg" style="height: auto; width:100%;">
+<img src="./my-journey-of-using-and-contributing-to-google-maps.jpg" alt="My journey of using and contributing to google maps" tyle="height: auto; width:100%;">
 
 ## My perspective on maps
 

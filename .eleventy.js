@@ -1,4 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -20,6 +21,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return new Date(dateObj).toISOString().split("T")[0];
   });
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   return {
     dir: {

@@ -10,7 +10,7 @@ tags:
   - fun
 ---
 
-<img src="./the-story-of-a-light-bulb.jpg" style=" height: auto; width:100%;">
+<img src="./the-story-of-a-light-bulb.jpg" alt="The story of a light bulb" style=" height: auto; width:100%;">
 
 ## Short Story
 I made a simple internet-connected table lamp that blinked when you visited this page.
@@ -75,7 +75,7 @@ I have deployed the REST API and a web socket server in [deno edge](https://deno
 
 <button class="button send-message-button w-full px-6 py-4 text-2xl mb-4 text-zinc-800 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-800" style="">Give me a clap again</button>
 
-<img src="./globo-iot-mood-light-table.jpg" style=" height: auto; width:100%;">
+<img src="./globo-iot-mood-light-table.jpg" alt="Globo IoT mood light table" style=" height: auto; width:100%;">
 
 <script>
     const sendMessageButtons = document.getElementsByClassName('send-message-button');
