@@ -4,11 +4,11 @@
 - [x] Set up footer content
 - [ ] Add meta tags to pages
 - [ ] Content migration
-  - [ ] Blog posts
-  - [ ] Photos
+  - [x] Blog posts
+  - [x] Photos
   - [ ] Projects
 - [ ] Fix urls in projects
-- [ ] Optimize images
+- [x] Optimize images
 - [ ] Move navigation to burger menu in mobile screen
 - [ ] Adds support for source code and try now button for projects
 - [ ] Add support for google analytics
