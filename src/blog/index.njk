@@ -15,7 +15,7 @@ permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 <section>
   <h2 class="text-2xl font-medium mb-8">Thoughts / Logs / Notes </h2>
   <div class="space-y-4">
-    {% for post in posts | reverse %}
+    {% for post in posts %}
     <article class="mt-4">
       <a class="mt-4" href="{{ post.url }}" class="group block">
         <h3 class="font-medium group-hover:underline decoration-zinc-400 underline-offset-4">{{ post.data.title }}</h3>
