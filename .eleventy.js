@@ -11,11 +11,27 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/projects/**/*.jpg");
 
 
+  eleventyConfig.addCollection("projects", function(collectionApi) {
+    return collectionApi.getFilteredByTag("projects").sort(function(a, b) {
+      const dateA = new Date(a.data.created || a.date);
+      const dateB = new Date(b.data.created || b.date);
+      return dateA - dateB; 
+    });
+  });
+
   // Filters
   eleventyConfig.addFilter("humanDate", function (dateObj) {
     return dateObj.toLocaleDateString("en-US", {
       month: "short", // Jan
       day: "numeric", // 1
+      year: "numeric" // 2024
+    });
+  });
+
+    eleventyConfig.addFilter("humanDateYearMonth", function (dateObj) {
+    const date = new Date(dateObj);
+    return date.toLocaleDateString("en-US", {
+      month: "short", // Jan
       year: "numeric" // 2024
     });
   });

@@ -1,17 +1,34 @@
 ---
-title: "Hacker News - Reader"
-description: "Minimal and simple feed UI for hackernews"
-date: "2021-10-01"
+title: Hacker News - Reader
+description: Minimal and simple feed UI for hackernews
+created: 2021-10-01
 tags:
   - iot
   - light
   - diy
   - project
   - fun
-projectUrl: http://guyswhocode.com/HN
-sourceCodeUrl: https://github.com/guyswhocode/HN.git
+livePreviewUrl: http://guyswhocode.com/hn
+sourceCodeUrl: https://github.com/guyswhocode/hn.git
 ---
 
-Hacker News is a social news website focusing on computer science and entrepreneurship. It is run by Paul Graham's investment fund and startup incubator, Y Combinator.
+A clean, distraction-free viewer for Hacker News focused on readability, speed, and keyboard-first navigation. This is a read-only experience - no login, no submissions, no noise. Just better consumption.
 
-I just created a simple frontend app for reading stuffs from Hackernews.
+## Features
+
+* **Ample Spacing** : Clean, uncluttered layout designed for long reading sessions.
+* **Dark Mode** : Carefully tuned for comfort - not just inverted colors.
+* **Collapsible Comments** : Collapse entire threads to reduce noise and focus on what matters.
+* **Keyboard Navigation** : Navigate like a pro - fast, efficient, and distraction-free.
+
+
+## Why this exists
+
+The original Hacker News is powerful, but this project explores how far we can improve the experience without changing the core product ideologies.
+
+## Future Ideas
+
+* Focus mode for discussions
+* Inline link previews
+* Highlight new comments
+* Density toggle (compact vs comfortable)
