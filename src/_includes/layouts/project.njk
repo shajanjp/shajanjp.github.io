@@ -17,8 +17,8 @@ layout: layouts/base.njk
     <div class="prose dark:prose-invert text-justify max-w-none">
         {{ content | safe }}
     </div>
-    <div class="mt-8">
-        <a href="{{sourceCodeUrl}}">View Source Code</a><br>
-        <a href="{{livePreviewUrl}}">View Live Preview</a>
+    <div class="mt-8 flex flex-col gap-3 items-start">
+        <a class="px-5 py-2 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-150 bg-transparent text-neutral-600 border border-neutral-300 hover:text-neutral-900 hover:border-neutral-900 dark:text-neutral-500 dark:border-neutral-800 dark:hover:text-neutral-200 dark:hover:border-neutral-500 focus:outline-none active:opacity-70" href="{{sourceCodeUrl}}">View Source Code</a>
+        <a class="px-5 py-2 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-150 bg-transparent text-neutral-600 border border-neutral-300 hover:text-neutral-900 hover:border-neutral-900 dark:text-neutral-500 dark:border-neutral-800 dark:hover:text-neutral-200 dark:hover:border-neutral-500 focus:outline-none active:opacity-70" href="{{livePreviewUrl}}">View Live Preview</a>
     </div>
 </article>
