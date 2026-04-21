@@ -20,7 +20,7 @@ description: "Software Engineer | Hacker"
     </div>
     <div class="space-y-4">
         {% for project in collections.projects | reverse | batch(4) | first %}
-        <article class="mt-4">
+        <article class="mt-6">
             <a class="mt-4" href="{{ project.url }}" class="group block">
                 <h3 class="font-medium decoration-zinc-400">{{ project.data.title }}</h3>
             </a>
@@ -42,7 +42,7 @@ description: "Software Engineer | Hacker"
     </div>
     <div class="space-y-4">
         {% for post in collections.blog | reverse | batch(4) | first %}
-        <article class="mt-4">
+        <article class="mt-6">
             <a class="mt-4" href="{{ post.url }}" class="group block">
                 <h3 class="font-medium group-hover:underline decoration-zinc-400 underline-offset-4">{{ post.data.title }}</h3>
             </a>
