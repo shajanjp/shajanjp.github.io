@@ -48,8 +48,8 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
 </head>
-<body class="bg-white text-zinc-900 selection:bg-black selection:text-white dark:bg-zinc-900 dark:text-zinc-100 dark:selection:bg-white dark:selection:text-black transition-colors duration-300">
-    <main class="max-w-3xl mx-auto px-6 py-12 relative">
+<body class="bg-white text-zinc-900 selection:bg-black selection:text-white dark:bg-zinc-900 dark:text-zinc-100 dark:selection:bg-white dark:selection:text-black transition-colors duration-300 min-h-screen grid grid-rows-[1fr_auto]">
+    <main class="max-w-3xl mx-auto px-6 py-12 relative w-full">
         <!-- Header -->
         <header class="mb-12">
             <div class="flex justify-between items-start mb-6">
@@ -80,12 +80,11 @@
         <div class="mt-8">
             {{ content | safe }}
         </div>
-
-
-        <footer class="mt-8 pt-8 text-center text-xs text-zinc-800 dark:text-zinc-200">
-            <p id="footer-text" >Made with ❤️</p>
-        </footer>
     </main>
+
+    <footer class="max-w-3xl mx-auto px-6 pb-8 w-full text-center text-xs text-zinc-800 dark:text-zinc-200">
+        <p id="footer-text" >Made with ❤️</p>
+    </footer>
 
     <script>
         // Theme toggle script
