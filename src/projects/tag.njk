@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - blog
+    - posts
+    - photos
+    - projects
+  addAllPagesToCollections: true
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "Projects tagged '{{ tag }}'"
+permalink: /projects/tag/{{ tag }}/
+---
+
+<section>
+  <h2 class="text-2xl font-medium mb-8">Projects tagged <span class="uppercase">{{ tag }}</span></h2>
+  <div class="space-y-4">
+    {% set taglist = collections[ tag ] %}
+    {% set projectFound = false %}
+    {% for project in taglist | reverse %}
+    {# Only show if it's a project #}
+    {% if project.data.tags and "projects" in project.data.tags %}
+      {% set projectFound = true %}
+      <article class="mt-6">
+        <a class="mt-4" href="{{ project.url }}" class="group block">
+          <h3 class="font-medium decoration-zinc-400">{{ project.data.title }}</h3>
+        </a>
+        <p class="mt-1 text-sm text-justify text-zinc-500 dark:text-zinc-400">{{ project.data.description }}</p>
+        <span class="text-xs text-zinc-400 dark:text-zinc-600">{{ project.date | humanDate }}</span>
+      </article>
+    {% endif %}
+    {% endfor %}
+
+    {% if not projectFound %}
+      <script>window.location.href = '/projects/tag/';</script>
+    {% endif %}
+  </div>
+</section>
