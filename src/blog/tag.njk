@@ -32,7 +32,7 @@ permalink: /blog/tag/{{ tag }}/
       <div class="mt-1 flex gap-2">
         {% for postTag in post.data.tags %}
         {% if postTag != "posts" and postTag != "blog" %}
-        <a href="/blog/tag/{{ postTag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all translate-0.5 hover:border-zinc-300 dark:hover:border-zinc-700">{{ postTag }}</a>
+        <a href="/blog/tag/{{ postTag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all hover:border-zinc-300 dark:hover:border-zinc-700">{{ postTag }}</a>
         {% endif %}
         {% endfor %}
       </div>

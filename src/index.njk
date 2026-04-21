@@ -28,7 +28,7 @@ description: "Software Engineer | Hacker"
             <div class="mt-1 flex gap-2">
                 {% for tag in project.data.tags %}
                 {% if tag != "projects" %}
-                <a href="/projects/tag/{{ tag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all translate-0.5 hover:border-zinc-300 dark:hover:border-zinc-700">{{ tag }}</a>
+                <a href="/projects/tag/{{ tag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all hover:border-zinc-300 dark:hover:border-zinc-700">{{ tag }}</a>
                 {% endif %}
                 {% endfor %}
             </div>
@@ -57,7 +57,7 @@ description: "Software Engineer | Hacker"
             <div class="mt-1 flex gap-2">
                 {% for tag in post.data.tags %}
                 {% if tag != "posts" and tag != "blog" %}
-                <a href="/blog/tag/{{ tag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all translate-0.5 hover:border-zinc-300 dark:hover:border-zinc-700">{{ tag }}</a>
+                <a href="/blog/tag/{{ tag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all hover:border-zinc-300 dark:hover:border-zinc-700">{{ tag }}</a>
                 {% endif %}
                 {% endfor %}
             </div>
