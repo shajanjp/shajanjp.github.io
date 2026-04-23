@@ -25,7 +25,7 @@ description: "Software Engineer | Hacker"
                 <h3 class="font-medium decoration-zinc-400">{{ project.data.title }}</h3>
             </a>
             <p class="mt-1 text-sm text-justify text-zinc-500 dark:text-zinc-400">{{ project.data.description }}</p>
-            <div class="mt-4 flex flex-wrap gap-2">
+            <div class="mt-1 flex flex-wrap gap-2">
                 {% for tag in project.data.tags %}
                 {% if tag != "projects" %}
                 <a href="/projects/tag/{{ tag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all hover:border-zinc-300 dark:hover:border-zinc-700">{{ tag }}</a>
@@ -54,7 +54,7 @@ description: "Software Engineer | Hacker"
                 <h3 class="font-medium group-hover:underline decoration-zinc-400 underline-offset-4">{{ post.data.title }}</h3>
             </a>
             <p class="mt-1 text-sm text-justify text-zinc-500 dark:text-zinc-400">{{ post.data.description }}</p>
-            <div class="mt-4 flex flex-wrap gap-2">
+            <div class="mt-1 flex flex-wrap gap-2">
                 {% for tag in post.data.tags %}
                 {% if tag != "posts" and tag != "blog" %}
                 <a href="/blog/tag/{{ tag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all hover:border-zinc-300 dark:hover:border-zinc-700">{{ tag }}</a>
