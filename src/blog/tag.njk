@@ -19,7 +19,6 @@ permalink: /blog/tag/{{ tag }}/
 
 <section>
   <h2 class="text-2xl font-medium mb-8">Posts tagged <span class="uppercase">{{ tag }}</span></h2>
-  <a href="/blog/tag/" class="ext-xs text-xs text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors flex group">See all blog post tags <span class="group-hover:translate-x-1 transition-transform">&rarr;</span></a>
   <div class="space-y-4">
     {% set taglist = collections[tag] %}
     {% for post in taglist | reverse %}
@@ -33,7 +32,7 @@ permalink: /blog/tag/{{ tag }}/
       <div class="mt-1 flex flex-wrap gap-2">
         {% for postTag in post.data.tags %}
         {% if postTag != "posts" and postTag != "blog" %}
-        <a href="/blog/tag/{{ postTag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 rounded-sm transition-all hover:border-zinc-300 dark:hover:border-zinc-700">{{ postTag }}</a>
+        <a href="/blog/tag/{{ postTag }}/" class="text-[10px] uppercase tracking-wide px-1.5 py-0.5 border border-zinc-300 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 rounded-sm hover:border-zinc-900 dark:hover:border-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-300">{{ postTag }}</a>
         {% endif %}
         {% endfor %}
       </div>
@@ -41,5 +40,10 @@ permalink: /blog/tag/{{ tag }}/
     </article>
     {% endif %}
     {% endfor %}
+  </div>
+  <div class="mt-6 text-center">
+    <a href="/blog/tag/" class="inline-flex items-center gap-1 text-xs text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors group">
+      See all blog post tags <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+    </a>
   </div>
 </section>
