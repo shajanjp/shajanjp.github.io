@@ -1,13 +1,13 @@
 ---   
 title: "Merry Pixels: Hand crafted programmable christmas star"
 description: "A hand crafted christmas star thats programmable using javascript by anyone around the world"
+thumbnail: "merry-pixels-a-hand-crafted-programmable-christmas-star.jpg"
 tags: 
  - christmas
  - home
  - tech
  - ws2812b
  - deno
- - esp32
  - arduino
 date: 2024-12-23
 ---

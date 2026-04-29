@@ -2,15 +2,16 @@
 title: Story of a light bulb
 date: 2022-07-16
 description: "I just love seeing them glow"
+thumbnail: "the-story-of-a-light-bulb.jpg"
 tags:
   - iot
   - light
   - diy
-  - project
   - fun
+  - story
 ---
 
-<img src="./the-story-of-a-light-bulb.jpg" alt="The story of a light bulb" style=" height: auto; width:100%;">
+<img src="./the-diy-internet-connected-bulb" alt="The story of a light bulb" style=" height: auto; width:100%;">
 
 ## Short Story
 I made a simple internet-connected table lamp that blinked when you visited this page.

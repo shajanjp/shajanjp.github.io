@@ -1,7 +1,8 @@
 ---   
 title: "A bottle full of nature"
 description: "A personal journey of discovering terrariums — tiny self-sustaining ecosystems in glass bottles"
-tags: 
+thumbnail: "a-bottle-full-of-nature.jpg"
+tags:
  - terrarium
  - personal
  - nature

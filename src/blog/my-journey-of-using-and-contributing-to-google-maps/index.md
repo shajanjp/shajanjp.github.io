@@ -2,14 +2,14 @@
 title: "My journey of using and contributing to google maps"
 date: 2022-11-24
 description: "How I started with google maps and reached level 10 as a contributed"
+thumbnail: "my-journey-of-using-and-contributing-to-google-maps.jpg"
 tags:
- - live
  - tech
- - experience
- - google
+ - milestone
+ - contribution
 ---
 
-<img src="./my-journey-of-using-and-contributing-to-google-maps.jpg" alt="My journey of using and contributing to google maps" tyle="height: auto; width:100%;">
+<img src="./map-drawing" alt="My journey of using and contributing to google maps" tyle="height: auto; width:100%;">
 
 ## My perspective on maps
 
