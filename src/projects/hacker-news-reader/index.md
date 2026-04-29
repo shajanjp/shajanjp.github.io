@@ -2,12 +2,11 @@
 title: Hacker News - Reader
 description: Minimal and simple feed UI for hackernews
 created: 2021-10-01
+thumbnail: "hacker-news-reader.jpg"
 tags:
-  - iot
-  - light
-  - diy
-  - project
-  - fun
+  - web
+  - tech
+  - vibe-coding
 livePreviewUrl: http://guyswhocode.com/hn
 sourceCodeUrl: https://github.com/guyswhocode/hn.git
 ---

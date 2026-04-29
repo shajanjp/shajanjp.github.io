@@ -1,6 +1,6 @@
 ---
 title: Morse Up
-description: Interactive learning tool built for M5stack Atom S3
+description: Interactive morse code learning tool built for M5stack Atom S3
 thumbnail: "morse-up.jpg"
 created: 2026-04-28
 tags:
