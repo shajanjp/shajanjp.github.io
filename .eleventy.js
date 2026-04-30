@@ -1,21 +1,20 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
-  
+
   // Pass through any static assets if you add them later (e.g., images)
   eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("src/blog/**/*.jpg");
-  eleventyConfig.addPassthroughCopy("src/photography/**/*.jpg");
-  eleventyConfig.addPassthroughCopy("src/projects/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.{jpg,png}");
+  eleventyConfig.addPassthroughCopy("src/photography/**/*.{jpg,png}");
+  eleventyConfig.addPassthroughCopy("src/projects/**/*.{jpg,png}");
 
-
-  eleventyConfig.addCollection("projects", function(collectionApi) {
-    return collectionApi.getFilteredByTag("projects").sort(function(a, b) {
+  eleventyConfig.addCollection("projects", function (collectionApi) {
+    return collectionApi.getFilteredByTag("projects").sort(function (a, b) {
       const dateA = new Date(a.data.created || a.date);
       const dateB = new Date(b.data.created || b.date);
-      return dateA - dateB; 
+      return dateA - dateB;
     });
   });
 
@@ -24,18 +23,18 @@ module.exports = function(eleventyConfig) {
     return dateObj.toLocaleDateString("en-US", {
       month: "short", // Jan
       day: "numeric", // 1
-      year: "numeric" // 2024
+      year: "numeric", // 2024
     });
   });
 
-    eleventyConfig.addFilter("humanDateYearMonth", function (dateObj) {
+  eleventyConfig.addFilter("humanDateYearMonth", function (dateObj) {
     const date = new Date(dateObj);
     return date.toLocaleDateString("en-US", {
       month: "short", // Jan
-      year: "numeric" // 2024
+      year: "numeric", // 2024
     });
   });
-  
+
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return new Date(dateObj).toISOString().split("T")[0];
   });
@@ -46,7 +45,7 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src",
       output: "_site",
-      includes: "_includes"
+      includes: "_includes",
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
@@ -54,12 +53,7 @@ module.exports = function(eleventyConfig) {
   };
 };
 
-async function imageShortcode(
-  src,
-  alt,
-  sizes = "100vw",
-  className = ""
-) {
+async function imageShortcode(src, alt, sizes = "100vw", className = "") {
   console.log("IMAGE SRC:", src);
   if (!alt) {
     throw new Error(`Missing alt text for image: ${src}`);

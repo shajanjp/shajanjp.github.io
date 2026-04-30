@@ -2,6 +2,7 @@
 title: "A simple smart DIY AC controller to cut power bills"
 description: "A simple ESP32-based controller that turns your AC on/off based on room temperature - saving electricity without apps, cloud, or complexity."
 thumbnail: "a-simple-smart-diy-ac-controller-to-cut-power-bills.jpg"
+icon: "a-simple-smart-diy-ac-controller-to-cut-power-bills-icon.png"
 tags: 
  - home
  - tech
@@ -12,8 +13,6 @@ tags:
 date: 2026-04-21
 ---
 
-<img src="./a-simple-smart-diy-ac-controller-to-cut-power-bills.jpg" alt="A simple smart DIY AC controller to cut power bills" style=" height: auto; width:100%;">
-    
 The temperature in my place is around 38°C during the daytime, and the AC in my room is running almost all the time.
 
 In the last couple of months, I started noticing something. My electricity bill was quietly going up. Not dramatically, just enough to make me uncomfortable.

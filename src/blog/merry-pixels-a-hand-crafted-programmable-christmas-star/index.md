@@ -2,6 +2,7 @@
 title: "Merry Pixels: Hand crafted programmable christmas star"
 description: "A hand crafted christmas star thats programmable using javascript by anyone around the world"
 thumbnail: "merry-pixels-a-hand-crafted-programmable-christmas-star.jpg"
+icon: "merry-pixels-a-hand-crafted-programmable-christmas-star-icon.png"
 tags: 
  - christmas
  - home

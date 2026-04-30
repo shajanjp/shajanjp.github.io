@@ -3,6 +3,7 @@ title: Story of a light bulb
 date: 2022-07-16
 description: "I just love seeing them glow"
 thumbnail: "the-story-of-a-light-bulb.jpg"
+icon: "the-story-of-a-light-bulb-icon.png"
 tags:
   - iot
   - light

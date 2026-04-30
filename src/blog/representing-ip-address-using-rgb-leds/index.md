@@ -3,6 +3,7 @@ title: Representing IP addresses using WS2812B
 date: 2019-02-25
 description: "I just wanted the NodeMCU to tell me the IP through some interface without needing a computer."
 thumbnail: "representing-ip-address-using-rgb-leds.jpg"
+icon: "representing-ip-address-using-rgb-leds-icon.png"
 tags:
   - iot
   - light

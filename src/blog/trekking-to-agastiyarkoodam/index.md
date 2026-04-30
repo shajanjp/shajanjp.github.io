@@ -3,6 +3,7 @@ title: Trekking to Agasthyarkoodam – A random plan that turned into a lifetime
 date: 2026-01-30
 description: "A randomly planned trek to Agasthyarkoodam that turned into a challenging and unforgettable journey through forest, wind, and rain."
 thumbnail: "trekking-to-agastiyarkoodam.jpg"
+icon: "trekking-to-agastiyarkoodam-icon.png"
 tags:
   - trek
   - forest

@@ -2,6 +2,7 @@
 title: Flip52
 description: A Real-Time Multiplayer Card Game
 thumbnail: "flip52.jpg"
+icon: "flip52-icon.png"
 created: 2026-03-16
 tags:
   - web

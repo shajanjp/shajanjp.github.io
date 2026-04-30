@@ -3,6 +3,7 @@ title: Hacker News - Reader
 description: Minimal and simple feed UI for hackernews
 created: 2021-10-01
 thumbnail: "hacker-news-reader.jpg"
+icon: "hacker-news-reader-icon.png"
 tags:
   - web
   - tech

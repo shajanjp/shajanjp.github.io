@@ -2,6 +2,7 @@
 title: "How I track and predict electricity consumption at home"
 description: "How I automated electricity tracking and prediction at home using a Deno REST API, Notion, and iPhone shortcuts to monitor daily usage and forecast bills effortlessly."
 thumbnail: "how-i-track-and-predict-electricity-consumption-at-home.jpg"
+icon: "how-i-track-and-predict-electricity-consumption-at-home-icon.png"
 tags: 
  - home
  - tech
