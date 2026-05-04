@@ -3,165 +3,73 @@
     <head>
         <meta charset="UTF-8" />
         <title>Page cover generator</title>
+        <link rel="stylesheet" href="/assets/css/style.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
             rel="stylesheet"
         />
-        <style>
-            body {
-                margin: 0;
-                background: #222;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
-
-            .cover {
-                width: 900px;
-                height: 450px;
-                position: relative;
-                overflow: hidden;
-                background: #181818;
-
-                font-family: "IBM Plex Mono", monospace;
-                color: #e6edf3;
-
-                display: flex;
-                align-items: center;
-            }
-
-            /* RIGHT DOT GRID */
-            .cover::after {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 80%;
-                height: 100%;
-
-                /* Dot pattern */
-                background-image: radial-gradient(
-                    rgba(255, 255, 255, 0.25) 1px,
-                    transparent 1px
-                );
-
-                background-size: 25px 25px;
-
-                /* fade effect like your screenshot */
-                mask-image: linear-gradient(
-                    to left,
-                    rgba(0, 0, 0, 1),
-                    rgba(0, 0, 0, 0.4),
-                    transparent
-                );
-
-                -webkit-mask-image: linear-gradient(
-                    to left,
-                    rgba(0, 0, 0, 1),
-                    rgba(0, 0, 0, 0.4),
-                    transparent
-                );
-
-                opacity: 0.6;
-                pointer-events: none;
-            }
-
-            .content {
-                margin-left: 60px;
-                width: 512px;
-                position: relative;
-                z-index: 1;
-            }
-
-            .label {
-                font-size: 14px;
-                font-weight: bold;
-                letter-spacing: 2px;
-                color: #6b7280;
-                margin-bottom: 18px;
-                text-transform: uppercase;
-            }
-
-            .title {
-                font-size: 32px;
-                font-weight: 500;
-                line-height: 1.2;
-                margin-bottom: 14px;
-                color: #e6edf3;
-            }
-
-            .desc {
-                font-size: 18px;
-                color: #9aa4af;
-                line-height: 1.6;
-                margin-bottom: 26px;
-            }
-
-            .tags {
-                display: flex;
-                gap: 12px;
-                text-transform: uppercase;
-            }
-
-            .tag {
-                font-size: 12px;
-                padding: 6px 12px;
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 6px;
-                color: #c9d1d9;
-                background: rgba(255, 255, 255, 0.02);
-            }
-
-            .icon-container {
-                width: 192px;
-                height: 192px;
-                margin-left: 45px;
-                /*background: rgba(255, 255, 255, 0.05);*/
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                border: 2px solid transparent;
-                transition:
-                    border-color 0.2s,
-                    background 0.2s;
-            }
-
-            .icon-container.drag-over {
-                border-color: #58a6ff;
-                /*background: rgba(255, 255, 255, 0.1);*/
-            }
-
-            .cover-icon {
-                width: 100%;
-                height: 100%;
-                opacity: 0.5;
-                object-fit: contain;
-                pointer-events: none; /* Let events bubble to container */
-            }
-        </style>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            mono: ['"IBM Plex Mono"', "monospace"],
+                        },
+                    },
+                },
+            };
+        </script>
     </head>
 
-    <body>
-        <div class="cover">
-            <div class="content" spellcheck="false">
-                <div class="label" contenteditable="true">BLOG</div>
+    <body class="bg-[#222] flex justify-center items-center min-h-screen m-0">
+        <div
+            class="cover w-[900px] h-[450px] relative overflow-hidden bg-[#181818] font-mono text-[#e6edf3] flex items-center after:content-[''] after:absolute after:right-0 after:top-0 after:w-[80%] after:h-full after:bg-[radial-gradient(rgba(255,255,255,0.25)_1px,transparent_1px)] after:bg-[length:25px_25px] after:[mask-image:linear-gradient(to_left,rgba(0,0,0,1),rgba(0,0,0,0.4),transparent)] after:[-webkit-mask-image:linear-gradient(to_left,rgba(0,0,0,1),rgba(0,0,0,0.4),transparent)] after:opacity-60 after:pointer-events-none"
+        >
+            <div
+                class="content ml-[60px] w-[512px] relative z-10"
+                spellcheck="false"
+            >
+                <div
+                    class="label text-[14px] font-bold tracking-[2px] text-[#6b7280] mb-[18px] uppercase"
+                    contenteditable="true"
+                >
+                    BLOG
+                </div>
 
-                <div class="title" contenteditable="true">Blog title</div>
+                <div
+                    class="title text-[32px] font-medium leading-[1.2] mb-[14px] text-[#e6edf3]"
+                    contenteditable="true"
+                >
+                    Blog title
+                </div>
 
-                <div class="desc" contenteditable="true">
+                <div
+                    class="desc text-[18px] text-[#9aa4af] leading-[1.6] mb-[26px]"
+                    contenteditable="true"
+                >
                     A short description of the blog post.
                 </div>
 
-                <div class="tags">
-                    <div class="tag" contenteditable="true">TAG1</div>
-                    <div class="tag" contenteditable="true">TAG2</div>
+                <div class="tags flex gap-[12px] uppercase">
+                    <div
+                        class="tag text-[12px] px-[12px] py-[6px] border border-white/10 rounded-[6px] text-[#c9d1d9] bg-white/[0.02]"
+                        contenteditable="true"
+                    >
+                        TAG1
+                    </div>
+                    <div
+                        class="tag text-[12px] px-[12px] py-[6px] border border-white/10 rounded-[6px] text-[#c9d1d9] bg-white/[0.02]"
+                        contenteditable="true"
+                    >
+                        TAG2
+                    </div>
                 </div>
             </div>
-            <div class="icon-container">
+            <div
+                class="icon-container w-[192px] h-[192px] ml-[45px] flex items-center justify-center cursor-pointer border-2 border-transparent transition-all duration-200"
+            >
                 <img
-                    class="cover-icon"
+                    class="cover-icon w-full h-full opacity-80 object-contain pointer-events-none invert-100"
                     src="https://www.flaticon.com/download/icon/14759449?icon_id=14759449&team=1327&format=png&colored=0&type=uicon&size=256"
                     alt="cover image"
                 />
@@ -189,7 +97,7 @@
             iconContainer.addEventListener(eventName, (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                iconContainer.classList.add("drag-over");
+                iconContainer.classList.add("!border-[#58a6ff]");
                 e.dataTransfer.dropEffect = "copy";
             });
         });
@@ -197,13 +105,13 @@
         iconContainer.addEventListener("dragleave", (e) => {
             e.preventDefault();
             e.stopPropagation();
-            iconContainer.classList.remove("drag-over");
+            iconContainer.classList.remove("!border-[#58a6ff]");
         });
 
         iconContainer.addEventListener("drop", (e) => {
             e.preventDefault();
             e.stopPropagation();
-            iconContainer.classList.remove("drag-over");
+            iconContainer.classList.remove("!border-[#58a6ff]");
 
             const files = e.dataTransfer.files;
             if (files && files.length > 0) {
@@ -231,7 +139,8 @@
 
                 // Create new tag
                 const newTag = document.createElement("div");
-                newTag.className = "tag";
+                newTag.className =
+                    "tag text-[12px] px-[12px] py-[6px] border border-white/10 rounded-[6px] text-[#c9d1d9] bg-white/[0.02]";
                 newTag.setAttribute("contenteditable", "true");
                 newTag.textContent = "NEW TAG";
 
