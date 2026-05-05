@@ -9,6 +9,21 @@
 /* This replaces darkMode: 'class' */
 @variant dark (&:where(.dark, .dark *));
 
+@layer components {
+    .link {
+        @apply transition-all duration-200
+          /* Text Colors */
+          text-zinc-800 hover:text-zinc-700
+          dark:text-zinc-300 dark:hover:text-zinc-400
+          hover:after:text-zinc-700 dark:hover:after:text-zinc-400
+          /* The Arrow */
+          after:content-['→'] after:ml-0.5 after:rotate-315 after:inline-block
+          after:text-zinc-800 dark:after:text-zinc-300
+          /* The 1px Animation */
+          hover:after:translate-x-[2px] hover:after:rotate-0;
+    }
+}
+
 body {
     font-family: "IBM Plex Mono", monospace;
 }
