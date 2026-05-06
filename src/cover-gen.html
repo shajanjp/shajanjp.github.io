@@ -64,45 +64,46 @@
         <!-- Preview Container (for scaling if needed) -->
         <div
             id="preview-container"
-            class="relative transition-transform origin-top"
+            class="relative dark transition-transform origin-top"
         >
             <!-- Parent div: added 'justify-center' and 'gap-[1%]' -->
             <div
                 id="cover"
-                class="bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 w-[900px] h-[450px] relative overflow-hidden font-mono flex items-center justify-center gap-[1%] transition-all duration-300 after:content-[''] after:absolute after:right-0 after:top-0 after:w-[80%] after:h-full after:bg-[radial-gradient(rgba(0,0,0,0.1)_1px,transparent_1px)] dark:after:bg-[radial-gradient(rgba(255,255,255,0.25)_1px,transparent_1px)] after:bg-[length:25px_25px] after:[mask-image:linear-gradient(to_left,rgba(0,0,0,1),rgba(0,0,0,0.4),transparent)] after:[-webkit-mask-image:linear-gradient(to_left,rgba(0,0,0,1),rgba(0,0,0,0.4),transparent)] after:opacity-60 after:pointer-events-none"
+                class="bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-300 w-[900px] h-[450px] relative overflow-hidden font-mono flex items-center justify-center gap-[1%] transition-all duration-300 after:content-[''] after:absolute after:right-0 after:top-0 after:w-[80%] after:h-full after:bg-[radial-gradient(rgba(0,0,0,0.1)_0.1em,transparent_0.1em)] dark:after:bg-[radial-gradient(rgba(255,255,255,0.25)_0.1em,transparent_0.1em)] after:bg-[length:2.5em_2.5em] after:[mask-image:linear-gradient(to_left,rgba(0,0,0,1),rgba(0,0,0,0.4),transparent)] after:[-webkit-mask-image:linear-gradient(to_left,rgba(0,0,0,1),rgba(0,0,0,0.4),transparent)] after:opacity-60 after:pointer-events-none"
+                style="font-size: 10px"
             >
                 <!-- Child 1: Content -->
-                <div class="content w-[512px]" spellcheck="false">
+                <div class="content w-[51.2em]" spellcheck="false">
                     <div
-                        class="label text-[14px] font-bold tracking-[2px] text-[#6b7280] mb-[18px] uppercase"
+                        class="label text-[1.4em] font-bold tracking-[0.2em] text-[#6b7280] mb-[0.6em] uppercase"
                         contenteditable="true"
                     >
                         BLOG
                     </div>
 
                     <div
-                        class="title text-[32px] font-medium leading-[1.2] mb-[14px] text-[#111827] dark:text-[#e6edf3]"
+                        class="title text-[3.2em] font-medium leading-[1.2] mb-[0.5em] text-[#111827] dark:text-[#e6edf3]"
                         contenteditable="true"
                     >
                         Blog title
                     </div>
 
                     <div
-                        class="desc text-[18px] text-[#4b5563] dark:text-[#9aa4af] leading-[1.6] mb-[26px]"
+                        class="desc text-[1.8em] text-[#4b5563] dark:text-[#9aa4af] leading-[1.6] mb-[0.9em]"
                         contenteditable="true"
                     >
                         A short description of the blog post.
                     </div>
 
-                    <div class="tags flex gap-[12px] uppercase">
+                    <div class="tags flex gap-[1.2em] uppercase">
                         <div
-                            class="tag text-[12px] px-[12px] py-[6px] border border-black/10 dark:border-white/10 rounded-[6px] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]"
+                            class="tag text-[1.2em] px-[1.2em] py-[0.6em] border border-black/10 dark:border-white/10 rounded-[0.6em] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]"
                             contenteditable="true"
                         >
                             TAG1
                         </div>
                         <div
-                            class="tag text-[12px] px-[12px] py-[6px] border border-black/10 dark:border-white/10 rounded-[6px] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]"
+                            class="tag text-[1.2em] px-[1.2em] py-[0.6em] border border-black/10 dark:border-white/10 rounded-[0.6em] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]"
                             contenteditable="true"
                         >
                             TAG2
@@ -112,7 +113,7 @@
 
                 <!-- Child 2: Icon (Removed ml-[45px]) -->
                 <div
-                    class="icon-container w-[192px] h-[192px] flex items-center justify-center cursor-pointer border-2 border-transparent transition-all duration-200 z-10"
+                    class="icon-container w-[19.2em] h-[19.2em] flex items-center justify-center cursor-pointer border-2 border-transparent transition-all duration-200 z-10"
                 >
                     <img
                         class="cover-icon w-full h-auto transition-all duration-300 invert-[30%] dark:invert-[80%]"
@@ -143,6 +144,10 @@
             const preset = presets[sizePreset.value];
             cover.style.width = preset.w + "px";
             cover.style.height = preset.h + "px";
+
+            // Calculate base font size for scaling (Reference: 900px width = 10px font size)
+            const baseFontSize = (preset.w / 900) * 10;
+            cover.style.fontSize = baseFontSize + "px";
 
             // Scale to fit screen
             const padding = 100;
