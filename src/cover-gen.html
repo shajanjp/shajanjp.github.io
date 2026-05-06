@@ -97,13 +97,13 @@
 
                     <div class="tags flex gap-[1.2em] uppercase">
                         <div
-                            class="tag text-[1.2em] px-[1.2em] py-[0.6em] border border-black/10 dark:border-white/10 rounded-[0.6em] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]"
+                            class="tag text-[1.2em] px-[1em] py-[0.5em] border border-black/10 dark:border-white/10 rounded-[0.6em] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]"
                             contenteditable="true"
                         >
                             TAG1
                         </div>
                         <div
-                            class="tag text-[1.2em] px-[1.2em] py-[0.6em] border border-black/10 dark:border-white/10 rounded-[0.6em] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]"
+                            class="tag text-[1.2em] px-[1em] py-[0.5em] border border-black/10 dark:border-white/10 rounded-[0.6em] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]"
                             contenteditable="true"
                         >
                             TAG2
@@ -226,9 +226,15 @@
                 e.preventDefault();
                 const container = document.querySelector(".tags");
                 if (!container) return;
+
+                const existingTag = container.querySelector(".tag");
                 const newTag = document.createElement("div");
-                newTag.className =
-                    "tag text-[12px] px-[12px] py-[6px] border border-black/10 dark:border-white/10 rounded-[6px] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]";
+
+                // Copy classes from existing tag if available, otherwise use default
+                newTag.className = existingTag
+                    ? existingTag.className
+                    : "tag text-[1.2em] px-[1.2em] py-[0.6em] border border-black/10 dark:border-white/10 rounded-[0.6em] text-[#374151] dark:text-[#c9d1d9] bg-black/[0.02] dark:bg-white/[0.02]";
+
                 newTag.setAttribute("contenteditable", "true");
                 newTag.textContent = "NEW TAG";
                 container.appendChild(newTag);
