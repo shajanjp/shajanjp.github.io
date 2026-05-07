@@ -25,3 +25,4 @@ The project aims to provide a frictionless way to learn Morse code by doing. Ins
 - **Persistent Memory:** Your scores and progress are saved automatically to the device's internal storage, so you can pick up exactly where you left off.
 - **Flexible Input:** Supports both the built-in screen button and external physical buttons for a more authentic telegraph-style experience.
 - **Simple Reset:** A dedicated long-press gesture allows you to clear your data and start your learning journey from scratch whenever you like.
+- **Morse Keyboard:** Connect the device to phone or computer to use a traditional Morse keyboard for input.
