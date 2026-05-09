@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>Page cover generator</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
         <link
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
             rel="stylesheet"
@@ -57,7 +58,7 @@
                 id="download-btn"
                 class="bg-[#58a6ff] hover:bg-[#4a9eff] text-white px-4 py-1 rounded transition-colors ml-4"
             >
-                Download (Copy to Clipboard)
+                Download
             </button>
         </div>
 
@@ -75,6 +76,7 @@
                 <!-- Child 1: Content -->
                 <div class="content w-[51.2em]" spellcheck="false">
                     <div
+                        id="content-label"
                         class="label text-[1.4em] font-bold tracking-[0.2em] text-[#6b7280] mb-[0.6em] uppercase"
                         contenteditable="true"
                     >
@@ -82,6 +84,7 @@
                     </div>
 
                     <div
+                        id="content-title"
                         class="title text-[3.2em] font-medium leading-[1.2] mb-[0.5em] text-[#111827] dark:text-[#e6edf3]"
                         contenteditable="true"
                     >
@@ -248,13 +251,48 @@
             }
         });
 
-        // Add dummy function for download button to avoid errors
+        // Handle download/screenshot
+        async function takeScreenshot() {
+            const previewContainer =
+                document.getElementById("preview-container");
+            const originalTransform = previewContainer.style.transform;
+
+            // Temporarily reset transform for accurate capture
+            previewContainer.style.transform = "none";
+
+            try {
+                const canvas = await html2canvas(previewContainer, {
+                    backgroundColor: null,
+                    scale: 2, // Higher quality (Retina-like)
+                    useCORS: true,
+                    logging: false,
+                });
+
+                // Restore transform
+                previewContainer.style.transform = originalTransform;
+                // Get content label and title
+                const label = document
+                    .getElementById("content-label")
+                    .innerText.replace(/\s+/g, "-")
+                    .toLowerCase();
+                const title = document
+                    .getElementById("content-title")
+                    .innerText.replace(/\s+/g, "-")
+                    .toLowerCase();
+                // Download the image
+                const link = document.createElement("a");
+                link.download = `cover-${label}-${title}.png`;
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            } catch (err) {
+                console.error("Screenshot failed:", err);
+                previewContainer.style.transform = originalTransform;
+                alert("Failed to capture screenshot.");
+            }
+        }
+
         document
             .getElementById("download-btn")
-            .addEventListener("click", () => {
-                alert(
-                    "Download functionality would go here (e.g., using html2canvas or similar)",
-                );
-            });
+            .addEventListener("click", takeScreenshot);
     </script>
 </html>
