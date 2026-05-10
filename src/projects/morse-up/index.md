@@ -9,6 +9,7 @@ tags:
   - fun
   - m5stack
   - arduino
+  - morse
 sourceCodeUrl: https://github.com/shajanjp/morse-up
 ---
 
