@@ -4,100 +4,181 @@ title: CV
 eleventyExcludeFromCollections: true
 ---
 
-<main class="space-y-5">
-  <section>
-    <a
-    href="https://github.com/shajanjp/cv/raw/master/shajan-jacob-CV.pdf"
-    class="ui right floated button"
-    >Download Resume</a
-    ><br />
-    <div class="name-and-brief">
-      <p>Shajan Jacob</p>
-      <p>shajanjp@gmail.com</p>
-      <p><a href="https://www.shajanjacob.com">shajanjacob.com</a></p>
-      <p>Cochin, Kerala, India</p>
+<section class="space-y-8">
+  <!-- Header -->
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-4 border-b border-zinc-100 dark:border-zinc-800">
+    <div>
+      <h2 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Shajan Jacob</h2>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400">Software Engineer</p>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400">Kochi, Kerala, India | (+91) 974-795-2378</p>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400">shajanjp@gmail.com</p>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400"><a href="https://shajanjacob.com" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">shajanjacob.com</a></p>
     </div>
-  </section>
+    <a
+      href="https://github.com/shajanjp/cv/raw/master/shajan-jacob-CV.pdf"
+      class="text-xs uppercase tracking-widest px-5 py-2 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-900 dark:hover:border-zinc-100 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-300 flex-shrink-0"
+    >Download Resume</a>
+  </div>
 
-  <section>
+  <!-- Professional Summary -->
+  <div>
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Professional Summary</h3>
+    <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-justify">
+      Software Engineer with 8+ years of experience in web applications development, specializing in Node.js, TypeScript, and scalable microservices. Proven track record in system optimization, deployments, and team leadership.
+    </p>
+  </div>
 
-    <h3 class="text-gradient">EDUCATION</h3>
-    <ul class="list">
-      <li>
-        <div class="content">
-          <a class="header">Bachelor of Engineering (CS)</a>
-          <div class="meta">T JOHN INSTITUTE OF TECHNOLOGY</div>
-        </div>
-        <div class="extra content">2017</div>
-      </li>
-      <li>
-        <div class="content">
-          <a class="header">Pre University</a>
-          <div class="meta">Bappuji Central School, Peruva</div>
-        </div>
-        <div class="extra content">2011</div>
-      </li>
-      <li>
-        <div class="content">
-          <a class="header">10th Standard</a>
-          <div class="meta">Bappuji Public School, Elivaly</div>
-        </div>
-        <div class="extra content">2008</div>
-      </li>
-    </ul>
-  </section>
-    
-<section>
-  <h3 class="text-gradient">PROJECTS</h3>
-    <ul class="list">
-      {% for project in site.categories.project %}
-      <li>
-        <div class="content">
-          <a class="header">{{ project.title }}</a>
-          <div class="meta">
-            <span class="date">{{ project.description }}</span>
-          </div>
-        </div>
-        <div class="extra content">
-          <a href="{{ project.visit }}"> View </a>
-        </div>
-      </li>
+  <!-- Technical Skills -->
+  <div>
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Technical Skills</h3>
+    <div class="flex flex-wrap gap-2">
+      {% set skills = ["Node.js", "JavaScript", "TypeScript", "NestJS", "Express.js", "Deno", "REST API", "Microservices", "Event-driven Architecture", "Real-time Applications", "Google Cloud Platform", "AWS (Lambda, EC2, API Gateway, S3)", "Firebase Functions", "Docker", "Kubernetes", "Nginx", "MongoDB", "PostgreSQL", "MySQL", "Redis", "Elasticsearch", "gRPC", "Kafka", "FHIR", "JWT", "Auth0", "Stripe"] %}
+      {% for skill in skills %}
+      <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">{{ skill }}</span>
       {% endfor %}
+    </div>
+  </div>
+
+  <!-- Professional Experience -->
+  <div>
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-4">Professional Experience</h3>
+
+    <!-- Sorice Solutions -->
+    <div class="mb-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-1 mb-2">
+        <div>
+          <p class="font-medium text-zinc-900 dark:text-zinc-100">Sorice Solutions, Kochi</p>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Technical Lead</p>
+        </div>
+        <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">Feb 2020 - Present</p>
+      </div>
+      <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+        <li>Architected and delivered core system architectures and key application features, enhancing scalability, reliability, and maintainability.</li>
+        <li>Migrated legacy applications to modern frameworks, improving reliability and cutting code modification and feature addition time by 20%.</li>
+        <li>Optimized high-throughput APIs handling 300K+ daily requests, improving average response times by 25% and enhancing overall system efficiency and performance.</li>
+        <li>Remediated numerous security vulnerabilities across internal and external applications, reducing incidents and improving compliance with industry standards.</li>
+        <li>Optimized releases across environments and clients by creating robust deployment plans, cutting time, and reducing release related incidents.</li>
+        <li>Contributed to AI integration efforts by researching and implementing relevant tools and technologies.</li>
+        <li>Developed internal tools and automation scripts to streamline routine tasks, enhance productivity, and support cross-functional development processes.</li>
+        <li>Conducted thorough merge request reviews to maintain high coding standards and mentored junior developers to improve team capability.</li>
+        <li>Led hiring process for software engineering roles, interviewing 300+ candidates and improving feedback tracking workflows for faster onboarding.</li>
+        <li>Contributed to end-to-end project execution, including planning, estimation, development, delivery, and cross-team collaboration.</li>
+      </ul>
+    </div>
+
+    <!-- Cubet -->
+    <div class="mb-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-1 mb-2">
+        <div>
+          <p class="font-medium text-zinc-900 dark:text-zinc-100">Cubet, Kochi</p>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Software Engineer</p>
+        </div>
+        <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">Oct 2017 - Feb 2020</p>
+      </div>
+      <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+        <li>Architected and developed custom APIs, microservices, and serverless solutions (AWS Lambda, Firebase FaaS) for core projects.</li>
+        <li>Published the ffmpeg-sdk NPM package (Node.js wrapper for FFMPEG) powering an online dubbing studio platform.</li>
+        <li>Built a scalable Twitter chat engine supporting multiple chatbots per Node.js instance, and implemented real-time text/audio chat via sockets.</li>
+        <li>Delivered end-to-end software solutions from prototyping to deployment, resolving critical issues and ensuring seamless operations.</li>
+      </ul>
+    </div>
+
+    <!-- Alt S Solutions -->
+    <div class="mb-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-1 mb-2">
+        <div>
+          <p class="font-medium text-zinc-900 dark:text-zinc-100">Alt S Solutions, Kochi</p>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Junior Software Engineer</p>
+        </div>
+        <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">May 2017 - Oct 2017</p>
+      </div>
+      <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+        <li>Developed responsive websites tailored to diverse client requirements.</li>
+        <li>Designed and implemented dashboards and APIs for a CRM application.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div>
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Education</h3>
+    <div class="flex justify-between items-baseline">
+      <div>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Bachelor of Engineering in CS</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">T John Institute of Technology, Bangalore</p>
+      </div>
+      <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0 ml-4">2017</p>
+    </div>
+  </div>
+
+  <!-- Achievements -->
+  <div>
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Achievements</h3>
+    <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+      <li>Ranked in the top 2% globally in LinkedIn's JavaScript skill assessment.</li>
+      <li>Awarded "Project of the Year" for final-year campus project.</li>
     </ul>
+  </div>
+
+  <!-- Hobby / Side Projects -->
+  <div>
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Hobby / Side Projects</h3>
+    <div class="space-y-3">
+      <div>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Merry Pixels</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Internet-connected Christmas star with 300 addressable LEDs, remotely animated via JavaScript.</p>
+        <p class="text-xs text-zinc-400 dark:text-zinc-600">TypeScript | Deno | Socket | HTML | Tailwind</p>
+        <a href="https://merry-pixels.deno.dev" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">merry-pixels.deno.dev</a>
+      </div>
+      <div>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Community Portal</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">One-stop platform to discover local businesses, services, and attractions for residents and visitors.</p>
+        <p class="text-xs text-zinc-400 dark:text-zinc-600">TypeScript | Deno | Fresh | Notion API | Tailwind | HTML</p>
+        <a href="https://piravom.in" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">piravom.in</a>
+      </div>
+      <div>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">HN</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Minimalistic Hacker News reader and PWA.</p>
+        <p class="text-xs text-zinc-400 dark:text-zinc-600">PWA | JavaScript | jQuery | Semantic-UI | Firebase</p>
+        <a href="https://guyswhocode.com/HN/" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">guyswhocode.com/HN/</a>
+      </div>
+      <div>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Lets All Chef</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Companion for Home Cooks and Chefs. Organize recipes, create cookbooks, manage health and diet.</p>
+        <p class="text-xs text-zinc-400 dark:text-zinc-600">NodeJS | ExpressJS | MongoDB | Semantic-UI | Jekyll</p>
+        <a href="https://letsallchef.github.io" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">letsallchef.github.io</a>
+      </div>
+      <div>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">BlackPipe</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Expose terminal outputs without sacrificing security.</p>
+        <p class="text-xs text-zinc-400 dark:text-zinc-600">NodeJS | Sockets | Semantic-UI | ExpressJS</p>
+        <a href="https://shajanjacob.com/blackpipe/" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">shajanjacob.com/blackpipe/</a>
+      </div>
+      <div>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Meemi</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Online ornamental fish store, forum, store locator and wiki.</p>
+        <p class="text-xs text-zinc-400 dark:text-zinc-600">NodeJS | ExpressJS | MongoDB | Elastic Search | SemanticUI</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profiles -->
+  <div>
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Profiles</h3>
+    <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+      <li><a href="https://linkedin.com/in/shajanjp" target="_blank" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">linkedin.com/in/shajanjp</a></li>
+      <li><a href="https://github.com/shajanjp" target="_blank" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">github.com/shajanjp</a></li>
+      <li><a href="https://npmjs.com/~shajanjp" target="_blank" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">npmjs.com/~shajanjp</a></li>
+    </ul>
+  </div>
+
+  <!-- Hobbies -->
+  <div>
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Hobbies</h3>
+    <div class="flex flex-wrap gap-2">
+      <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">Terrariums</span>
+      <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">Photography</span>
+      <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">Crafting</span>
+    </div>
+  </div>
 </section>
-  <h3 class="text-gradient">SKILLS</h3>
-  <ul class="list">
-    <li>HTML - Expert</li>
-    <li>CSS - Expert</li>
-    <li>NodeJS - Intermediate</li>
-    <li>MongoDB - Intermediate</li>
-    <li>PHP - Intermediate</li>
-    <li>Linux - Expert</li>
-    <li>JavaScript - Intermediate</li>
-    <li>Bootstrap - Expert</li>
-    <li>MySQL - Intermediate</li>
-    <li>jQuery - Intermediate</li>
-    <li>Python - Beginner</li>
-    <li>AngularJS - Beginner</li>
-  </ul>
-  <h3 class="text-gradient">WORK SAMPLES &amp PROFILES</h3>
-  <ul class="list">
-    <li>
-      <a href="http://shajanjacob.com/blog">Blog</a>
-    </li>
-    <li>
-      <a href="http://github.com/shajanjp">Github</a>
-    </li>
-    <li>
-      <a href="http://behance.net/shajanjp">Behance</a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/shajanjp/">LinkedIn</a>
-    </li>
-    <li>
-      <a href="http://guyswhocode.com/shajanjp" title="Guys Who Code"
-        >Guys Who Code</a
-      >
-    </li>
-  </ul>
-</main>
