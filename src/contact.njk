@@ -75,7 +75,7 @@ description: "Get in touch with me."
         const data = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('/api/send-message', {
+            const response = await fetch('https://website-utils.sj.deno.net/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
