@@ -284,12 +284,28 @@ layout: layouts/base.njk
   >
 </p>
 <p>Books :</p>
-<ul class="list-disc list-inside space-y-1 text-zinc-600 dark:text-zinc-400">
-  <li>Ikigai</li>
-  <li>Sapiens</li>
-  <li>The God of Small Things</li>
-  <li>The Power Of Your Subconscious Mind</li>
-  <li>Eloquent JavaScript</li>
-  <li>YDKJS</li>
-  <li>The 5 AM Club</li>
+<ul id="books-list" class="list-disc list-inside space-y-1 text-zinc-600 dark:text-zinc-400">
+  <li class="text-zinc-400 dark:text-zinc-600">Loading books...</li>
 </ul>
+
+<script>
+  (async function () {
+    const list = document.getElementById('books-list');
+    try {
+      const res = await fetch('https://website-utils.sj.deno.net/api/books');
+      if (!res.ok) throw new Error('Failed to fetch');
+      const books = await res.json();
+
+      list.innerHTML = '';
+      books.forEach(book => {
+        const authors = book.authors?.map(a => a.name).join(', ') || '';
+        const li = document.createElement('li');
+        li.textContent = authors ? `${book.title} - ${authors}` : book.title;
+        list.appendChild(li);
+      });
+    } catch (err) {
+      list.innerHTML = '<li class="text-zinc-400 dark:text-zinc-600">Failed to load books.</li>';
+      console.error(err);
+    }
+  })();
+</script>
