@@ -13,10 +13,7 @@ description: "Books I have"
 </section>
 
 <script>
-  // Books I've finished reading
-  const completed = new Set([
-    "05c25926-88ee-448c-889f-56352e6b4443", // Make Time
-  ]);
+
 
   (async function () {
     const grid = document.getElementById('book-grid');
@@ -32,7 +29,7 @@ description: "Books I have"
       books.forEach(book => {
         const authors = book.authors?.map(a => a.name).join(', ') || '';
         const tooltip = `${book.title}${authors ? ' - ' + authors : ''}`;
-        const isDone = completed.has(book.id);
+        const completionPercentage = book.completionPercentage ?? 0;
 
         // Card wrapper
         const item = document.createElement('div');
@@ -54,24 +51,31 @@ description: "Books I have"
         imgWrap.appendChild(img);
         item.appendChild(imgWrap);
 
-        // Completed badge
-        if (isDone) {
-          const badge = document.createElement('div');
+        // Status badge
+        let badge;
+        if (completionPercentage >= 100) {
+          badge = document.createElement('div');
           badge.className =
             'mt-1.5 flex items-center gap-1 text-xs text-green-600 dark:text-green-400';
           badge.innerHTML =
             '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>' +
             '<span>Read</span>';
-          item.appendChild(badge);
+        } else if (completionPercentage > 0) {
+          badge = document.createElement('div');
+          badge.className =
+            'mt-1.5 flex items-center gap-1 text-xs text-yellow-600 dark:text-yellow-400';
+          badge.innerHTML =
+            '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>' +
+            '<span>In Progress</span>';
         } else {
-          const badge = document.createElement('div');
+          badge = document.createElement('div');
           badge.className =
             'mt-1.5 flex items-center gap-1 text-xs text-zinc-400 dark:text-zinc-600';
           badge.innerHTML =
             '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>' +
             '<span>Unread</span>';
-          item.appendChild(badge);
         }
+        item.appendChild(badge);
 
         grid.appendChild(item);
       });
