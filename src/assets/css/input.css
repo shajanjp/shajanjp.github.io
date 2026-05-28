@@ -19,6 +19,8 @@
           /* The Arrow */
           after:content-['→'] after:ml-0.5 after:inline-block
           after:text-zinc-800 dark:after:text-zinc-300
+          italic
+
           /* The 1px Animation */
           hover:after:translate-x-[2px];
     }

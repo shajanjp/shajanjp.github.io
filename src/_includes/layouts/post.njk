@@ -1,6 +1,41 @@
 ---
 layout: layouts/base.njk
 ---
+{% if tags and "blog" in tags %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ page.date | htmlDateString }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}"
+  }{% if thumbnail %},
+  "image": "{{ site.url }}{{ page.url }}{{ thumbnail }}"{% endif %}
+}
+</script>
+{% elif tags and "photos" in tags %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Photograph",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "dateCreated": "{{ page.date | htmlDateString }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}"
+  }{% if image %},
+  "contentUrl": "{{ site.url }}{{ page.url }}{{ image }}"{% endif %}
+}
+</script>
+{% endif %}
 <article>
     <header class="mb-8 not-prose">
         <div class="relative flex flex-row items-start sm:items-center gap-4 sm:gap-6 py-1 border-b border-zinc-100 dark:border-zinc-800 last:border-0">

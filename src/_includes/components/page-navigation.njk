@@ -1,6 +1,8 @@
-<nav class="flex gap-6 text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-600">
+<nav class="flex flex-wrap gap-x-4 gap-y-1 justify-center text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-600">
+  <a href="/about/" class="{% if '/about/' in page.url %}text-zinc-900 dark:text-zinc-100 font-bold{% else %}hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors{% endif %}">About</a>
   <a href="/projects/" class="{% if '/projects/' in page.url %}text-zinc-900 dark:text-zinc-100 font-bold{% else %}hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors{% endif %}">Projects</a>
   <a href="/blog/" class="{% if '/blog/' in page.url %}text-zinc-900 dark:text-zinc-100 font-bold{% else %}hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors{% endif %}">Blog</a>
   <a href="/photography/" class="{% if '/photography/' in page.url %}text-zinc-900 dark:text-zinc-100 font-bold{% else %}hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors{% endif %}">Photography</a>
+  <a href="/cv/" class="{% if '/cv/' in page.url %}text-zinc-900 dark:text-zinc-100 font-bold{% else %}hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors{% endif %}">CV</a>
   <a href="/contact/" class="{% if '/contact/' in page.url %}text-zinc-900 dark:text-zinc-100 font-bold{% else %}hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors{% endif %}">Contact</a>
 </nav>

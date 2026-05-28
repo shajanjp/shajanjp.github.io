@@ -1,6 +1,24 @@
 ---
 layout: layouts/base.njk
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "datePublished": "{{ (created | default(page.date)) | htmlDateString }}",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}"
+  }{% if sourceCodeUrl %},
+  "codeRepository": "{{ sourceCodeUrl }}"{% endif %}
+}
+</script>
 <article>
     <header class="mb-8 not-prose">
         <div class="relative flex flex-row items-start sm:items-center gap-4 sm:gap-6 py-1 border-b border-zinc-100 dark:border-zinc-800 last:border-0">
