@@ -42,6 +42,15 @@
     <link rel="icon" type="image/png" href="{{ site.url }}/assets/img/favicon-16x16.png" sizes="16x16">
     <link rel="mask-icon" href="{{ site.url }}/assets/img/safari-pinned-tab.svg" color="#5bbad5">
 
+    <!-- Anti-FOUC: Apply dark mode before rendering -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <link rel="alternate" type="application/rss+xml" title="Shajan Jacob - Blog" href="{{ site.url }}/feed.xml" />
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,26 +122,22 @@
     </footer>
 
     <script>
-        // Theme toggle script
+        // Theme toggle UI
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-        // Check for saved theme in localStorage or system preference
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
+        // Set initial icon visibility based on current state
+        if (document.documentElement.classList.contains('dark')) {
             themeToggleLightIcon.classList.remove('hidden');
         } else {
-            document.documentElement.classList.remove('dark');
             themeToggleDarkIcon.classList.remove('hidden');
         }
 
         themeToggleBtn.addEventListener('click', function() {
-            // Toggle icons
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
 
-            // Toggle theme
             if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
                 localStorage.theme = 'light';
@@ -152,7 +157,6 @@
             "Made with ❤️"
         ];
 
-        let index = 0;
         const el = document.getElementById("footer-text");
         el.textContent = footerTextLines[Math.floor(Math.random() * footerTextLines.length)];
     </script>
