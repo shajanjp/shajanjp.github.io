@@ -1,0 +1,16 @@
+<a href="{{ shortcut.data.url }}" target="_blank" rel="noopener noreferrer" class="block group">
+    <div class="rounded-3xl p-4 h-40 relative overflow-hidden transition-transform duration-200 group-hover:scale-[1.02]" style="background-color: {{ loop.index0 | shortcutColor }}">
+        <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-xl">
+            {{ shortcut.data.icon }}
+        </div>
+
+        <div class="absolute bottom-4 left-4 right-4">
+            <h3 class="font-semibold text-base text-white">
+                {{ shortcut.data.name }}
+            </h3>
+            <p class="text-xs text-white/80 mt-1">
+                {{ shortcut.data.description }}
+            </p>
+        </div>
+    </div>
+</a>

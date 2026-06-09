@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+<article>
+    <header class="mb-8 not-prose">
+        <div class="flex flex-col items-center text-center gap-4 py-8 border-b border-zinc-100 dark:border-zinc-800">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl" style="background-color: {{ name.length | shortcutColor }}">
+                {{ icon }}
+            </div>
+
+            <div>
+                <h1 class="text-2xl font-medium mb-2 text-zinc-900 dark:text-zinc-100">
+                    {{ name }}
+                </h1>
+                <p class="text-md text-zinc-500 dark:text-zinc-400">
+                    {{ description }}
+                </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 justify-center">
+                {% for tag in tags %}
+                <span class="text-xs uppercase tracking-wider px-2 py-0.5 border border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-500 rounded-sm">
+                    {{ tag }}
+                </span>
+                {% endfor %}
+            </div>
+
+            <a href="{{ url }}" target="_blank" rel="noopener noreferrer"
+               class="mt-2 px-6 py-2 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-150 inline-block"
+               style="background-color: {{ name.length | shortcutColor }}; color: white; border-radius: 9999px;">
+                Get Shortcut
+            </a>
+        </div>
+    </header>
+    <div class="prose dark:prose-invert text-justify max-w-none">
+        {{ content | safe }}
+    </div>
+</article>

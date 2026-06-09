@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/blog/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/photography/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/projects/**/*.{jpg,png}");
+  eleventyConfig.addPassthroughCopy("src/shortcuts/**/*.{jpg,png}");
 
   eleventyConfig.addCollection("projects", function (collectionApi) {
     return collectionApi.getFilteredByTag("projects").sort(function (a, b) {
@@ -20,6 +21,34 @@ module.exports = function (eleventyConfig) {
       const dateB = new Date(b.data.created || b.date);
       return dateA - dateB;
     });
+  });
+
+  eleventyConfig.addCollection("shortcuts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("shortcuts");
+  });
+
+  // Return color from palette by index; wraps around if out of bounds
+  const shortcutColors = [
+    "rgb(237, 90, 96)",
+    "rgb(252, 123, 91)",
+    "rgb(41, 191, 79)",
+    "rgb(14, 197, 165)",
+    "rgb(231, 192, 23)",
+    "rgb(98, 194, 235)",
+    "rgb(24, 138, 255)",
+    "rgb(71, 102, 194)",
+    "rgb(123, 77, 179)",
+    "rgb(243, 158, 65)",
+    "rgb(174, 111, 216)",
+    "rgb(233, 125, 200)",
+    "rgb(143, 168, 148)",
+    "rgb(184, 158, 127)",
+    "rgb(125, 136, 146)",
+    "rgb(124, 77, 179)",
+  ];
+
+  eleventyConfig.addFilter("shortcutColor", function (index) {
+    return shortcutColors[index % shortcutColors.length];
   });
 
   // Filters
