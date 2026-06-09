@@ -45,3 +45,29 @@ body {
 .animate-grayscale {
     animation: grayscaleSmooth 4s ease-in-out infinite;
 }
+/* Prevent long code blocks and wide mermaid diagrams from causing
+   page-level horizontal scroll. Code blocks get a scrollbar via
+   overflow-x: auto so content is still accessible. */
+
+.prose pre[class*="language-"] {
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    contain: inline-size;
+}
+
+/* Mermaid diagrams: after JS transforms pre.language-mermaid into
+   .mermaid-wrapper > .mermaid, the pre[class*="language-"] selector
+   no longer applies. These styles fill the gap. */
+
+.mermaid-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.mermaid-wrapper .mermaid {
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
