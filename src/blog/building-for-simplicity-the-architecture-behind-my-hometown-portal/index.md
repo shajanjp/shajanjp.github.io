@@ -1,6 +1,6 @@
 ---
 title: "Building for Simplicity: The Architecture Behind My Hometown Portal"
-description: "How I built Piravom Portal - a zero bufget static town directory for my hometown."
+description: "How I built Piravom Portal - a zero budget static town directory for my hometown."
 thumbnail: "building-for-simplicity-the-architecture-behind-my-hometown-portal-thumbnail.png"
 icon: "building-for-simplicity-the-architecture-behind-my-hometown-portal-icon.png"
 tags:
