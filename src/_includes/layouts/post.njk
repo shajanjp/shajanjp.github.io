@@ -80,4 +80,15 @@ layout: layouts/base.njk
     <div class="prose dark:prose-invert text-justify max-w-none">
         {{ content | safe }}
     </div>
+
+    {% if relatedPosts and relatedPosts.length %}
+    <div class="mt-16 not-prose">
+        <h2 class="text-xl font-medium mb-6 text-zinc-700 dark:text-zinc-300">Related Posts</h2>
+        <div class="divide-y divide-zinc-100 dark:divide-zinc-800">
+            {% for slug in relatedPosts %}
+            {% itemEmbed "blog", slug %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 </article>

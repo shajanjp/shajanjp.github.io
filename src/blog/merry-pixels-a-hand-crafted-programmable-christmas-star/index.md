@@ -11,6 +11,9 @@ tags:
  - deno
  - arduino
 date: 2024-12-23
+relatedPosts:
+  - the-story-of-a-light-bulb
+  - sharing-the-joy-of-christmas-through-postcards
 ---
 
 ## TLDR:
