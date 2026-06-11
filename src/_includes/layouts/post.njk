@@ -82,7 +82,8 @@ layout: layouts/base.njk
     </div>
 
     {% if relatedPosts and relatedPosts.length %}
-    <div class="mt-16 not-prose">
+    <hr class="mt-16 border-zinc-200 dark:border-zinc-800">
+    <div class="not-prose mt-8">
         <h2 class="text-xl font-medium mb-6 text-zinc-700 dark:text-zinc-300">Related Posts</h2>
         <div class="divide-y divide-zinc-100 dark:divide-zinc-800">
             {% for slug in relatedPosts %}
