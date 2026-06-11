@@ -50,7 +50,9 @@ The above format is the expected output from the twinkle function. Each line rep
 
 Using this idea, any animation can be created.
 
-<iframe width="315" height="560" src="https://www.youtube.com/embed/NqWbfRxFq-4" title="YouTube video player" frameborder="0"></iframe>
+<div style="display: flex; justify-content: center;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/NqWbfRxFq-4" title="YouTube video player" frameborder="0"></iframe>
+</div>
 
 ## Challenges:
 
