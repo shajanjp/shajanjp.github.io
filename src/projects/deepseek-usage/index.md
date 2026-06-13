@@ -7,15 +7,16 @@ icon: "deepseek-usage-icon.png"
 tags:
   - web
   - dashboard
-  - api
   - nodejs
   - analytics
-  - tool
+  - ai
+  - deepseek
+  - vibe-coding
 livePreviewUrl: https://shajanjacob.com/deepseek-usage/
 sourceCodeUrl: https://github.com/shajanjp/deepseek-usage/
 ---
 
-A self-hosted dashboard for visualising your DeepSeek AI API usage — daily costs, token consumption, cache hit rates, and per-key breakdowns. Data is fetched directly from the [DeepSeek Platform API](https://platform.deepseek.com) and rendered client-side.
+A self-hosted dashboard that pulls your DeepSeek AI usage data from the [Platform API](https://platform.deepseek.com) and renders it entirely in the browser - daily costs, token consumption, cache efficiency, and per-key breakdowns, all at a glance.
 
 <img src="./deepseek-usage.jpg" alt="DeepSeek Usage Dashboard desktop screenshot" style="height: auto; width: 100%;">
 
