@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
 
       if (!alt) return match;
 
-      return `<figure>\n  ${match}\n  <figcaption>${alt}</figcaption>\n</figure>`;
+      return `<figure>\n  ${match}\n  <figcaption class="text-center">${alt}</figcaption>\n</figure>`;
     });
   });
 };
