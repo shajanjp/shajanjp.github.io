@@ -1,7 +1,7 @@
 ---
-title: "How I Learned to Drive My Car in My 30s"
+title: "How I learned to drive my car in my 30s"
 date: 2026-06-16
-description: "From never wanting to drive to 50,000 kilometers behind the wheel - the story of how I finally learned to drive my Maruti Swift."
+description: "From never wanting to drive to 50,000 kilometers with my car - the story of how I finally learned to drive my car."
 thumbnail: "how-i-learned-to-drive-my-car-in-my-30s.jpg"
 icon: "how-i-learned-to-drive-my-car-in-my-30s-icon.png"
 tags:
