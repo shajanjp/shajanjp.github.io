@@ -10,7 +10,7 @@ tags:
  - contribution
 ---
 
-<img src="./map-drawing" alt="My journey of using and contributing to google maps" tyle="height: auto; width:100%;">
+<img src="./map-drawing" alt="My journey of using and contributing to google maps" style="height: auto; width:100%;">
 
 ## My perspective on maps
 

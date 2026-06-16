@@ -2,11 +2,14 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const Image = require("@11ty/eleventy-img");
 const itemEmbed = require("./src/_plugins/item-embed");
+const imgCaption = require("./src/_plugins/img-caption");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss.rssPlugin);
   eleventyConfig.addPlugin(itemEmbed);
+  // Image caption filter — used in post layout for blog content images
+  eleventyConfig.addPlugin(imgCaption);
 
   // Pass through any static assets if you add them later (e.g., images)
   eleventyConfig.addPassthroughCopy("src/assets");

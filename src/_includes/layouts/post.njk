@@ -78,7 +78,7 @@ layout: layouts/base.njk
         </div>
     </header>
     <div class="prose dark:prose-invert max-w-none">
-        {{ content | safe }}
+        {{ content | imgCaption | safe }}
     </div>
 
     {% if relatedPosts and relatedPosts.length %}

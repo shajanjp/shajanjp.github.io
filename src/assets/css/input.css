@@ -71,3 +71,84 @@ body {
     overflow-x: auto;
     box-sizing: border-box;
 }
+
+/* Image captions within prose content */
+
+.prose figure {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.prose figure figcaption {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--tw-prose-captions, #71717a);
+}
+
+/* Constrain tall images in blog content.
+   Inline width:100% makes portrait images too tall, so we cap the height
+   and use object-fit:contain to preserve aspect ratio within the box. */
+
+.prose figure img {
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+/* Lightbox overlay */
+
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    user-select: none;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
