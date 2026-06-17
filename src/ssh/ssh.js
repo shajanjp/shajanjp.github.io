@@ -465,5 +465,15 @@
     });
 
     body.addEventListener('click', function() { input.focus(); });
+
+    var tabBtn = document.getElementById('tab-btn');
+    if (tabBtn) {
+        tabBtn.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+            input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Tab', bubbles: true }));
+            input.focus();
+        });
+    }
+
     input.focus();
 })();

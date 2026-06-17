@@ -95,7 +95,12 @@ description: "An interactive terminal simulation for shajanjacob.com. Try comman
         display: flex;
         align-items: center;
         gap: 0;
+        flex-wrap: wrap;
+    }
+
+    .prompt-group {
         white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .prompt { color: #00cc00; }
@@ -113,7 +118,9 @@ description: "An interactive terminal simulation for shajanjacob.com. Try comman
         caret-color: #00cc00;
         padding: 0;
         margin-left: 6px;
-        min-width: 0;
+        min-width: 80px;
+        flex-basis: 120px;
+        flex-grow: 1;
     }
 
     .output-info { color: #00cc00; }
@@ -121,6 +128,44 @@ description: "An interactive terminal simulation for shajanjacob.com. Try comman
     .output-highlight { color: #6699ff; }
     .output-dim { color: #666666; }
     .output-default { color: #cccccc; }
+
+    .tab-btn {
+        display: none;
+        background: #1a1a1a;
+        color: #888;
+        border: 1px solid #333;
+        border-radius: 3px;
+        padding: 1px 8px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px;
+        cursor: pointer;
+        margin-left: 8px;
+        flex-shrink: 0;
+        line-height: 1.4;
+    }
+
+    .tab-btn:active {
+        background: #333;
+        color: #ccc;
+    }
+
+    .welcome-banner {
+        overflow-x: auto;
+        white-space: pre;
+    }
+
+    @media (max-width: 480px) {
+        .welcome-banner {
+            font-size: 8px;
+            line-height: 1.2;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .tab-btn {
+            display: inline-block;
+        }
+    }
 </style>
 
 <div class="terminal-topbar">
@@ -132,7 +177,7 @@ description: "An interactive terminal simulation for shajanjacob.com. Try comman
 
 <div class="terminal-body" id="terminal-body" tabindex="-1">
     <div id="terminal-output">
-        <div class="terminal-line output-info">
+        <div class="terminal-line output-info welcome-banner">
    __        __   _
    \ \      / /__| | ___ ___  _ __ ___   ___
     \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
@@ -145,8 +190,9 @@ description: "An interactive terminal simulation for shajanjacob.com. Try comman
         <div class="terminal-line output-dim">────────────────────────────────────────────</div>
     </div>
     <div class="terminal-input-line" id="terminal-input-line">
-        <span class="prompt">guest@sj</span><span class="directory">:~$</span>
+        <span class="prompt-group"><span class="prompt">guest@sj</span><span class="directory">:~$</span></span>
         <input type="text" id="terminal-input" autofocus autocomplete="off" autocapitalize="off" spellcheck="false">
+        <button id="tab-btn" type="button" class="tab-btn" aria-label="Tab">&#x21B9;</button>
     </div>
 </div>
 
