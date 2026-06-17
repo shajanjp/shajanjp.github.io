@@ -1,0 +1,250 @@
+---
+title: SSH
+description: "An interactive terminal simulation for shajanjacob.com. Try commands like ls, cd, whoami, help."
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ description }}"/>
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+</head>
+<body>
+<style>
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #000000;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #cccccc;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .terminal-topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #111111;
+        border-bottom: 1px solid #1a1a1a;
+        padding: 4px 12px;
+        flex-shrink: 0;
+        user-select: none;
+    }
+
+    .terminal-topbar-left {
+        font-size: 12px;
+        color: #666;
+    }
+
+    .terminal-topbar-right a {
+        color: #666;
+        text-decoration: none;
+        font-size: 12px;
+        padding: 2px 8px;
+        border-radius: 4px;
+        transition: background 0.15s, color 0.15s;
+    }
+
+    .terminal-topbar-right a:hover {
+        background: #1a1a1a;
+        color: #aaa;
+    }
+
+    .terminal-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 4px 16px 8px;
+        scroll-behavior: smooth;
+        word-break: break-word;
+    }
+
+    .terminal-body::-webkit-scrollbar {
+        width: 6px;
+    }
+    .terminal-body::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .terminal-body::-webkit-scrollbar-thumb {
+        background: #222;
+        border-radius: 3px;
+    }
+
+    .terminal-line {
+        margin-bottom: 0;
+        white-space: pre-wrap;
+    }
+
+    .terminal-input-line {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        white-space: nowrap;
+    }
+
+    .prompt { color: #00cc00; }
+    .directory { color: #6699ff; }
+    .command { color: #ffffff; }
+
+    #terminal-input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 16px;
+        flex: 1;
+        caret-color: #00cc00;
+        padding: 0;
+        margin-left: 6px;
+        min-width: 0;
+    }
+
+    .output-info { color: #00cc00; }
+    .output-error { color: #cc3333; }
+    .output-highlight { color: #6699ff; }
+    .output-dim { color: #666666; }
+    .output-default { color: #cccccc; }
+</style>
+
+<div class="terminal-topbar">
+    <span class="terminal-topbar-left">guest@shajanjacob.com — bash</span>
+    <span class="terminal-topbar-right">
+        <a href="/">← back to site</a>
+    </span>
+</div>
+
+<div class="terminal-body" id="terminal-body" tabindex="-1">
+    <div id="terminal-output">
+        <div class="terminal-line output-info">
+   __        __   _
+   \ \      / /__| | ___ ___  _ __ ___   ___
+    \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \
+     \ V  V /  __/ | (_| (_) | | | | | |  __/
+      \_/\_/ \___|_|\___\___/|_| |_| |_|\___|
+        </div>
+        <div class="terminal-line output-dim">Welcome to shajanjacob.com terminal</div>
+        <div class="terminal-line output-dim">Type <span class="output-highlight">help</span> for available commands.</div>
+        <div class="terminal-line output-dim">Type <span class="output-highlight">ls</span> to explore the filesystem.</div>
+        <div class="terminal-line output-dim">────────────────────────────────────────────</div>
+    </div>
+    <div class="terminal-input-line" id="terminal-input-line">
+        <span class="prompt">guest@sj</span><span class="directory">:~$</span>
+        <input type="text" id="terminal-input" autofocus autocomplete="off" autocapitalize="off" spellcheck="false">
+    </div>
+</div>
+
+<script>
+window.__sshFS = {
+
+    // ── File system built from site content at build time ──
+        '/': { type: 'dir', children: ['home', 'etc', 'var', 'tmp', 'usr'] },
+        '/home': { type: 'dir', children: ['guest'] },
+        '/home/guest': { type: 'dir', children: ['projects', 'blog', 'photos', 'shortcuts', 'contact.md', 'about.md', 'cv.md', 'welcome.md'] },
+
+        // top-level content dirs
+        '/home/guest/projects': { type: 'dir', children: [{%- for item in collections.projects -%}'{{ item.page.fileSlug }}',{%- endfor -%}] },
+        '/home/guest/blog': { type: 'dir', children: [{%- for item in collections.blog -%}'{{ item.page.fileSlug }}',{%- endfor -%}] },
+        '/home/guest/photos': { type: 'dir', children: [{%- for item in collections.photos -%}'{{ item.page.fileSlug }}',{%- endfor -%}] },
+        '/home/guest/shortcuts': { type: 'dir', children: [{%- for item in collections.shortcuts -%}'{{ item.page.fileSlug }}',{%- endfor -%}] },
+
+{%- for item in collections.projects %}
+{%- set userTags = item.data.tags | userTags -%}
+{%- set content -%}
+Title: {{ item.data.title }}
+Description: {{ item.data.description }}
+{% if item.data.created %}Created: {{ item.data.created | htmlDateString }}
+{% endif %}{% if item.data.sourceCodeUrl %}Source: <a href="{{ item.data.sourceCodeUrl }}" target="_blank" class="output-highlight" style="text-decoration:underline">{{ item.data.sourceCodeUrl }}</a>
+{% endif %}{% if item.data.livePreviewUrl %}Live: <a href="{{ item.data.livePreviewUrl }}" target="_blank" class="output-highlight" style="text-decoration:underline">{{ item.data.livePreviewUrl }}</a>
+{% endif %}{% if userTags.length %}Tags: {{ userTags | join(", ") }}
+{% endif %}{%- endset %}
+        '/home/guest/projects/{{ item.page.fileSlug }}': { type: 'dir', children: ['index.md'] },
+        '/home/guest/projects/{{ item.page.fileSlug }}/index.md': { type: 'file', content: {{ content | js | safe }} },
+{%- endfor %}
+
+{%- for item in collections.blog %}
+{%- set userTags = item.data.tags | userTags -%}
+{%- set content -%}
+Title: {{ item.data.title }}
+{% if item.data.date %}Date: {{ item.data.date | htmlDateString }}
+{% endif %}Description: {{ item.data.description }}
+{% if userTags.length %}Tags: {{ userTags | join(", ") }}
+{% endif %}{% if item.data.tldr %}
+TL;DR: {{ item.data.tldr }}
+{% endif %}{%- endset %}
+        '/home/guest/blog/{{ item.page.fileSlug }}': { type: 'dir', children: ['index.md'] },
+        '/home/guest/blog/{{ item.page.fileSlug }}/index.md': { type: 'file', content: {{ content | js | safe }} },
+{%- endfor %}
+
+{%- for item in collections.photos %}
+{%- set userTags = item.data.tags | userTags -%}
+{%- set imgUrl = item.data.image | replace("./src/", "/") -%}
+{%- set content -%}
+Title: {{ item.data.title }}
+{% if item.data.date %}Date: {{ item.data.date | htmlDateString }}
+{% endif %}{% if userTags.length %}Tags: {{ userTags | join(", ") }}
+{% endif %}Image: {{ imgUrl }}
+
+<img src="{{ imgUrl }}" alt="{{ item.data.title }}" style="display:block;max-width:100%;max-height:60vh;margin-top:8px;border:1px solid #222;" loading="eager">{%- endset %}
+        '/home/guest/photos/{{ item.page.fileSlug }}': { type: 'dir', children: ['index.md'] },
+        '/home/guest/photos/{{ item.page.fileSlug }}/index.md': { type: 'file', content: {{ content | js | safe }} },
+{%- endfor %}
+
+{%- for item in collections.shortcuts %}
+{%- set userTags = item.data.tags | userTags -%}
+{%- set content -%}
+Name: {{ item.data.name }}
+Description: {{ item.data.description }}
+URL: {{ item.data.url }}
+{% if item.data.icon -%}
+Icon: {{ item.data.icon }}
+{%- endif %}
+{% if userTags.length -%}
+Tags: {{ userTags | join(", ") }}
+{%- endif %}
+{%- endset %}
+        '/home/guest/shortcuts/{{ item.page.fileSlug }}': { type: 'dir', children: ['index.md'] },
+        '/home/guest/shortcuts/{{ item.page.fileSlug }}/index.md': { type: 'file', content: {{ content | js | safe }} },
+{%- endfor %}
+
+        // static content files
+        '/home/guest/contact.md': { type: 'file', content: "Email: <a href='mailto:shajanjp@gmail.com' class='output-info' style='text-decoration:underline'>shajanjp at gmail dot com</a>\nGitHub:  <a href='https://github.com/shajanjp' target='_blank' class='output-highlight' style='text-decoration:underline'>github.com/shajanjp</a>\nLinkedIn: <a href='https://linkedin.com/in/shajanjp' target='_blank' class='output-highlight' style='text-decoration:underline'>linkedin.com/in/shajanjp</a>\n" },
+        '/home/guest/about.md':   { type: 'file', content: "Hello,\n\nI'm Shajan Jacob - a software engineer and technical lead based in\nKochi, India, with over 8 years of experience designing and building\nproduction-grade web applications.\n\nI specialize in backend engineering with Node.js, TypeScript, and NestJS,\narchitecting scalable microservices and real-time systems on Google Cloud\nPlatform and AWS. My work spans high-throughput APIs, event-driven\narchitectures, and full-stack development - from ideation through deployment\nand beyond.\n\nCurrently, I serve as Technical Lead at Sorice Solutions (sorice.solutions),\nwhere I lead architecture decisions, mentor engineers, optimize system\nperformance, and drive end-to-end project delivery. Previously, I was a\nSoftware Engineer at Cubet Techno Labs (cubettech.com), where I built APIs,\nmicroservices, and serverless solutions, and published the ffmpeg-sdk npm\npackage.\n\nBeyond the keyboard, I'm deeply curious about hardware. The green traces\non circuit boards fascinated me as a child, and that curiosity grew into a\npassion for IoT and building things with Raspberry Pi, ESP32, and addressable\nLEDs. I've built everything from internet-connected Christmas stars to smart\nAC controllers - blending software with the physical world.\n\nWhen I'm not coding or tinkering, you'll find me spending time with family,\nreading a good book, shooting photographs, or getting lost on the internet\nlearning something new.\n\nI believe great engineering is about people as much as code - whether it's\nmentoring junior developers, collaborating with cross-functional teams, or\nbuilding tools that make someone's day a little easier.\n\nI also maintain a shelf of books and a uses page with the tools and gadgets\nI rely on.\n\nWant to work together or just say hello? Get in touch.\n" },
+        '/home/guest/cv.md':      { type: 'file', content: "SHAJAN JACOB\nSoftware Engineer | Kochi, Kerala, India\nshajanjp at gmail dot com | shajanjacob.com\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nPROFESSIONAL SUMMARY\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nSoftware Engineer with 8+ years of experience in web applications\ndevelopment, specializing in Node.js, TypeScript, and scalable microservices.\nProven track record in system optimization, deployments, and team leadership.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nTECHNICAL SKILLS\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nNode.js, JavaScript, TypeScript, NestJS, Express.js, Deno, REST API,\nMicroservices, Event-driven Architecture, Real-time Applications,\nGoogle Cloud Platform, AWS (Lambda, EC2, API Gateway, S3),\nFirebase Functions, Docker, Kubernetes, Nginx, MongoDB, PostgreSQL,\nMySQL, Redis, Elasticsearch, gRPC, Kafka, FHIR, JWT, Auth0, Stripe\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nPROFESSIONAL EXPERIENCE\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nSorice Solutions, Kochi — Technical Lead (Feb 2020 - Present)\n  - Architected core system architectures and key application features,\n    enhancing scalability, reliability, and maintainability.\n  - Migrated legacy apps to modern frameworks, cutting modification time\n    by 20%.\n  - Optimized high-throughput APIs handling 300K+ daily requests, improving\n    response times by 25%.\n  - Remediated security vulnerabilities, reducing incidents and improving\n    compliance.\n  - Optimized releases with robust deployment plans, cutting release-related\n    incidents.\n  - Contributed to AI integration efforts, researching and implementing\n    relevant tools.\n  - Developed internal tools and automation scripts to streamline tasks.\n  - Conducted merge request reviews and mentored junior developers.\n  - Led hiring for engineering roles, interviewing 300+ candidates.\n  - Contributed to end-to-end project execution: planning, estimation,\n    development, delivery, and cross-team collaboration.\n\nCubet, Kochi — Software Engineer (Oct 2017 - Feb 2020)\n  - Architected and developed custom APIs, microservices, and serverless\n    solutions (AWS Lambda, Firebase FaaS).\n  - Published the ffmpeg-sdk NPM package powering an online dubbing studio.\n  - Built a scalable Twitter chat engine supporting multiple chatbots per\n    Node.js instance, with real-time text/audio chat via sockets.\n  - Delivered end-to-end software solutions from prototyping to deployment.\n\nAlt S Solutions, Kochi — Junior Software Engineer (May 2017 - Oct 2017)\n  - Developed responsive websites tailored to diverse client requirements.\n  - Designed and implemented dashboards and APIs for a CRM application.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nEDUCATION\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nBachelor of Engineering in CS\nT John Institute of Technology, Bangalore (2017)\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nACHIEVEMENTS\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  - Ranked in the top 2% globally in LinkedIn's JavaScript skill assessment.\n  - Awarded \"Project of the Year\" for final-year campus project.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nHOBBY / SIDE PROJECTS\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nMerry Pixels — Internet-connected Christmas star with 300 addressable LEDs.\n  TypeScript | Deno | Socket | HTML | Tailwind\n  merry-pixels.deno.dev\n\nCommunity Portal — Local business and services directory for residents.\n  TypeScript | Deno | Fresh | Notion API | Tailwind\n  piravom.in\n\nHN — Minimalistic Hacker News reader and PWA.\n  PWA | JavaScript | jQuery | Semantic-UI | Firebase\n  guyswhocode.com/HN/\n\nLets All Chef — Companion for home cooks: recipes, cookbooks, meal planning.\n  NodeJS | ExpressJS | MongoDB | Semantic-UI\n  letsallchef.github.io\n\nBlackPipe — Expose terminal outputs without sacrificing security.\n  NodeJS | Sockets | Semantic-UI | ExpressJS\n  shajanjacob.com/blackpipe/\n\nMeemi — Online ornamental fish store, forum, store locator and wiki.\n  NodeJS | ExpressJS | MongoDB | Elastic Search | SemanticUI\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nPROFILES\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  linkedin.com/in/shajanjp\n  github.com/shajanjp\n  npmjs.com/~shajanjp\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nHOBBIES\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n  Terrariums, Photography, Crafting\n" },
+        '/home/guest/welcome.md': { type: 'file', content: "Welcome to shajanjacob.com!\n\nThis terminal lets you explore the site contents.\n\n  cd projects  — browse {{ collections.projects.length }} projects\n  cd blog      — read {{ collections.blog.length }} blog posts\n  cd photos    — view {{ collections.photos.length }} photos\n  cd shortcuts — check out {{ collections.shortcuts.length }} shortcuts\n\nUse ls, cd, and cat to navigate. Type help for all commands.\n" },
+
+        // system dirs
+        '/etc': { type: 'dir', children: ['hostname', 'motd'] },
+        '/etc/hostname': { type: 'file', content: 'shajanjacob.com\n' },
+        '/etc/motd': { type: 'file', content: 'Welcome to the virtual terminal!\nAll your base are belong to us.\n' },
+        '/var': { type: 'dir', children: ['log'] },
+        '/var/log': { type: 'dir', children: ['syslog'] },
+        '/var/log/syslog': { type: 'file', content: 'Jun 18 12:00:01 sj systemd[1]: Started Session 42.\nJun 18 12:01:23 sj sshd[1234]: Accepted publickey for guest\nJun 18 12:05:00 sj kernel: Hello from the other side\n' },
+        '/tmp': { type: 'dir', children: [] },
+        '/usr': { type: 'dir', children: ['bin', 'share'] },
+        '/usr/bin': { type: 'dir', children: [] },
+        '/usr/share': { type: 'dir', children: ['fortune.txt'] },
+        '/usr/share/fortune.txt': { type: 'file', content: "Q: How many programmers does it take to change a light bulb?\nA: None, that's a hardware problem.\n" },
+    };
+
+
+</script>
+<script src="./ssh.js"></script>
+</body>
+</html>

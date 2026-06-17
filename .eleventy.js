@@ -20,6 +20,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/photography/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/projects/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/shortcuts/**/*.{jpg,png}");
+  eleventyConfig.addPassthroughCopy("src/ssh/**/*.js");
 
   eleventyConfig.addCollection("projects", function (collectionApi) {
     return collectionApi.getFilteredByTag("projects").sort(function (a, b) {
@@ -80,6 +81,19 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("markdown", function (content) {
     return md.render(content);
+  });
+
+  // Safe JS string embedding: JSON stringifies and escapes </script>
+  eleventyConfig.addFilter("js", function (value) {
+    const s = typeof value === 'string' ? value : JSON.stringify(value);
+    return JSON.stringify(s).replace(/<\//g, '<\\/');
+  });
+
+  // Strip collection tags (projects, blog, photos, shortcuts) from tag arrays
+  const collectionTags = new Set(['projects', 'blog', 'photos', 'shortcuts']);
+  eleventyConfig.addFilter("userTags", function (tags) {
+    if (!Array.isArray(tags)) return [];
+    return tags.filter(t => !collectionTags.has(t));
   });
 
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
