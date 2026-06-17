@@ -12,13 +12,10 @@ tags:
  - iphone
  - scriptable
 date: 2024-10-05
+tldr: "After receiving an unexpectedly high electricity bill, I built a system to track and predict my electricity consumption using a [Deno](https://deno.com/) REST API thats connected to a [Notion](https://www.notion.so) database. It calculates daily usage, current costs using the KSEB API, and future bill predictions. I log my meter readings via an [iPhone Shortcut](https://support.apple.com/en-in/guide/shortcuts/welcome/ios), and an iOS widget created with [Scriptable](https://scriptable.app/) displays the data on my phone home screen."
 ---
 
 <img src="./ios-widget-power-bill-monitor.jpg" alt="My iphone widget for tracking electricity consumption" style=" height: auto; width:100%;">
-
-## TLDR
-
-After receiving an unexpectedly high electricity bill, I built a system to track and predict my electricity consumption using a [Deno](https://deno.com/) REST API thats connected to a [Notion](https://www.notion.so) database. It calculates daily usage, current costs using the KSEB API, and future bill predictions. I log my meter readings via an [iPhone Shortcut](https://support.apple.com/en-in/guide/shortcuts/welcome/ios), and an iOS widget created with [Scriptable](https://scriptable.app/) displays the data on my phone home screen.
 
 ## The bill that started it all
 

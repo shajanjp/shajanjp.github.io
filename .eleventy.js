@@ -1,8 +1,11 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const Image = require("@11ty/eleventy-img");
+const MarkdownIt = require("markdown-it");
 const itemEmbed = require("./src/_plugins/item-embed");
 const imgCaption = require("./src/_plugins/img-caption");
+
+const md = new MarkdownIt({ html: true });
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -13,7 +16,7 @@ module.exports = function (eleventyConfig) {
 
   // Pass through any static assets if you add them later (e.g., images)
   eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("src/blog/**/*.{jpg,png}");
+  eleventyConfig.addPassthroughCopy("src/blog/**/*.{jpg,png,pdf}");
   eleventyConfig.addPassthroughCopy("src/photography/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/projects/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/shortcuts/**/*.{jpg,png}");
@@ -73,6 +76,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     return new Date(dateObj).toISOString().split("T")[0];
+  });
+
+  eleventyConfig.addFilter("markdown", function (content) {
+    return md.render(content);
   });
 
   eleventyConfig.addAsyncShortcode("image", imageShortcode);

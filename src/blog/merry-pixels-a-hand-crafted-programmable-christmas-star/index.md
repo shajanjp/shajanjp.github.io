@@ -14,10 +14,8 @@ date: 2024-12-23
 relatedPosts:
   - the-story-of-a-light-bulb
   - sharing-the-joy-of-christmas-through-postcards
+tldr: "I created a christmas star with 300 led bulbs and hung it in front of my house, which can be programmed by anyone around the world the way they want. Give it a [try here](https://merry-pixels.deno.dev/)."
 ---
-
-## TLDR:
-I created a christmas star with 300 led bulbs and hung it in front of my house, which can be programmed by anyone around the world the way they want. Give it a [try here](https://merry-pixels.deno.dev/).
 
 ## Backstory:
 Like a lot of other people, I like the December season very much. The holidays, snow weather, lights, gifts, and Christmas cake. The time spent on decorating the house with lights and making the Christmas crib always gives a warm feeling. This season brings back good childhood memories too. Colorful lights blinking everywhere always make me happy. I’ve written a few lines on how obsessed I am with lights [here](https://shajanjacob.com/blog/2022/07/16/the-story-of-a-light-bulb.html). 

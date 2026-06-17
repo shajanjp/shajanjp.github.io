@@ -11,11 +11,8 @@ tags:
   - deno
 relatedPosts:
   - merry-pixels-a-hand-crafted-programmable-christmas-star
+tldr: "To celebrate Christmas, I hand-painted and mailed personalized postcards using vintage yellow postcards and printed custom Christmas cards for anyone who signed up through a simple web form. Without any promotion beyond a WhatsApp status, the project received over 50 requests from across India, proving that small acts of happiness can create meaningful connections."
 ---
-
-## TL;DR 
-
-To celebrate Christmas, I hand-painted and mailed personalized postcards using vintage yellow postcards and printed custom Christmas cards for anyone who signed up through a simple web form. Without any promotion beyond a WhatsApp status, the project received over 50 requests from across India, proving that small acts of happiness can create meaningful connections.
 
 ## Memorable Christmas Season
 

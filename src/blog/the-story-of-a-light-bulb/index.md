@@ -10,13 +10,10 @@ tags:
   - diy
   - fun
   - story
+tldr: "I made a simple internet-connected table lamp that blinked when you visited this page. It will blink again if you click on the below button."
 ---
 
-<img src="./the-diy-internet-connected-bulb" alt="The story of a light bulb" style=" height: auto; width:100%;">
-
-## Short Story
-I made a simple internet-connected table lamp that blinked when you visited this page.
-It will blink again if you click on the below button.
+<img src="./the-diy-internet-connected-bulb.jpg" alt="The story of a light bulb" style=" height: auto; width:100%;">
 
 <button class="button send-message-button w-full px-6 py-4 text-2xl mb-4 text-zinc-800 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-800" style="">Give me a clap</button>
 

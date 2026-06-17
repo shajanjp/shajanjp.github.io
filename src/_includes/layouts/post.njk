@@ -76,6 +76,13 @@ layout: layouts/base.njk
                 </div>
             </div>
         </div>
+
+        {% if tldr %}
+        {% set tldrMd = "**TL;DR** \n\n" + tldr %}
+        <div class="mt-6 p-3 border-l-4 border-zinc-300 dark:border-zinc-600 bg-zinc-50 dark:bg-zinc-800/30 rounded-r-md text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          {{ tldrMd | markdown | safe }}
+        </div>
+        {% endif %}
     </header>
     <div class="prose dark:prose-invert max-w-none">
         {{ content | imgCaption | safe }}

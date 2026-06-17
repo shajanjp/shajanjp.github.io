@@ -10,11 +10,8 @@ tags:
  - eleventy
  - deno
 date: 2026-06-07
+tldr: "[Piravom Portal](https://piravom.in/) is a static town directory built with [Eleventy](https://www.11ty.dev/), [Markdown](https://daringfireball.net/projects/markdown/), and [Tailwind CSS](https://tailwindcss.com/). Content is stored as files instead of a database, search runs entirely in the browser, deployment is automated through [GitHub Actions](https://github.com/features/actions) and [GitHub Pages](https://pages.github.com/), and the only backend component is a contact form powered by [Deno Deploy](https://deno.com/deploy) and [Notion](https://www.notion.so/)."
 ---
-
-## TL;DR
-
-[Piravom Portal](https://piravom.in/) is a static town directory built with [Eleventy](https://www.11ty.dev/), [Markdown](https://daringfireball.net/projects/markdown/), and [Tailwind CSS](https://tailwindcss.com/). Content is stored as files instead of a database, search runs entirely in the browser, deployment is automated through [GitHub Actions](https://github.com/features/actions) and [GitHub Pages](https://pages.github.com/), and the only backend component is a contact form powered by [Deno Deploy](https://deno.com/deploy) and [Notion](https://www.notion.so/).
 
 ## Why I Built It
 
