@@ -2,6 +2,7 @@
 title: Teaching My 10-Year-Old Nephew Basic Electronics Through a Letter
 date: 2026-06-17
 description: "A simple letter and a tiny RGB LED circuit I mailed to my 10-year-old nephew to introduce him to basic electronics and encourage curiosity."
+thumbnail: teaching-my-10-year-old-nephew-basic-electronics-through-a-letter.jpg
 icon: "teaching-my-10-year-old-nephew-basic-electronics-through-a-letter-icon.png"
 tags:
   - electronics
