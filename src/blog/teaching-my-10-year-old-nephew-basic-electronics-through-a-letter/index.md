@@ -27,6 +27,10 @@ These days, a lot of learning happens on screens. That's why getting a small han
 <img src="./circuit-frontside.jpg" alt="Front side of the assembled circuit with RGB LED and three push buttons" style="height: auto; width:100%;">
 <img src="./circuit-backside.jpg" alt="Back side of the circuit showing the wiring and connections" style="height: auto; width:100%;">
 
+<div style="display: flex; justify-content: center;">
+  <iframe width="315" height="560" src="https://youtube.com/embed/0xUs3bqHT0Y" title="YouTube video player" frameborder="0"></iframe>
+</div>
+
 Heres the letter:
 
 <div class="my-8 p-6 md:p-8 bg-amber-50 dark:bg-amber-950/40 rounded-md shadow-sm text-zinc-800 dark:text-zinc-200 leading-relaxed border-4 border-solid border-transparent" style="border-image: repeating-linear-gradient(-45deg, #2563eb 0px, #2563eb 8px, #dc2626 8px, #dc2626 16px) 4;">
