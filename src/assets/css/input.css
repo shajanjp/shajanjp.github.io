@@ -10,6 +10,29 @@
 @variant dark (&:where(.dark, .dark *));
 
 @layer components {
+    .nav-active {
+        position: relative;
+        font-weight: bold;
+        color: var(--color-zinc-900);
+        animation: nav-text-pop 0.45s ease-out;
+    }
+
+    .dark .nav-active {
+        color: var(--color-zinc-100);
+    }
+
+    .nav-active::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        transform-origin: left;
+        animation: nav-underline-slide 0.4s 0.08s ease-out forwards;
+    }
+
     .link {
         @apply transition-all duration-200
           /* Text Colors */
@@ -28,6 +51,26 @@
 
 body {
     font-family: "IBM Plex Mono", monospace;
+}
+
+@keyframes nav-text-pop {
+    0% { transform: scale(1); }
+    60% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
+@keyframes nav-underline-slide {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+@keyframes theme-toggle-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#theme-toggle.spinning svg {
+    animation: theme-toggle-spin 0.45s ease-in-out;
 }
 
 @keyframes grayscaleSmooth {

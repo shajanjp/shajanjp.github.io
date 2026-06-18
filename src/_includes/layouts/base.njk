@@ -194,6 +194,13 @@
             themeToggleDarkIcon.classList.toggle('hidden');
             themeToggleLightIcon.classList.toggle('hidden');
 
+            // Cute spin animation on toggle
+            themeToggleBtn.classList.add('spinning');
+            themeToggleBtn.addEventListener('animationend', function onEnd() {
+                themeToggleBtn.classList.remove('spinning');
+                themeToggleBtn.removeEventListener('animationend', onEnd);
+            });
+
             if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
                 localStorage.theme = 'light';
