@@ -4,9 +4,17 @@ title: "About"
 description: "Few things about me."
 ---
 <section class="space-y-4">
-<p class="text-2xl font-medium mb-8">Hello,</p>
+<div class="flex flex-col md:flex-row md:gap-8 md:items-start">
+    <div class="flex-shrink-0 mb-6 md:mb-0 flex justify-center md:justify-start">
+        {% image "./src/assets/img/shajan-jacob-portrait.jpg", "Portrait of Shajan Jacob", "(max-width: 768px) 160px, 192px", "w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover border border-zinc-200 dark:border-zinc-700 grayscale hover:grayscale-0 brightness-[0.92] hover:brightness-100 shadow-md hover:shadow-lg hover:border-zinc-400 dark:hover:border-zinc-400 transition-all duration-700 ease-out" %}
+    </div>
 
-<p>I'm Shajan Jacob - a software engineer and technical lead based in Kochi, India, with over 8 years of experience designing and building production-grade web applications.</p>
+    <div class="flex-1 min-w-0">
+        <p class="text-2xl font-medium mb-8">Hello,</p>
+
+        <p>I'm Shajan Jacob - a software engineer and technical lead based in Kochi, India, with over 8 years of experience designing and building production-grade web applications.</p>
+    </div>
+</div>
 
 <p>I specialize in backend engineering with <strong>Node.js</strong>, <strong>TypeScript</strong>, and <strong>NestJS</strong>, architecting scalable microservices and real-time systems on <strong>Google Cloud Platform</strong> and <strong>AWS</strong>. My work spans high-throughput APIs, event-driven architectures, and full-stack development - from ideation through deployment and beyond.</p>
 
