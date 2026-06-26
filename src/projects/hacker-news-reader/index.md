@@ -14,7 +14,7 @@ sourceCodeUrl: https://github.com/guyswhocode/hn.git
 
 A clean, distraction-free viewer for Hacker News focused on readability, speed, and keyboard-first navigation. This is a read-only experience - no login, no submissions, no noise. Just better consumption.
 
-<img src="hn-desktop-homepage.jpg" alt="HN Desktop Homepage" style="height: auto; width: 100%;">
+<img src="hn-screenshot-desktop.jpg" alt="HN Desktop Homepage" style="height: auto; width: 100%;">
 
 ## Features
 
@@ -27,7 +27,7 @@ A clean, distraction-free viewer for Hacker News focused on readability, speed, 
 * **Keyboard Navigation** : Navigate like a pro - fast, efficient, and distraction-free.
 * **Density toggle** : (compact vs comfortable)
     
-<img src="hn-mobile-view-comments.jpg" alt="HN Mobile Comments View" style="height: auto; width: 100%;">
+<img src="hn-screenshot-mobile.jpg" alt="HN Mobile Screenshot" style="height: auto; width: 100%;">
 
 ## Why this exists
 

@@ -60,10 +60,7 @@ layout: layouts/base.njk
             </div>
         </div>
     </header>
-    <div class="prose dark:prose-invert max-w-none">
-        {{ content | safe }}
-    </div>
-    <div class="mt-8 flex justify-center">
+    <div class="flex justify-center mb-8">
         <div class="flex flex-col sm:flex-row">
             {% if sourceCodeUrl %}
             <a
@@ -83,5 +80,8 @@ layout: layouts/base.njk
             </a>
             {% endif %}
         </div>
+    </div>
+    <div class="prose dark:prose-invert max-w-none">
+        {{ content | safe }}
     </div>
 </article>
