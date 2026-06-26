@@ -1,0 +1,26 @@
+# Cache Control Headers
+# Works with Cloudflare Pages. For GitHub Pages, configure via Cloudflare dashboard instead.
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/blog/**/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/blog/**/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/projects/**/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/projects/**/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/photography/**/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/shortcuts/**/*.png
+  Cache-Control: public, max-age=31536000, immutable

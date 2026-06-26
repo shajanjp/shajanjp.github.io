@@ -55,8 +55,12 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <!-- Non-blocking Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"></noscript>
+    <!-- Non-blocking Prism syntax highlighting -->
+    <link rel="preload" href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css"></noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -122,59 +126,70 @@
     </footer>
 
     <!-- Mermaid: transforms ```mermaid blocks into rendered diagrams -->
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    <!-- Only loads on pages that have mermaid blocks -->
+    <script>
+        (function() {
+            // Check if page has any mermaid code blocks before loading the library
+            if (document.querySelector('.language-mermaid, .mermaid')) {
+                var s = document.createElement('script');
+                s.type = 'module';
+                s.textContent = `
+                    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 
-        // Transform Prism-highlighted mermaid code blocks into proper mermaid pre elements
-        // and store the original source text so we can re-render on theme toggle
-        document.querySelectorAll('pre.language-mermaid code.language-mermaid').forEach((codeBlock) => {
-            const pre = codeBlock.parentElement;
-            const mermaidCode = codeBlock.textContent;
+                    // Transform Prism-highlighted mermaid code blocks into proper mermaid pre elements
+                    // and store the original source text so we can re-render on theme toggle
+                    document.querySelectorAll('pre.language-mermaid code.language-mermaid').forEach((codeBlock) => {
+                        const pre = codeBlock.parentElement;
+                        const mermaidCode = codeBlock.textContent;
 
-            // Replace pre content with raw mermaid source
-            pre.innerHTML = mermaidCode;
-            pre.className = 'mermaid';
-            pre.dataset.source = mermaidCode;
+                        // Replace pre content with raw mermaid source
+                        pre.innerHTML = mermaidCode;
+                        pre.className = 'mermaid';
+                        pre.dataset.source = mermaidCode;
 
-            // Wrap in a scrollable container to prevent horizontal page scroll
-            const wrapper = document.createElement('div');
-            wrapper.className = 'mermaid-wrapper';
-            wrapper.style.maxWidth = '100%';
-            wrapper.style.overflowX = 'auto';
-            wrapper.style.boxSizing = 'border-box';
-            pre.style.maxWidth = '100%';
-            pre.style.overflowX = 'auto';
-            pre.style.boxSizing = 'border-box';
-            pre.parentNode.insertBefore(wrapper, pre);
-            wrapper.appendChild(pre);
-        });
+                        // Wrap in a scrollable container to prevent horizontal page scroll
+                        const wrapper = document.createElement('div');
+                        wrapper.className = 'mermaid-wrapper';
+                        wrapper.style.maxWidth = '100%';
+                        wrapper.style.overflowX = 'auto';
+                        wrapper.style.boxSizing = 'border-box';
+                        pre.style.maxWidth = '100%';
+                        pre.style.overflowX = 'auto';
+                        pre.style.boxSizing = 'border-box';
+                        pre.parentNode.insertBefore(wrapper, pre);
+                        wrapper.appendChild(pre);
+                    });
 
-        mermaid.initialize({
-            startOnLoad: false,
-            theme: document.documentElement.classList.contains('dark') ? 'dark' : 'default',
-        });
+                    mermaid.initialize({
+                        startOnLoad: false,
+                        theme: document.documentElement.classList.contains('dark') ? 'dark' : 'default',
+                    });
 
-        // Helper: render all mermaid elements
-        function renderMermaid() {
-            mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
-        }
+                    // Helper: render all mermaid elements
+                    function renderMermaid() {
+                        mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
+                    }
 
-        // Wait for DOM and any async transforms, then render
-        document.addEventListener('DOMContentLoaded', renderMermaid);
+                    // Wait for DOM and any async transforms, then render
+                    document.addEventListener('DOMContentLoaded', renderMermaid);
 
-        // Re-render on theme toggle — restore source text first since Mermaid
-        // replaces the element content with SVG after the first render
-        document.getElementById('theme-toggle').addEventListener('click', () => {
-            setTimeout(() => {
-                const isDark = document.documentElement.classList.contains('dark');
-                document.querySelectorAll('.mermaid').forEach(el => {
-                    el.textContent = el.dataset.source;
-                    el.removeAttribute('data-processed');
-                });
-                mermaid.initialize({ theme: isDark ? 'dark' : 'default' });
-                renderMermaid();
-            }, 100);
-        });
+                    // Re-render on theme toggle — restore source text first since Mermaid
+                    // replaces the element content with SVG after the first render
+                    document.getElementById('theme-toggle').addEventListener('click', () => {
+                        setTimeout(() => {
+                            const isDark = document.documentElement.classList.contains('dark');
+                            document.querySelectorAll('.mermaid').forEach(el => {
+                                el.textContent = el.dataset.source;
+                                el.removeAttribute('data-processed');
+                            });
+                            mermaid.initialize({ theme: isDark ? 'dark' : 'default' });
+                            renderMermaid();
+                        }, 100);
+                    });
+                `;
+                document.body.appendChild(s);
+            }
+        })();
     </script>
 
     <script>
@@ -225,6 +240,6 @@
     </script>
 
     <!-- Lightbox for blog images -->
-    <script src="/assets/js/lightbox.js"></script>
+    <script defer src="/assets/js/lightbox.js"></script>
 </body>
 </html>
