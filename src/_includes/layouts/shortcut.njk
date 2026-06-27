@@ -4,13 +4,13 @@ layout: layouts/base.njk
 <article>
     <header class="mb-8 not-prose">
         <div class="flex flex-col items-center text-center gap-4 py-8 border-b border-zinc-100 dark:border-zinc-800">
-            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl" style="background-color: {{ name.length | shortcutColor }}">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl" style="background-color: {{ title.length | shortcutColor }}">
                 {{ icon }}
             </div>
 
             <div>
                 <h1 class="text-2xl font-medium mb-2 text-zinc-900 dark:text-zinc-100">
-                    {{ name }}
+                    {{ title }}
                 </h1>
                 <p class="text-md text-zinc-500 dark:text-zinc-400">
                     {{ description }}
@@ -27,7 +27,7 @@ layout: layouts/base.njk
 
             <a href="{{ url }}" target="_blank" rel="noopener noreferrer"
                class="mt-2 px-6 py-2 font-mono text-xs uppercase tracking-[0.2em] transition-colors duration-150 inline-block"
-               style="background-color: {{ name.length | shortcutColor }}; color: white; border-radius: 9999px;">
+               style="background-color: {{ title.length | shortcutColor }}; color: white; border-radius: 9999px;">
                 Get Shortcut
             </a>
         </div>

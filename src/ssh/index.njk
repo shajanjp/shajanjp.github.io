@@ -297,7 +297,7 @@ Title: {{ item.data.title }}
 {%- for item in collections.shortcuts %}
 {%- set userTags = item.data.tags | userTags -%}
 {%- set content -%}
-Name: {{ item.data.name }}
+Name: {{ item.data.title }}
 Description: {{ item.data.description }}
 URL: {{ item.data.url }}
 {% if item.data.icon -%}
