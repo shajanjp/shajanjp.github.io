@@ -15,7 +15,21 @@
         if (photoModal) {
             const modalImage = document.getElementById('modal-image');
             const modalCaption = document.getElementById('modal-caption');
+            const modalSpinner = document.getElementById('modal-spinner');
             const closeModal = document.getElementById('close-modal');
+
+            function showSpinner() {
+                if (modalSpinner) modalSpinner.style.display = '';
+                if (modalImage) {
+                    modalImage.style.display = 'none';
+                    modalImage.src = '';
+                    modalImage.alt = '';
+                }
+            }
+
+            function hideSpinner() {
+                if (modalSpinner) modalSpinner.style.display = 'none';
+            }
 
             document.querySelectorAll('.photo-card').forEach(card => {
                 card.addEventListener('click', () => {
@@ -23,8 +37,26 @@
                     const image = card.getAttribute('data-image');
                     
                     if (modalImage && image) {
+                        showSpinner();
+
                         let fixedImageUrl = image.replace('./src', '..');
+
+                        modalImage.onload = function () {
+                            hideSpinner();
+                            modalImage.style.display = '';
+
+                            // Re-trigger scale-in animation
+                            modalImage.classList.remove('scale-in');
+                            void modalImage.offsetWidth;
+                            modalImage.classList.add('scale-in');
+                        };
+
+                        modalImage.onerror = function () {
+                            hideSpinner();
+                        };
+
                         modalImage.src = fixedImageUrl;
+                        modalImage.alt = caption || '';
                     }
                     if (caption && modalCaption) {
                         modalCaption.textContent = caption;
@@ -44,6 +76,21 @@
                     photoModal.classList.add('hidden');
                 }
             });
+
+            // Clean up on close
+            const observer = new MutationObserver(() => {
+                if (photoModal.classList.contains('hidden')) {
+                    if (modalImage) {
+                        modalImage.style.display = 'none';
+                        modalImage.src = '';
+                        modalImage.alt = '';
+                        modalImage.onload = null;
+                        modalImage.onerror = null;
+                    }
+                    hideSpinner();
+                }
+            });
+            observer.observe(photoModal, { attributes: true, attributeFilter: ['class'] });
         }
     </script>
 </div>
