@@ -143,7 +143,7 @@
                         const mermaidCode = codeBlock.textContent;
 
                         // Replace pre content with raw mermaid source
-                        pre.innerHTML = mermaidCode;
+                        pre.textContent = mermaidCode;
                         pre.className = 'mermaid';
                         pre.dataset.source = mermaidCode;
 
@@ -170,8 +170,8 @@
                         mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
                     }
 
-                    // Wait for DOM and any async transforms, then render
-                    document.addEventListener('DOMContentLoaded', renderMermaid);
+                    // Render immediately — DOM is already parsed by the time this module script runs
+                    renderMermaid();
 
                     // Re-render on theme toggle — restore source text first since Mermaid
                     // replaces the element content with SVG after the first render
