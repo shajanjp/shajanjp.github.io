@@ -2,7 +2,7 @@
     <!-- Content Section -->
     <div class="flex-1 min-w-0">
         <div class="text-[10px] text-zinc-400 dark:text-zinc-600 mb-1 uppercase tracking-widest font-semibold">
-            {{ project.date | humanDate }}
+            {{ project.data.created | default(project.date) | humanDate }}
         </div>
 
         <a href="{{ project.url }}" class="block">

@@ -25,7 +25,7 @@ layout: layouts/base.njk
             <!-- Content Section -->
             <div class="flex-1 min-w-0">
                 <div class="text-base text-zinc-400 dark:text-zinc-600 mb-4 uppercase tracking-widest font-semibold">
-                    {{ page.date | humanDate }}
+                    {{ created | default(page.date) | humanDate }}
                 </div>
 
                 <div  class="block">
