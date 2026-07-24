@@ -34,6 +34,46 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByTag("shortcuts");
   });
 
+  eleventyConfig.addCollection("timeline", function (collectionApi) {
+    const blog = collectionApi.getFilteredByTag("blog").map(function (item) {
+      return {
+        url: item.url,
+        date: item.date,
+        data: item.data,
+        type: "blog",
+        sortDate: new Date(item.date),
+        itemDate: item.date,
+      };
+    });
+
+    const photos = collectionApi.getFilteredByTag("photos").map(function (item) {
+      return {
+        url: item.url,
+        date: item.date,
+        data: item.data,
+        type: "photo",
+        sortDate: new Date(item.date),
+        itemDate: item.date,
+      };
+    });
+
+    const projects = collectionApi.getFilteredByTag("projects").map(function (item) {
+      const projectDate = item.data.created || item.date;
+      return {
+        url: item.url,
+        date: item.date,
+        data: item.data,
+        type: "project",
+        sortDate: new Date(projectDate),
+        itemDate: projectDate,
+      };
+    });
+
+    return blog.concat(photos).concat(projects).sort(function (a, b) {
+      return b.sortDate - a.sortDate;
+    });
+  });
+
   // Return color from palette by index; wraps around if out of bounds
   const shortcutColors = [
     "rgb(237, 90, 96)",
@@ -73,6 +113,14 @@ module.exports = function (eleventyConfig) {
       month: "short", // Jan
       year: "numeric", // 2024
     });
+  });
+
+  eleventyConfig.addFilter("humanDateDayMonth", function (dateObj) {
+    const date = new Date(dateObj);
+    const day = date.toLocaleDateString("en-US", { day: "numeric" });
+    const month = date.toLocaleDateString("en-US", { month: "long" });
+    const year = date.toLocaleDateString("en-US", { year: "numeric" });
+    return `${day} ${month} ${year}`;
   });
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {

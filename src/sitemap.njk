@@ -20,6 +20,9 @@ eleventyExcludeFromCollections: true
 	<url>
 		<loc>{{site.url}}/photography</loc>
 	</url>
+	<url>
+		<loc>{{site.url}}/timeline</loc>
+	</url>
 {%- for page in collections.all %}
   {%- if page.url and page.data.excludeFromSitemap != true %}
   <url>

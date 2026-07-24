@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Photograph",
+  "name": "{{ title }}",
+  "description": "{{ description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "dateCreated": "{{ page.date | htmlDateString }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}"
+  }{% if image %},
+  "contentUrl": "{{ site.url }}{{ image | replace('./src/', '/') }}"{% endif %}
+}
+</script>
+<article>
+    <header class="mb-10 not-prose text-center">
+        <div class="text-base text-zinc-400 dark:text-zinc-600 mb-4 uppercase tracking-widest font-semibold">
+            {{ page.date | humanDate }}
+        </div>
+
+        <h1 class="text-3xl font-medium leading-tight mb-4 text-zinc-900 dark:text-zinc-100">
+            {{ title }}
+        </h1>
+
+        {% if description %}
+        <p class="text-md text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg mx-auto">
+            {{ description }}
+        </p>
+        {% endif %}
+    </header>
+
+    <div class="mb-12">
+        {% if image %}
+        {% image image, title, "(min-width: 768px) 768px, 100vw", "w-full h-auto" %}
+        {% endif %}
+    </div>
+
+    {% if content %}
+    <div class="prose dark:prose-invert max-w-none">
+        {{ content | imgCaption | safe }}
+    </div>
+    {% endif %}
+
+    <nav class="mt-16 pt-8 border-t border-zinc-100 dark:border-zinc-800">
+        {% set photoCollection = collections.photos | sort(false, false, "date") %}
+        {% set currentIndex = -1 %}
+        {% for photo in photoCollection %}
+            {% if photo.url === page.url %}
+                {% set currentIndex = loop.index0 %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="flex justify-between text-sm">
+            <div>
+                {% if currentIndex > 0 %}
+                {% set prevPhoto = photoCollection[currentIndex - 1] %}
+                <a href="{{ prevPhoto.url }}" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+                    &larr; {{ prevPhoto.data.title }}
+                </a>
+                {% endif %}
+            </div>
+            <div>
+                <a href="/photography/" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+                    All Photos
+                </a>
+            </div>
+            <div>
+                {% if currentIndex < photoCollection.length - 1 %}
+                {% set nextPhoto = photoCollection[currentIndex + 1] %}
+                <a href="{{ nextPhoto.url }}" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+                    {{ nextPhoto.data.title }} &rarr;
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+</article>

@@ -1,6 +1,6 @@
 {
   "tags": "photos",
-  "layout": "layouts/post.njk",
-  "permalink": "/blog/{{ page.fileSlug }}/",
+  "layout": "layouts/photo.njk",
+  "permalink": "/photography/{{ page.fileSlug }}/",
   "description": "Photos by Shajan Jacob"
 }
