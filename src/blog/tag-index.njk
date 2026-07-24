@@ -9,7 +9,7 @@ permalink: /blog/tag/
   <h2 class="text-2xl font-medium mb-8">All Blog Tags</h2>
   <div class="flex flex-wrap gap-3">
     {% for tag, posts in collections %}
-      {% if tag not in ["all", "blog", "posts", "photos", "projects"] %}
+      {% if tag not in ["all", "blog", "posts", "photos", "projects", "timeline"] %}
         {% set blogCount = 0 %}
         {% for post in posts %}
           {% if "blog" in post.data.tags %}

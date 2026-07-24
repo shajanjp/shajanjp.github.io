@@ -69,7 +69,20 @@ module.exports = function (eleventyConfig) {
       };
     });
 
-    return blog.concat(photos).concat(projects).sort(function (a, b) {
+    // Personal events from global data file
+    const personalEvents = require('./src/_data/events.json');
+    const personal = personalEvents.map(function (item) {
+      return {
+        url: item.url || '#',
+        date: new Date(item.date),
+        data: { title: item.title },
+        type: 'personal',
+        sortDate: new Date(item.date),
+        itemDate: item.date,
+      };
+    });
+
+    return blog.concat(photos).concat(projects).concat(personal).sort(function (a, b) {
       return b.sortDate - a.sortDate;
     });
   });
