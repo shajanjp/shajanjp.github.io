@@ -55,12 +55,12 @@ layout: layouts/base.njk
             {% endif %}
         {% endfor %}
 
-        <div class="flex justify-between text-sm">
+        <div class="flex items-center justify-between text-sm">
             <div>
                 {% if currentIndex > 0 %}
                 {% set prevPhoto = photoCollection[currentIndex - 1] %}
-                <a href="{{ prevPhoto.url }}" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-                    &larr; {{ prevPhoto.data.title }}
+                <a href="{{ prevPhoto.url }}" class="group block">
+                    <img src="{{ prevPhoto.data.image | replace('./src/', '/') }}" alt="{{ prevPhoto.data.title }}" title="{{ prevPhoto.data.title }}" loading="lazy" class="w-20 h-20 object-cover rounded-lg opacity-60 group-hover:opacity-100 transition-opacity" />
                 </a>
                 {% endif %}
             </div>
@@ -72,8 +72,8 @@ layout: layouts/base.njk
             <div>
                 {% if currentIndex < photoCollection.length - 1 %}
                 {% set nextPhoto = photoCollection[currentIndex + 1] %}
-                <a href="{{ nextPhoto.url }}" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
-                    {{ nextPhoto.data.title }} &rarr;
+                <a href="{{ nextPhoto.url }}" class="group block">
+                    <img src="{{ nextPhoto.data.image | replace('./src/', '/') }}" alt="{{ nextPhoto.data.title }}" title="{{ nextPhoto.data.title }}" loading="lazy" class="w-20 h-20 object-cover rounded-lg opacity-60 group-hover:opacity-100 transition-opacity ml-auto" />
                 </a>
                 {% endif %}
             </div>
