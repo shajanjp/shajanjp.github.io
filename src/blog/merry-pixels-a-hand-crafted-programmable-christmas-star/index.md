@@ -7,7 +7,7 @@ tags:
  - christmas
  - home
  - tech
- - ws2812b
+ - neopixel
  - deno
  - arduino
 date: 2024-12-23

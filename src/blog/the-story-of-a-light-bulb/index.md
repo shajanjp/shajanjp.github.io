@@ -10,6 +10,7 @@ tags:
   - diy
   - fun
   - story
+  - neopixel
 tldr: "I made a simple internet-connected table lamp that blinked when you visited this page. It will blink again if you click on the below button."
 ---
 
