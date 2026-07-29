@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(imgCaption);
 
   // Pass through any static assets if you add them later (e.g., images)
+  eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/blog/**/*.{jpg,png,pdf}");
   eleventyConfig.addPassthroughCopy("src/photography/**/*.{jpg,png}");
