@@ -86,15 +86,9 @@ eleventyExcludeFromCollections: true
           <a href="{{ item.url }}" class="block group mt-0.5">
             <h3 class="text-base font-medium leading-tight text-zinc-900 dark:text-zinc-100 group-hover:underline transition-all duration-200 break-words flex items-center gap-2">
               {% if item.data.icon and (item.type === 'blog' or item.type === 'project') %}
-              <img src="{{ item.url }}{{ item.data.icon }}" alt=""
-                width="64" height="64"
-                class="w-4 h-auto flex-shrink-0 invert-40 dark:invert-70"
-              >
+              {% image "./src" + item.url + item.data.icon, "", "64px", "w-4 h-auto flex-shrink-0 invert-40 dark:invert-70", [64] %}
               {% elseif item.data.image and item.type === 'photo' %}
-              <img src="{{ item.data.image | replace('./src/', '/') }}" alt=""
-                width="64" height="64"
-                class="w-4 h-4 object-cover rounded flex-shrink-0"
-              >
+              {% image item.data.image, item.data.title, "64px", "w-4 h-4 object-cover rounded flex-shrink-0", [64] %}
               {% endif %}
               {{ item.data.title }}
             </h3>

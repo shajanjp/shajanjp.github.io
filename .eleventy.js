@@ -171,15 +171,14 @@ module.exports = function (eleventyConfig) {
   };
 };
 
-async function imageShortcode(src, alt, sizes = "100vw", className = "") {
-  console.log("IMAGE SRC:", src);
-  if (!alt) {
+async function imageShortcode(src, alt, sizes = "100vw", className = "", widths = null) {
+  if (alt === undefined || alt === null) {
     throw new Error(`Missing alt text for image: ${src}`);
   }
 
   const metadata = await Image(src, {
-    widths: [320, 640, 960, 1280],
-    formats: ["avif", "webp", "jpeg"],
+    widths: widths || [320, 640, 960, 1280],
+    formats: ["webp", "jpeg"],
     outputDir: "_site/img/",
     urlPath: "/img/",
   });

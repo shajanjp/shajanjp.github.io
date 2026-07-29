@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "concurrently \"npm:watch:*\"",
+    "dev": "mkdir -p _site/assets/css && concurrently \"npm:watch:*\"",
     "watch:eleventy": "eleventy --serve",
-    "watch:tailwind": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/style.css --watch",
+    "watch:tailwind": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/style.css --watch --verbose",
     "build": "npm run build:tailwind && npm run build:eleventy",
     "build:eleventy": "eleventy",
     "build:tailwind": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/style.css --minify"
