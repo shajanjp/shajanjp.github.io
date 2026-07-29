@@ -95,9 +95,9 @@
         <header class="mb-12">
             <div class="flex justify-between items-start mb-6">
                 <div>
-                    <a href="/" class="flex items-center gap-4">
+                    <a href="/" class="flex items-center gap-4 group">
                         <div class="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden flex-shrink-0 border border-zinc-200 dark:border-zinc-800">
-                            <img src="/assets/me.jpg" alt="Shajan Jacob" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" onerror="this.style.display='none'">
+                            {% image "./src/assets/img/me.jpg", "Shajan Jacob", "40px", "w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300", [40, 80, 120] %}
                         </div>
                         <div>
                             <h1 class="text-xl font-medium tracking-tight">{{ site.title }}</h1>
