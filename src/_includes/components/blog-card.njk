@@ -1,8 +1,9 @@
 <div class="relative flex flex-row items-start sm:items-center gap-4 sm:gap-6 py-2 border-b border-zinc-100 dark:border-zinc-800 last:border-0">
     <!-- Content Section -->
     <div class="flex-1 min-w-0">
-        <div class="text-[10px] text-zinc-400 dark:text-zinc-600 mb-1 uppercase tracking-widest font-semibold">
-            {{ post.date | humanDate }}
+        <div class="text-[10px] text-zinc-400 dark:text-zinc-600 mb-1 uppercase tracking-widest font-semibold flex justify-between items-center">
+            <span>{{ post.date | humanDate }}</span>
+            <span>{{ post.templateContent | readingTime }}</span>
         </div>
 
         <a href="{{ post.url }}" class="block">

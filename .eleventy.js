@@ -141,6 +141,16 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
+  // Reading time estimate: ~200 words/min, rounds up
+  eleventyConfig.addFilter("readingTime", function (content) {
+    if (!content) return "";
+    const text = content.replace(/<[^>]*>/g, "");
+    const wordCount = text.split(/\s+/).filter(w => w.length > 0).length;
+    const minutes = Math.ceil(wordCount / 200);
+    if (minutes < 1) return "< 1 min read";
+    return `${minutes} min read`;
+  });
+
   eleventyConfig.addFilter("markdown", function (content) {
     return md.render(content);
   });

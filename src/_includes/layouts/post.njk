@@ -41,8 +41,9 @@ layout: layouts/base.njk
         <div class="relative flex flex-row items-start sm:items-center gap-4 sm:gap-6 py-1 border-b border-zinc-100 dark:border-zinc-800 last:border-0">
             <!-- Content Section -->
             <div class="flex-1 min-w-0">
-                <div class="text-base  text-zinc-400 dark:text-zinc-600 mb-4 uppercase tracking-widest font-semibold">
-                    {{ page.date | humanDate }}
+                <div class="text-base  text-zinc-400 dark:text-zinc-600 mb-4 uppercase tracking-widest font-semibold flex justify-between items-center">
+                    <span>{{ page.date | humanDate }}</span>
+                    <span>{{ content | readingTime }}</span>
                 </div>
 
                 <div  class="block">
