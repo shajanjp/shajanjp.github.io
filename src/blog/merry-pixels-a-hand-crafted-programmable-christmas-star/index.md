@@ -30,13 +30,13 @@ We started with creating the frame for the star using teak wood, which we bought
 
 For the lighting, I decided to go with the addressable RGB LED strip I had in my stock. The LED strip I had was also 5 meters in length, which means each side of the star leg will get 30 LEDs. Perfect.
 
-<img src="./star-led-panel-and-light-strip.jpg" alt="Star LED panel and light strip" yle=" height: auto; width:100%;">
+<img src="./star-led-panel-and-light-strip.jpg" alt="Star LED panel and light strip" style="height: auto; width:100%;">
 
 I cut the strip into 10 pieces, each 50 cm long, and my wife stuck the LED strips to the panel easily. We soldered the LED strips together and made sure they were working fine. I hung it in the room for the first couple of days and tried some animations before hanging it in front of my house.
 
 I chose to use the ESP32 as the controller to drive the LEDs. I had an M5Stack Atom S3 in my stock, so I took that one for this project. I created a web server using Deno with a couple of REST APIs to accept and provide the animation data to the star. The ESP32 controller is connected to Wi-Fi and is listening to the Deno server to get the star animation data.
 
-<img src="./merry-pixels-webpage.jpg" alt="Merry Pixels webpage" tyle=" height: auto; width:100%;">
+<img src="./merry-pixels-webpage.jpg" alt="Merry Pixels webpage" style="height: auto; width:100%;">
 
 I also created a [web page that has an emulator of the star](https://merry-pixels.deno.dev/) using HTML canvas with the same number of lights and the same shape as the physical star. I also added a code editor to the web page, which can be used to program the star. The editor has a boilerplate JavaScript function called twinkle() which can be programmed to return a string that includes the colors for each LED in the star and a delay value that will decide how much time that particular color should stay lit.
 
@@ -76,4 +76,4 @@ Anyone can contribute animations. I will be running all the animations together 
 
 Thanks, everyone. Merry Christmas! 🎄
 
-<img src="./star-hung-in-front-of-house.jpg" alt="Star hung in front of my house" tyle=" height: auto; width:100%;">
+<img src="./star-hung-in-front-of-house.jpg" alt="Star hung in front of my house" style="height: auto; width:100%;">

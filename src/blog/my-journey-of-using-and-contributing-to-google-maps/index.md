@@ -10,8 +10,6 @@ tags:
  - contribution
 ---
 
-<img src="./map-drawing" alt="My journey of using and contributing to google maps" style="height: auto; width:100%;">
-
 ## My perspective on maps
 
 The map is a spectacular invention, without any doubt. Plotting and understanding the planet we live in to a single image is a tremendous achievement. Every time I zoom out on the map, I realize how tiny I am and my surroundings. Seeing photos of places around the world without physically going there is a luxury. I’ve not traveled to any places outside of my country. I've not even visited 1% of the places in the country I’m living-in, still, I can imagine how certain places look like, or how to navigate to places. I also like the idea of knowing and letting others know about places.
