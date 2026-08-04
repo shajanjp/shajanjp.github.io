@@ -15,7 +15,7 @@ eleventyExcludeFromCollections: false
       <p class="text-sm text-zinc-500 dark:text-zinc-400"><a href="https://shajanjacob.com" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">shajanjacob.com</a></p>
     </div>
     <a
-      href="https://github.com/shajanjp/cv/raw/master/shajan-jacob-CV.pdf"
+      href="./Shajan_Jacob_Technical_Lead_CV.pdf"
       class="text-xs uppercase tracking-widest px-5 py-2 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-900 dark:hover:border-zinc-100 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-all duration-300 flex-shrink-0"
     >Download Resume</a>
   </div>
@@ -24,17 +24,30 @@ eleventyExcludeFromCollections: false
   <div>
     <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Professional Summary</h3>
     <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-      Software Engineer with 8+ years of experience in web applications development, specializing in Node.js, TypeScript, and scalable microservices. Proven track record in system optimization, deployments, and team leadership.
+      Senior Software Engineer and Technical Lead with 8+ years of experience designing and building scalable backend systems, APIs, microservices, and cloud-native applications using Node.js and TypeScript. Experienced in system architecture, performance optimisation, event-driven systems, healthcare platforms, and engineering leadership. Proven track record of scaling high-throughput APIs, modernising legacy systems, mentoring engineers, and driving AI-assisted software development practices.
     </p>
   </div>
 
   <!-- Technical Skills -->
   <div>
     <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Technical Skills</h3>
-    <div class="flex flex-wrap gap-2">
-      {% set skills = ["Node.js", "JavaScript", "TypeScript", "NestJS", "Express.js", "Deno", "REST API", "Microservices", "Event-driven Architecture", "Real-time Applications", "Google Cloud Platform", "AWS (Lambda, EC2, API Gateway, S3)", "Firebase Functions", "Docker", "Kubernetes", "Nginx", "MongoDB", "PostgreSQL", "MySQL", "Redis", "Elasticsearch", "gRPC", "Kafka", "FHIR", "JWT", "Auth0", "Stripe"] %}
-      {% for skill in skills %}
-      <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">{{ skill }}</span>
+    {% set skillGroups = [
+      { label: "Languages & Backend", items: ["Node.js", "TypeScript", "JavaScript", "NestJS", "Express.js", "Deno"] },
+      { label: "Architecture & APIs", items: ["Microservices", "REST APIs", "Event-Driven Architecture", "Real-Time Systems", "gRPC", "WebSockets"] },
+      { label: "Cloud & DevOps", items: ["AWS (Lambda, EC2, API Gateway, S3)", "GCP (Pub/Sub, Cloud Storage, FHIR)", "Firebase", "Docker", "Kubernetes", "Nginx"] },
+      { label: "Databases & Messaging", items: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Elasticsearch", "Kafka", "GCP Pub/Sub"] },
+      { label: "AI & Automation", items: ["LLMs", "AI Agents", "LangChain", "AI-Assisted Development", "Tool Calling", "MCP", "RAG", "Prompt Engineering", "n8n"] }
+    ] %}
+    <div class="space-y-3">
+      {% for group in skillGroups %}
+      <div>
+        <p class="text-xs uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2">{{ group.label }}</p>
+        <div class="flex flex-wrap gap-2">
+          {% for skill in group.items %}
+          <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
       {% endfor %}
     </div>
   </div>
@@ -50,19 +63,19 @@ eleventyExcludeFromCollections: false
           <p class="font-medium text-zinc-900 dark:text-zinc-100">Sorice Solutions, Kochi</p>
           <p class="text-sm text-zinc-500 dark:text-zinc-400">Technical Lead</p>
         </div>
-        <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">Feb 2020 - Present</p>
+        <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">Feb 2020 - Nov 2025</p>
       </div>
       <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
-        <li>Architected and delivered core system architectures and key application features, enhancing scalability, reliability, and maintainability.</li>
-        <li>Migrated legacy applications to modern frameworks, improving reliability and cutting code modification and feature addition time by 20%.</li>
-        <li>Optimized high-throughput APIs handling 300K+ daily requests, improving average response times by 25% and enhancing overall system efficiency and performance.</li>
-        <li>Remediated numerous security vulnerabilities across internal and external applications, reducing incidents and improving compliance with industry standards.</li>
-        <li>Optimized releases across environments and clients by creating robust deployment plans, cutting time, and reducing release related incidents.</li>
-        <li>Contributed to AI integration efforts by researching and implementing relevant tools and technologies.</li>
-        <li>Developed internal tools and automation scripts to streamline routine tasks, enhance productivity, and support cross-functional development processes.</li>
-        <li>Conducted thorough merge request reviews to maintain high coding standards and mentored junior developers to improve team capability.</li>
-        <li>Led hiring process for software engineering roles, interviewing 300+ candidates and improving feedback tracking workflows for faster onboarding.</li>
-        <li>Contributed to end-to-end project execution, including planning, estimation, development, delivery, and cross-team collaboration.</li>
+        <li>Architected and delivered backend systems and core platform capabilities for U.S. healthcare applications, focusing on scalability, reliability, security, and maintainability.</li>
+        <li>Optimised high-throughput APIs serving 300K+ requests per day, reducing average response times by 25% and improving overall system performance.</li>
+        <li>Modernised legacy applications and migrated systems to newer frameworks, reducing development effort for modifications and new features by 20%.</li>
+        <li>Identified and remediated security vulnerabilities across internal and customer-facing applications, strengthening application security and compliance.</li>
+        <li>Designed deployment and release strategies across multiple environments and client deployments, reducing release effort and production incidents.</li>
+        <li>Drove AI-assisted software development practices across the engineering team, guiding developers in effectively integrating AI tools into development workflows.</li>
+        <li>Built internal developer tools and automation to eliminate repetitive engineering tasks and improve team productivity.</li>
+        <li>Led code and architecture reviews, established engineering standards, and mentored junior and mid-level developers.</li>
+        <li>Participated in technical hiring and interviewed 300+ software engineering candidates, while improving interview feedback and tracking workflows.</li>
+        <li>Contributed across the complete software delivery lifecycle, including architecture, planning, estimation, implementation, release, and cross-team coordination.</li>
       </ul>
     </div>
 
@@ -76,10 +89,11 @@ eleventyExcludeFromCollections: false
         <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">Oct 2017 - Feb 2020</p>
       </div>
       <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
-        <li>Architected and developed custom APIs, microservices, and serverless solutions (AWS Lambda, Firebase FaaS) for core projects.</li>
-        <li>Published the ffmpeg-sdk NPM package (Node.js wrapper for FFMPEG) powering an online dubbing studio platform.</li>
-        <li>Built a scalable Twitter chat engine supporting multiple chatbots per Node.js instance, and implemented real-time text/audio chat via sockets.</li>
-        <li>Delivered end-to-end software solutions from prototyping to deployment, resolving critical issues and ensuring seamless operations.</li>
+        <li>Designed and developed REST APIs, microservices, and serverless applications using Node.js, AWS Lambda, and Firebase Cloud Functions across multiple production platforms.</li>
+        <li>Published ffmpeg-sdk, an NPM wrapper for FFmpeg, powering media-processing workflows for an online video transcription and dubbing platform.</li>
+        <li>Engineered a scalable real-time Twitter chat platform supporting multiple chatbot instances and text/audio communication using WebSockets.</li>
+        <li>Delivered backend solutions across media processing, electronic BOM management, CSR, and matchmaking platforms from prototype through production deployment.</li>
+        <li>Diagnosed and resolved production-critical issues, improving application reliability and operational stability.</li>
       </ul>
     </div>
 
@@ -93,8 +107,7 @@ eleventyExcludeFromCollections: false
         <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">May 2017 - Oct 2017</p>
       </div>
       <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
-        <li>Developed responsive websites tailored to diverse client requirements.</li>
-        <li>Designed and implemented dashboards and APIs for a CRM application.</li>
+        <li>Developed responsive web applications, CRM dashboards, and backend APIs for client projects.</li>
       </ul>
     </div>
   </div>
@@ -116,7 +129,6 @@ eleventyExcludeFromCollections: false
     <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Achievements</h3>
     <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
       <li>Ranked in the top 2% globally in LinkedIn's JavaScript skill assessment.</li>
-      <li>Awarded "Project of the Year" for final-year campus project.</li>
     </ul>
   </div>
 
@@ -125,39 +137,28 @@ eleventyExcludeFromCollections: false
     <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Hobby / Side Projects</h3>
     <div class="space-y-3">
       <div>
-        <p class="font-medium text-zinc-900 dark:text-zinc-100">Merry Pixels</p>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400">Internet-connected Christmas star with 300 addressable LEDs, remotely animated via JavaScript.</p>
-        <p class="text-xs text-zinc-400 dark:text-zinc-600">TypeScript | Deno | Socket | HTML | Tailwind</p>
-        <a href="https://merry-pixels.deno.dev" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">merry-pixels.deno.dev</a>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Clockwall</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">Time zones, simplified. This virtual clock wall makes it easy to track time across different time zones.</p>
+        <a href="https://clockwall.app" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">clockwall.app</a>
       </div>
       <div>
-        <p class="font-medium text-zinc-900 dark:text-zinc-100">Community Portal</p>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400">One-stop platform to discover local businesses, services, and attractions for residents and visitors.</p>
-        <p class="text-xs text-zinc-400 dark:text-zinc-600">TypeScript | Deno | Fresh | Notion API | Tailwind | HTML</p>
-        <a href="https://piravom.in" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">piravom.in</a>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Community Town Portal</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">One-stop platform to discover local businesses, services, restaurants, food menus and attractions for residents and visitors.</p>
+        <div class="text-xs text-zinc-500 dark:text-zinc-400">
+          <a href="https://piravom.in" target="_blank" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">piravom.in</a>
+          <span class="mx-2">|</span>
+          <a href="https://aroundkochi.in" target="_blank" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">aroundkochi.in</a>
+        </div>
       </div>
       <div>
-        <p class="font-medium text-zinc-900 dark:text-zinc-100">HN</p>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400">Minimalistic Hacker News reader and PWA.</p>
-        <p class="text-xs text-zinc-400 dark:text-zinc-600">PWA | JavaScript | jQuery | Semantic-UI | Firebase</p>
-        <a href="https://guyswhocode.com/HN/" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">guyswhocode.com/HN/</a>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Deepseek Usage Analysis Tool</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">A self-hosted dashboard for visualising your DeepSeek AI API usage - daily costs, token consumption, cache hit rates, and per-key breakdowns.</p>
+        <a href="https://github.com/shajanjp/deepseek-usage" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">github.com/shajanjp/deepseek-usage</a>
       </div>
       <div>
-        <p class="font-medium text-zinc-900 dark:text-zinc-100">Lets All Chef</p>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400">Companion for Home Cooks and Chefs. Organize recipes, create cookbooks, manage health and diet.</p>
-        <p class="text-xs text-zinc-400 dark:text-zinc-600">NodeJS | ExpressJS | MongoDB | Semantic-UI | Jekyll</p>
-        <a href="https://letsallchef.github.io" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">letsallchef.github.io</a>
-      </div>
-      <div>
-        <p class="font-medium text-zinc-900 dark:text-zinc-100">BlackPipe</p>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400">Expose terminal outputs without sacrificing security.</p>
-        <p class="text-xs text-zinc-400 dark:text-zinc-600">NodeJS | Sockets | Semantic-UI | ExpressJS</p>
-        <a href="https://shajanjacob.com/blackpipe/" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">shajanjacob.com/blackpipe/</a>
-      </div>
-      <div>
-        <p class="font-medium text-zinc-900 dark:text-zinc-100">Meemi</p>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400">Online ornamental fish store, forum, store locator and wiki.</p>
-        <p class="text-xs text-zinc-400 dark:text-zinc-600">NodeJS | ExpressJS | MongoDB | Elastic Search | SemanticUI</p>
+        <p class="font-medium text-zinc-900 dark:text-zinc-100">Co-Apply</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400">AI-powered Firefox browser extension that uses an LLM API to intelligently autofill web forms.</p>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/co-apply/" target="_blank" class="text-xs text-zinc-500 dark:text-zinc-400 underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Firefox Addon Page</a>
       </div>
     </div>
   </div>

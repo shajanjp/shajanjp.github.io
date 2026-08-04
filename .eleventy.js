@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/blog/**/*.{jpg,png,pdf}");
+  eleventyConfig.addPassthroughCopy("src/cv/**/*.pdf");
   eleventyConfig.addPassthroughCopy("src/photography/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/projects/**/*.{jpg,png}");
   eleventyConfig.addPassthroughCopy("src/shortcuts/**/*.{jpg,png}");
