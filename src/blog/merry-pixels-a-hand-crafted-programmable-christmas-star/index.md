@@ -14,7 +14,7 @@ date: 2024-12-23
 relatedPosts:
   - the-story-of-a-light-bulb
   - sharing-the-joy-of-christmas-through-postcards
-tldr: "I created a christmas star with 300 led bulbs and hung it in front of my house, which can be programmed by anyone around the world the way they want. Give it a [try here](https://merry-pixels.deno.dev/)."
+tldr: "I created a christmas star with 300 led bulbs and hung it in front of my house, which can be programmed by anyone around the world the way they want."
 ---
 
 ## Backstory:
@@ -38,7 +38,7 @@ I chose to use the ESP32 as the controller to drive the LEDs. I had an M5Stack A
 
 <img src="./merry-pixels-webpage.jpg" alt="Merry Pixels webpage" style="height: auto; width:100%;">
 
-I also created a [web page that has an emulator of the star](https://merry-pixels.deno.dev/) using HTML canvas with the same number of lights and the same shape as the physical star. I also added a code editor to the web page, which can be used to program the star. The editor has a boilerplate JavaScript function called twinkle() which can be programmed to return a string that includes the colors for each LED in the star and a delay value that will decide how much time that particular color should stay lit.
+I also created a web page that has an emulator of the star using HTML canvas with the same number of lights and the same shape as the physical star. I also added a code editor to the web page, which can be used to program the star. The editor has a boilerplate JavaScript function called twinkle() which can be programmed to return a string that includes the colors for each LED in the star and a delay value that will decide how much time that particular color should stay lit.
 
 Each leg of the star has 60 LEDs (30 LEDs on each side), which makes 300 LEDs in total for the star. To animate it, we need 300 colors to be there in a single frame (colors of the star at a given moment). Also, for creating an animation (for example: to make an LED run from start to end), we need 300 frames. I decided to take the color input in hexadecimal colors.
 
