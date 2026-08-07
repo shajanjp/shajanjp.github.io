@@ -55,7 +55,7 @@ To collect addresses, I created a simple form in [Worth A Smile Xmas](https://ww
 Along with the postcards, I also designed custom Christmas cards with personalized cover artwork. For example, my wife has a Dachshund in her home, so the card I sent to her featured an illustration of her dog, which I created with the help of ChatGPT.
 
 <div style="display: flex; justify-content: center;">
-  <iframe width="315" height="560" src="https://youtube.com/embed/xkazSoaohnE" title="YouTube video player" frameborder="0"></iframe>
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/xkazSoaohnE" title="YouTube video player" frameborder="0"></iframe>
 </div>
 
 This was never meant to be a polished corporate project. It was personal. It was handmade. It was a small attempt to bring back the joy of simple and meaningful gestures.

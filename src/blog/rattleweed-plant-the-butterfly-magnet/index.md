@@ -23,6 +23,10 @@ It grows quickly, needs very little care, and does well in sunny places.
 
 A few years ago, I visited a hill near my place called Illikkal Kallu. On the way, I noticed a few plants in front of a roadside house. There were about four plants, and they were completely surrounded by hundreds of butterflies. It was a beautiful sight, and I couldn’t help but feel curious.
 
+<div style="display: flex; justify-content: center;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/JOXd8cCvu08" title="YouTube video player" frameborder="0"></iframe>
+</div>
+
 I stopped and spoke to the house owner, who told me about the plant. He was kind enough to offer me a few seeds, which I later brought home and planted in my garden.
 
 ## Why Do Butterflies Love It?

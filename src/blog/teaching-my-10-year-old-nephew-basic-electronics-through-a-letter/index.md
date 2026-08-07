@@ -28,7 +28,7 @@ These days, a lot of learning happens on screens. That's why getting a small han
 <img src="./circuit-backside.jpg" alt="Back side of the circuit showing the wiring and connections" style="height: auto; width:100%;">
 
 <div style="display: flex; justify-content: center;">
-  <iframe width="315" height="560" src="https://youtube.com/embed/0xUs3bqHT0Y" title="YouTube video player" frameborder="0"></iframe>
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/0xUs3bqHT0Y" title="YouTube video player" frameborder="0"></iframe>
 </div>
 
 Heres the letter:
