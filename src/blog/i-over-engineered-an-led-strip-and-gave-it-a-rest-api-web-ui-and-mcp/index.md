@@ -26,6 +26,10 @@ See the project here: [Pixels String](https://shajanjacob.com/projects/pixels-st
 
 ## It started with a very simple mood light idea
 
+<div style="display: flex; justify-content: center;">
+  <iframe width="315" height="560" src="https://www.youtube.com/embed/ldeJXF3cC08" title="YouTube video player" frameborder="0"></iframe>
+</div>
+
 The hardware is simple. I used an M5Stack NanoC6 (ESP32-C6) connected to about 90 NeoPixels.
 
 At first, the idea was to create a firefly-like effect using these 90 LEDs to make a nice ambient light. It looks superb at night, but when you're doing something on your laptop or reading, it's not that useful. So I added more animations, which can be changed by pressing the button on the controller. Eventually, it turned into over 25 effects.
