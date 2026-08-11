@@ -1,6 +1,6 @@
 ---
-title: "I Over-Engineered an LED Strip and Gave It a REST API, Web UI, and MCP"
-description: "I attached an ESP32 to 90 NeoPixels and gave it far more than it needed - a REST API, a web UI, automations, and an MCP server so AI agents can control the lights too."
+title: "I Over-Engineered an LED Strip and Gave It a REST API, Web UI, HomeKit, and MCP"
+description: "I attached an ESP32 to 90 NeoPixels and gave it far more than it needed - 23 effects with variations, a REST API, a web UI, Apple Home (HomeKit), automations, and an MCP server so AI agents can control the lights too."
 thumbnail: "i-over-engineered-an-led-strip-and-gave-it-a-rest-api-web-ui-and-mcp.jpg"
 icon: "i-over-engineered-an-led-strip-and-gave-it-a-rest-api-web-ui-and-mcp-icon.png"
 tags:
@@ -17,7 +17,7 @@ date: 2026-08-07
 relatedPosts:
   - merry-pixels-a-hand-crafted-programmable-christmas-star
   - the-story-of-a-light-bulb
-tldr: "I over-engineered 90 NeoPixels with an ESP32-C6: 25+ animations, REST API, web UI, mDNS, persistent state, and MCP. Control it with Apple Shortcuts, NFC, browsers, scripts, or even AI agents."
+tldr: "I over-engineered 90 NeoPixels with an ESP32-C6: 23 effects with 5 variations each, REST API, web UI, HomeKit, mDNS, persistent state, and MCP. Control it with Apple Shortcuts, NFC, browsers, Apple Home, or even AI agents."
 ---
 
 I've always been obsessed with lighting - I've written about it on my blog, including [Merry Pixels: A Hand-Crafted Programmable Christmas Star](https://shajanjacob.com/blog/merry-pixels-a-hand-crafted-programmable-christmas-star/) and [The Story of a Light Bulb](https://shajanjacob.com/blog/the-story-of-a-light-bulb/) - and NeoPixels are truly a great technology for anyone who loves lighting.
@@ -32,13 +32,13 @@ See the project here: [Pixels String](https://shajanjacob.com/projects/pixels-st
 
 The hardware is simple. I used an M5Stack NanoC6 (ESP32-C6) connected to about 90 NeoPixels.
 
-At first, the idea was to create a firefly-like effect using these 90 LEDs to make a nice ambient light. It looks superb at night, but when you're doing something on your laptop or reading, it's not that useful. So I added more animations, which can be changed by pressing the button on the controller. Eventually, it turned into over 25 effects.
+At first, the idea was to create a firefly-like effect using these 90 LEDs to make a nice ambient light. It looks superb at night, but when you're doing something on your laptop or reading, it's not that useful. So I added more animations, which can be changed by pressing the button on the controller. Eventually, it turned into 23 effects - fireflies, rainbow swipes, comets, heartbeats, lightning storms, and more - each with 5 variations you can cycle through.
 
 <img src="./pixels-string-testing-effects.jpg" alt="Testing animations in the LED string" style="height: auto; width:100%;">
 
 There’s a Twinkling Stars mode, a Fireflies mode, a slow Heartbeat, and a Pixel Runner that moves across the strip.
 
-Everything runs directly on the ESP32. No external rendering, no streaming. I just need to press the button on the controller, and the light effect changes.
+Everything runs directly on the ESP32. No external rendering, no streaming. I just need to press the button on the controller, and the light effect changes. A single click cycles to the next effect, a double click steps through that effect's variations, and a long press turns the strip on or off.
 
 <div style="display: flex; justify-content: center;">
   <iframe width="315" height="560" src="https://www.youtube.com/embed/WrpV2bcmpqo" title="YouTube video player" frameborder="0"></iframe>
@@ -54,6 +54,8 @@ To change the animation, I had to manually press the button each time. Walking t
 - GET /api/brightness?value=<0-255> - Set the global LED brightness. Applied to every effect and pattern, and saved to NVS (non-volatile storage) so it persists across reboots. 0 turns the LEDs off, 255 is maximum. Read the current value from /api/info.
 - GET /api/pixels/set - Set pixel colors with customizable patterns. All parameters are passed as query strings.
 - GET /api/info - Returns a JSON object with the current state.
+- GET /config - Set the NeoPixel color order (RGB, GRB, BGR, etc.) and LED count dynamically. Both apply immediately and persist across reboots.
+- GET /help - Plain-text listing of all available endpoints.
 
 It can switch animations, change brightness, set colors, and control how much of the strip is active. At that point, anything that can make an HTTP request can control the light. And that completely changed how I used it.
 
@@ -70,7 +72,7 @@ I also added a simple web UI. No backend, no cloud, no extra server. The ESP32 s
 
 <img src="https://shajanjacob.com/pixels-string/pixels-string-dashboard-mobile-screenshot.jpg" alt="Pixels String Mobile Friendly Web Dashboard" style="height: auto; width: 100%;">
 
-It supports mDNS too, so I don't even need to remember the IP address. Settings like Wi-Fi, brightness, and animation state are saved, so it survives reboots. It became a fully self-contained, internet-connected (LAN) light.
+It supports mDNS too, so I don't even need to remember the IP address - it's also given a static IP for reliability. Settings like Wi-Fi, brightness, animation state, and even the LED count are saved to NVS, so it survives reboots, and it watches the WiFi link and reconnects automatically if it ever drops. It became a fully self-contained, internet-connected (LAN) light.
 
 ## A few useful automations
 
@@ -91,6 +93,14 @@ No hub, no ecosystem. Just an event triggering an HTTP request.
 I also stuck an NFC tag near my bed. A tap on it switches the room to a warm, low-brightness mode. Another NFC tag I placed near my table triggers a bright yellow light, good for reading and for when I'm using a computer.
 
 It’s basically a physical shortcut button for lighting.
+
+## Then it joined Apple Home
+
+Since the ESP32 is already sitting on the network, I figured it might as well join Apple Home too. Using the [HomeSpan](https://github.com/HomeSpan/HomeSpan) library, the strip shows up in the Home app as a **Lightbulb** accessory - on/off, a brightness slider, and a color wheel. Pairing is just scanning a QR code in the Home app.
+
+HomeKit has no native "effect" menu, so the 23 animations each appear as their own **Switch** - tap the "AURORA" switch and the aurora runs and powers the strip on; tap another and it switches over. Using the Lightbulb itself (on/off, brightness, or color) drops the strip back into solid-color mode. It's the closest HomeKit gets to a proper effects menu.
+
+It became one more control surface I didn't know I wanted. I walk in, tell Siri "turn on the mood light," and the room fills with my usual evening color - no Shortcuts automation needed.
 
 ## Then I gave it a pinch of AI support
 

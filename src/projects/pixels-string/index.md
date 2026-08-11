@@ -32,6 +32,7 @@ A WiFi-enabled ESP32 LED pixel string controller with 23 stunning effects, 5 var
 - **Physical Button** - Single-click to cycle effects, double-click for variations, long-press for power on/off
 - **REST API** - Full programmatic control over HTTP
 - **MCP Server** - Built-in Model Context Protocol server so AI assistants can control the LEDs directly
+- **Apple Home (HomeKit)** - Exposes the strip as a Apple HomeKit Lightbulb (on/off, brightness, color) via HomeSpan
 - **Static IP & mDNS** - Reliable network configuration with custom hostname
 - **Persistent LED Count** - Number of LEDs is stored in NVS (non-volatile storage) and configurable via API
 - **Auto-reconnect** - Monitors WiFi and reconnects automatically
