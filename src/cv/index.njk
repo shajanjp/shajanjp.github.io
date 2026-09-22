@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 title: CV
+description: "Shajan Jacob’s experience, technical skills, and career as a software engineer and technical lead."
 eleventyExcludeFromCollections: false
 ---
 
@@ -8,7 +9,7 @@ eleventyExcludeFromCollections: false
   <!-- Header -->
   <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-4 border-b border-zinc-100 dark:border-zinc-800">
     <div>
-      <h2 class="text-2xl font-medium mb-8">Shajan Jacob</h2>
+      <h1 class="text-2xl font-medium mb-8">Shajan Jacob</h1>
       <p class="text-sm text-zinc-500 dark:text-zinc-400">Software Engineer</p>
       <p class="text-sm text-zinc-500 dark:text-zinc-400">Kochi, Kerala, India</p>
       <p class="text-sm text-zinc-500 dark:text-zinc-400">shajanjp at gmail dot com</p>
@@ -22,7 +23,7 @@ eleventyExcludeFromCollections: false
 
   <!-- Professional Summary -->
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Professional Summary</h3>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">Professional Summary</h2>
     <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
       Senior Software Engineer and Technical Lead with 8+ years of experience designing and building scalable backend systems, APIs, microservices, and cloud-native applications using Node.js and TypeScript. Experienced in system architecture, performance optimisation, event-driven systems, healthcare platforms, and engineering leadership. Proven track record of scaling high-throughput APIs, modernising legacy systems, mentoring engineers, and driving AI-assisted software development practices.
     </p>
@@ -30,7 +31,7 @@ eleventyExcludeFromCollections: false
 
   <!-- Technical Skills -->
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Technical Skills</h3>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">Technical Skills</h2>
     {% set skillGroups = [
       { label: "Languages & Backend", items: ["Node.js", "TypeScript", "JavaScript", "NestJS", "Express.js", "Deno"] },
       { label: "Architecture & APIs", items: ["Microservices", "REST APIs", "Event-Driven Architecture", "Real-Time Systems", "gRPC", "WebSockets"] },
@@ -41,7 +42,7 @@ eleventyExcludeFromCollections: false
     <div class="space-y-3">
       {% for group in skillGroups %}
       <div>
-        <p class="text-xs uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2">{{ group.label }}</p>
+        <p class="text-xs uppercase tracking-wider text-zinc-600 dark:text-zinc-400 mb-2">{{ group.label }}</p>
         <div class="flex flex-wrap gap-2">
           {% for skill in group.items %}
           <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">{{ skill }}</span>
@@ -54,7 +55,7 @@ eleventyExcludeFromCollections: false
 
   <!-- Professional Experience -->
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-4">Professional Experience</h3>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">Professional Experience</h2>
 
     <!-- Sorice Solutions -->
     <div class="mb-6">
@@ -63,7 +64,7 @@ eleventyExcludeFromCollections: false
           <p class="font-medium text-zinc-900 dark:text-zinc-100">Sorice Solutions, Kochi</p>
           <p class="text-sm text-zinc-500 dark:text-zinc-400">Technical Lead</p>
         </div>
-        <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">Feb 2020 - Nov 2025</p>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 flex-shrink-0">Feb 2020 - Nov 2025</p>
       </div>
       <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
         <li>Architected and delivered backend systems and core platform capabilities for U.S. healthcare applications, focusing on scalability, reliability, security, and maintainability.</li>
@@ -86,7 +87,7 @@ eleventyExcludeFromCollections: false
           <p class="font-medium text-zinc-900 dark:text-zinc-100">Cubet, Kochi</p>
           <p class="text-sm text-zinc-500 dark:text-zinc-400">Software Engineer</p>
         </div>
-        <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">Oct 2017 - Feb 2020</p>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 flex-shrink-0">Oct 2017 - Feb 2020</p>
       </div>
       <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
         <li>Designed and developed REST APIs, microservices, and serverless applications using Node.js, AWS Lambda, and Firebase Cloud Functions across multiple production platforms.</li>
@@ -104,7 +105,7 @@ eleventyExcludeFromCollections: false
           <p class="font-medium text-zinc-900 dark:text-zinc-100">Alt S Solutions, Kochi</p>
           <p class="text-sm text-zinc-500 dark:text-zinc-400">Junior Software Engineer</p>
         </div>
-        <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0">May 2017 - Oct 2017</p>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 flex-shrink-0">May 2017 - Oct 2017</p>
       </div>
       <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
         <li>Developed responsive web applications, CRM dashboards, and backend APIs for client projects.</li>
@@ -114,19 +115,19 @@ eleventyExcludeFromCollections: false
 
   <!-- Education -->
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Education</h3>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">Education</h2>
     <div class="flex justify-between items-baseline">
       <div>
         <p class="font-medium text-zinc-900 dark:text-zinc-100">Bachelor of Engineering in CS</p>
         <p class="text-sm text-zinc-500 dark:text-zinc-400">T John Institute of Technology, Bangalore</p>
       </div>
-      <p class="text-sm text-zinc-400 dark:text-zinc-600 flex-shrink-0 ml-4">2017</p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 flex-shrink-0 ml-4">2017</p>
     </div>
   </div>
 
   <!-- Achievements -->
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Achievements</h3>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">Achievements</h2>
     <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
       <li>Ranked in the top 2% globally in LinkedIn's JavaScript skill assessment.</li>
     </ul>
@@ -134,7 +135,7 @@ eleventyExcludeFromCollections: false
 
   <!-- Hobby / Side Projects -->
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Hobby / Side Projects</h3>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">Hobby / Side Projects</h2>
     <div class="space-y-3">
       <div>
         <p class="font-medium text-zinc-900 dark:text-zinc-100">Clockwall</p>
@@ -165,7 +166,7 @@ eleventyExcludeFromCollections: false
 
   <!-- Profiles -->
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Profiles</h3>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">Profiles</h2>
     <ul class="list-disc list-outside ml-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
       <li><a href="https://linkedin.com/in/shajanjp" target="_blank" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">linkedin.com/in/shajanjp</a></li>
       <li><a href="https://github.com/shajanjp" target="_blank" class="underline hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">github.com/shajanjp</a></li>
@@ -175,7 +176,7 @@ eleventyExcludeFromCollections: false
 
   <!-- Hobbies -->
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-500 mb-3">Hobbies</h3>
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-3">Hobbies</h2>
     <div class="flex flex-wrap gap-2">
       <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">Terrariums</span>
       <span class="px-3 py-1 text-xs uppercase tracking-wider border border-zinc-200 dark:border-zinc-800 rounded-sm text-zinc-600 dark:text-zinc-400">Photography</span>
