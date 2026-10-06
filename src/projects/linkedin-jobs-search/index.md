@@ -26,3 +26,11 @@ Open `index.html` in your browser - no installation or build step required.
 To add a location, copy its `geoId` from a LinkedIn Jobs search URL. Work arrangements are included as keywords.
 
 Built with plain HTML, CSS, and JavaScript.
+
+
+## Screenshots
+
+<figure>
+    <img src="./linkedin-jobs-search-screenshot.jpg" alt="Linkedin Jobs Search Webpage Screenshot" style="height: auto; width:100%;">
+    <figcaption class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 text-center">Linkedin Jobs Search Webpage</figcaption>
+</figure>
